@@ -1,6 +1,7 @@
 lockfileVersion: 5.4
 
 specifiers:
+  cssnano: ^5.1.11
   eslint: ^8.0.0
   eslint-config-react-app: ^7.0.0
   gatsby: ^4.15.2
@@ -18,6 +19,7 @@ dependencies:
   react-dom: 18.1.0_react@18.1.0
 
 devDependencies:
+  cssnano: 5.1.11_postcss@8.4.14
   eslint: 8.17.0
   eslint-config-react-app: 7.0.1_eslint@8.17.0
   gatsby-plugin-pnpm: 1.2.10_gatsby@4.15.2
@@ -4268,7 +4270,7 @@ packages:
       csso:
         optional: true
     dependencies:
-      cssnano: 5.1.10_postcss@8.4.14
+      cssnano: 5.1.11_postcss@8.4.14
       jest-worker: 26.6.2
       p-limit: 3.1.0
       postcss: 8.4.14
@@ -4308,8 +4310,8 @@ packages:
   /cssfilter/0.0.10:
     resolution: {integrity: sha512-FAaLDaplstoRsDR8XGYH51znUN0UY7nMc6Z9/fvE8EXGwvJE9hu7W2vHwx1+bd6gCYnln9nLbzxFTrcO9YQDZw==}
 
-  /cssnano-preset-default/5.2.10_postcss@8.4.14:
-    resolution: {integrity: sha512-H8TJRhTjBKVOPltp9vr9El9I+IfYsOMhmXdK0LwdvwJcxYX9oWkY7ctacWusgPWAgQq1vt/WO8v+uqpfLnM7QA==}
+  /cssnano-preset-default/5.2.11_postcss@8.4.14:
+    resolution: {integrity: sha512-4PadR1NtuaIK8MvLNuY7MznK4WJteldGlzCiMaaTiOUP+apeiIvUDIXykzUOoqgOOUAHrU64ncdD90NfZR3LSQ==}
     engines: {node: ^10 || ^12 || >=14.0}
     peerDependencies:
       postcss: ^8.2.15
@@ -4339,7 +4341,7 @@ packages:
       postcss-normalize-unicode: 5.1.0_postcss@8.4.14
       postcss-normalize-url: 5.1.0_postcss@8.4.14
       postcss-normalize-whitespace: 5.1.1_postcss@8.4.14
-      postcss-ordered-values: 5.1.1_postcss@8.4.14
+      postcss-ordered-values: 5.1.2_postcss@8.4.14
       postcss-reduce-initial: 5.1.0_postcss@8.4.14
       postcss-reduce-transforms: 5.1.0_postcss@8.4.14
       postcss-svgo: 5.1.0_postcss@8.4.14
@@ -4353,13 +4355,13 @@ packages:
     dependencies:
       postcss: 8.4.14
 
-  /cssnano/5.1.10_postcss@8.4.14:
-    resolution: {integrity: sha512-ACpnRgDg4m6CZD/+8SgnLcGCgy6DDGdkMbOawwdvVxNietTNLe/MtWcenp6qT0PRt5wzhGl6/cjMWCdhKXC9QA==}
+  /cssnano/5.1.11_postcss@8.4.14:
+    resolution: {integrity: sha512-2nx+O6LvewPo5EBtYrKc8762mMkZRk9cMGIOP4UlkmxHm7ObxH+zvsJJ+qLwPkUc4/yumL/qJkavYi9NlodWIQ==}
     engines: {node: ^10 || ^12 || >=14.0}
     peerDependencies:
       postcss: ^8.2.15
     dependencies:
-      cssnano-preset-default: 5.2.10_postcss@8.4.14
+      cssnano-preset-default: 5.2.11_postcss@8.4.14
       lilconfig: 2.0.5
       postcss: 8.4.14
       yaml: 1.10.2
@@ -8566,8 +8568,8 @@ packages:
       postcss: 8.4.14
       postcss-value-parser: 4.2.0
 
-  /postcss-ordered-values/5.1.1_postcss@8.4.14:
-    resolution: {integrity: sha512-7lxgXF0NaoMIgyihL/2boNAEZKiW0+HkMhdKMTD93CjW8TdCy2hSdj8lsAo+uwm7EDG16Da2Jdmtqpedl0cMfw==}
+  /postcss-ordered-values/5.1.2_postcss@8.4.14:
+    resolution: {integrity: sha512-wr2avRbW4HS2XE2ZCqpfp4N/tDC6GZKZ+SVP8UBTOVS8QWrc4TD8MYrebJrvVVlGPKszmiSCzue43NDiVtgDmg==}
     engines: {node: ^10 || ^12 || >=14.0}
     peerDependencies:
       postcss: ^8.2.15
