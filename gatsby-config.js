@@ -3,5 +3,5 @@ module.exports = {
     title: `Webteams`,
     siteUrl: `https://www.yourdomain.tld`,
   },
-  plugins: [`gatsby-plugin-pnpm`],
+  plugins: [`gatsby-plugin-pnpm`, `gatsby-plugin-postcss`],
 };
