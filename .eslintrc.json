@@ -1,5 +1,5 @@
 {
-  "extends": ["react-app", "react-app/jest"],
+  "extends": ["react-app", "react-app/jest", "plugin:tailwindcss/recommended"],
   "rules": {
     "no-console": "error",
     "no-unused-vars": "warn",

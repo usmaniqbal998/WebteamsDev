@@ -1,2 +1,15 @@
 @tailwind base;
 @tailwind utilities;
+
+body{
+    background-color: #121212;
+    color:'#fff'
+}
+
+.gradientHeading{
+    background: radial-gradient(50.67% 605.75% at 9.06% 59.7%, #00FF66 0%, #0035F0 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+        text-fill-color: transparent;
+}
