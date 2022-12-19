@@ -1,15 +1,86 @@
 @tailwind base;
+@tailwind components;
 @tailwind utilities;
 
-body{
-    background-color: #121212;
-    color:'#fff'
+body,
+html {
+  background-color: #121212;
+  color: #fff;
+  scroll-behavior: smooth;
+}
+* {
+  cursor: none;
 }
 
-.gradientHeading{
-    background: radial-gradient(50.67% 605.75% at 9.06% 59.7%, #00FF66 0%, #0035F0 100%);
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-        background-clip: text;
-        text-fill-color: transparent;
+.gradientHeading {
+  background: radial-gradient(
+    50.67% 605.75% at 9.06% 59.7%,
+    #00ff66 0%,
+    #0035f0 100%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
+}
+.gradientBackground {
+  background: radial-gradient(50% 50% at 50% 50%, #4caf50 0%, #000000 100%);
+  filter: blur(150px);
+}
+
+.linearGradient {
+  background: linear-gradient(
+    270deg,
+    #4caf50 0%,
+    rgba(76, 175, 80, 0.6) 64.39%,
+    rgba(0, 68, 3, 0.974286) 101.32%,
+    #1c441e 101.33%
+  );
+}
+.coverFlowImage {
+  height: 175px;
+  /* width: 250px; */
+  object-position: top;
+  object-fit: cover;
+}
+
+@media screen and (max-width: 767px) {
+  .stepbox:nth-child(2n) .svg-border {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1279px) {
+  .stepbox:nth-child(3n) .svg-border {
+    display: none;
+  }
+}
+
+@layer components {
+  .tab-pane {
+    @apply grow border border-primary-200 outline-none px-10 py-6 text-white lg:text-left text-xl font-bold w-full lg:text-[40px] lg:leading-[120%] hover:bg-[#2a2a2a] focus:bg-[#2a2a2a] lg:px-20 md:py-10;
+  }
+  .aside-fixed {
+    @apply fixed inset-x-0 top-0 shadow-md shadow-primary-700 lg:shadow-none bg-[#1b1b1b] pt-5 z-10 lg:bg-transparent  lg:sticky  lg:pt-10 transition-all duration-300 ease-in;
+  }
+  .aside-fixed ul {
+    @apply container lg:pl-0;
+  }
+  .sidenav ul {
+    @apply flex items-center justify-between gap-x-8 gap-y-16 lg:flex-col lg:items-start;
+  }
+
+  .brief h3 {
+    @apply font-emphasis order-1 md:order-2 text-4xl mb-4 md:mb-8 font-bold leading-[47px] text-white md:text-5xl md:leading-[62px];
+  }
+  .brief p {
+    @apply font-sans text-[14px] order-3 font-normal leading-[200%] text-current md:text-[16px];
+  }
+
+  .brief .mobile p {
+    @apply hidden;
+  }
+  .brief .large h3 {
+    @apply hidden md:block;
+  }
 }

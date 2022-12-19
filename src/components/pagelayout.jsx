@@ -1,11 +1,18 @@
-import React from 'react';
+import React from 'react'
+import Footer from './footer'
+import Nav from './navbar'
+import CustomCursorManager from './customCursor/context/manager'
+import CustomCursor from './customCursor'
 
 const PageLayout = ({ children }) => {
   return (
-    <main>
-      <div className="p-5">{children}</div>
-    </main>
-  );
-};
+    <CustomCursorManager>
+      <CustomCursor />
+      <Nav />
+      <main>{children}</main>
+      <Footer />
+    </CustomCursorManager>
+  )
+}
 
-export default PageLayout;
+export default PageLayout

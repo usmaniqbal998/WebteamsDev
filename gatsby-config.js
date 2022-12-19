@@ -9,6 +9,7 @@ module.exports = {
     `gatsby-plugin-image`,
     `gatsby-plugin-sharp`,
     `gatsby-transformer-sharp`,
+    // `gatsby-transformer-remark`,
     {
       resolve: `gatsby-plugin-google-fonts`,
       options: {
@@ -16,5 +17,23 @@ module.exports = {
         display: 'swap',
       },
     },
+    {
+      resolve: `gatsby-transformer-remark`,
+      options: {},
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `markdown`,
+        path: `${__dirname}/src/markdown/`,
+      },
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `images`,
+        path: `${__dirname}/src/images/`,
+      },
+    },
   ],
-};
+}
