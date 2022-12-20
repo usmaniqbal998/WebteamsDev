@@ -14,26 +14,25 @@ const StaffWorked = () => {
           <StaticImage
             placeholder="blurred"
             src={`../images/companies/shopify.png`}
-            width={180}
+            width={150}
             alt="shopify"
           />
           <StaticImage
             placeholder="blurred"
             src={`../images/companies/bynder.png`}
-            width={180}
+            width={150}
             alt="bynder"
           />
           <StaticImage
             placeholder="blurred"
-            s
             src={`../images/companies/amazon.png`}
-            width={180}
+            width={150}
             alt="amazon"
           />
           <StaticImage
             placeholder="blurred"
             src={`../images/companies/spotify.png`}
-            width={180}
+            width={150}
             alt="spotify"
           />
         </div>

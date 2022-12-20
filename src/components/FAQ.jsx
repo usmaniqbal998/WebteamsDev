@@ -43,7 +43,7 @@ const FAQ = () => {
               children={data.answer}
               Index={Index}
               setIndex={setIndex}
-            ></AccordionUI>
+            />
           )
         })}
       </div>
