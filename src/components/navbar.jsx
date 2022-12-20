@@ -51,16 +51,16 @@ const Nav = () => {
             ))}
           </div>
           <div className="hidden basis-1/4 justify-end lg:flex">
-            <button
+            <Button
               type="button"
               className="flex h-[52px] w-[52px]  items-center justify-center rounded-full bg-white text-black transition-colors duration-300 ease-in hover:bg-secondary-400"
             >
               <span>
                 <AroowTopRight />
               </span>
-            </button>
+            </Button>
           </div>
-          <button
+          <Button
             id="mobileNavBtn"
             className={`flex w-8  flex-col items-end transition-all duration-300 lg:hidden ${
               navOpen ? '-translate-y-px rotate-90' : ''
@@ -83,7 +83,7 @@ const Nav = () => {
                   : 'w-1/2 translate-y-[5px] rotate-0'
               }`}
             />
-          </button>
+          </Button>
         </div>
         <div
           className={`fixed inset-0  z-10  min-w-0 bg-primary-700 transition-all  duration-300 ease-in  lg:hidden ${

@@ -6,7 +6,7 @@ import Button from '../atoms/Button'
 const WatchVideo = () => {
   return (
     <div className="flex flex-col items-center justify-center gap-4 md:flex-row md:pl-20">
-      <Button>
+      <Button className="">
         <PlayIcon />
       </Button>
       <Typography variant="p" className="relative  text-xl italic text-white">
