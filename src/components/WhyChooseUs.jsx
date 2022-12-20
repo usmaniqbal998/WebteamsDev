@@ -2,6 +2,7 @@ import React from 'react'
 import InfoBox from './organisms/InfoBox'
 import { graphql, useStaticQuery } from 'gatsby'
 import Typography from './atoms/Text'
+import { AgileIcon, ExperienceIcon, TransparencyIcon } from '../utils/icons'
 
 const CardClass =
   'rounded-xl bg-[#282828] py-8 px-5 flex flex-col gap-5 text-white'
@@ -51,30 +52,37 @@ const WhyChooseUs = () => {
               </Typography>
             </div>
           </div>
-          <div className="mt-10 grid grid-cols-1 gap-5 md:mt-20 md:grid-cols-2 xl:grid-cols-4">
+          <div className="mg:gap-4 mt-10 grid grid-cols-1 gap-6 md:mt-20 md:grid-cols-2 xl:grid-cols-4">
             <InfoBox
               className={CardClass}
-              icon={data.agile}
+              icon={<AgileIcon />}
               title="Agile on Steroids"
               content="We provide cross-functional Agile teams that are self-organising, adapting to your business needs, taking ownership, and delivering to their full potential. You can scale up 
 "
             />
             <InfoBox
               className={CardClass}
-              icon={data.transparency}
+              icon={<TransparencyIcon />}
               title="Complete Transparency"
               content="This continuous knowledge transfer is a guarantee that the final product will be handed over without unnecessary stages of knowledge and documentation "
             />
             <InfoBox
               className={CardClass}
-              icon={data.experience}
+              icon={<ExperienceIcon />}
               title="Experienced Staff"
               content="All team members from our core developers to Product Managers and CTO’s have years of experience in different niches and together they bring a lot to the table
            "
             />
             <InfoBox
               className={CardClass}
-              icon={data.top}
+              icon={
+                <Typography
+                  variant="span"
+                  className="text-[40px] font-bold leading-[40px]  text-secondary-400"
+                >
+                  1%
+                </Typography>
+              }
               title="Top In-house Teams"
               content="We offer top 1% in-house development squads. We do all the heavy lifting of making your product scalable with the best development processes .
 "

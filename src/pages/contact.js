@@ -16,7 +16,7 @@ const Contact = () => {
     <PageLayout>
       <Section>
         <div className="mx-auto max-w-5xl">
-          <Typography variant="h1" align="center" className="pb-16 md:pb-1">
+          <Typography variant="h1" align="center" className="pb-16 md:pb-10">
             Contact{' '}
             <Typography variant="span" className="text-secondary-400">
               Us

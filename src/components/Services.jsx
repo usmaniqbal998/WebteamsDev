@@ -55,7 +55,7 @@ const Services = () => {
           <Typography variant="h3">
             We Provide Experts in every aspect of your product lifecycle.
           </Typography>
-          <Typography variant="p" align="center">
+          <Typography variant="p">
             Join 100+ Technology Companies that went beyond their goals with us.
             Whether you are a fortune 500 or a startup - we give you top-notch
             Product Managers and Development Squads with relevant experience in
