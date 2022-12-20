@@ -29,7 +29,7 @@ const CoverFlow = () => {
         <StaticImage
           placeholder="blurred"
           src="../../images/caseStudies/task-mgmt.png"
-          alt="Case Study 1"
+          alt="Task Managment"
           className="coverFlowImage"
         />
       </SwiperSlide>
@@ -37,7 +37,7 @@ const CoverFlow = () => {
         <StaticImage
           placeholder="blurred"
           src="../../images/caseStudies/multi-coffee-shops.png"
-          alt="Case Study 2"
+          alt="Multi Coffee Shops"
           className="coverFlowImage"
         />
       </SwiperSlide>
@@ -45,7 +45,7 @@ const CoverFlow = () => {
         <StaticImage
           placeholder="blurred"
           src="../../images/caseStudies/design-system.png"
-          alt="Case Study 1"
+          alt="Design System"
           className="coverFlowImage"
         />
       </SwiperSlide>
@@ -53,7 +53,7 @@ const CoverFlow = () => {
         <StaticImage
           placeholder="blurred"
           src="../../images/caseStudies/aflash-edtech.png"
-          alt="Case Study 2"
+          alt="Aflash Edtech"
           className="coverFlowImage"
         />
       </SwiperSlide>
