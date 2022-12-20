@@ -1,6 +1,6 @@
 import React from 'react'
 import Button from '../atoms/Button'
-import Section from './Section'
+import Section from '../organisms/Section'
 import Typography from '../atoms/Text'
 
 const PageHeading = ({
