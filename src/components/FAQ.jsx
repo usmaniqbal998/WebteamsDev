@@ -1,7 +1,7 @@
 import React from 'react'
-import ContentHeading from './molecules/ContentHeading'
 import AccordionUI from './organisms/AccordionUI'
 import Section from './organisms/Section'
+import Typography from './atoms/Text'
 const data = [
   {
     id: 1,
@@ -32,7 +32,7 @@ const FAQ = () => {
   const [Index, setIndex] = React.useState(false)
   return (
     <Section>
-      <ContentHeading>FAQ</ContentHeading>
+      <Typography variant="h3">FAQ</Typography>
       <div className="mt-5 md:mt-10">
         {data.map((data) => {
           return (

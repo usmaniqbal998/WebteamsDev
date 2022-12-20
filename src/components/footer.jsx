@@ -2,9 +2,12 @@ import { Link } from 'gatsby'
 import { StaticImage } from 'gatsby-plugin-image'
 import React from 'react'
 import SocialLinks from './organisms/SocialLinks'
+import Typography from './atoms/Text'
 
 const FooterHead = ({ title }) => (
-  <h5 className="mb-3 text-xl font-bold text-[#878787]">{title}</h5>
+  <Typography variant="h5" className="mb-3 text-xl text-[#878787]">
+    {title}
+  </Typography>
 )
 const FooterLinks = ({ name, url }) => (
   <Link
@@ -33,7 +36,9 @@ const Footer = () => {
               <div className="flex flex-col gap-8">
                 <div>
                   <FooterHead title="Email" />
-                  <p className="text-base text-white">Abubakr.max@gmail.com</p>
+                  <Typography variant="p" className="text-base">
+                    Abubakr.max@gmail.com
+                  </Typography>
                 </div>
                 <div>
                   <FooterHead title="Location" />
@@ -41,9 +46,13 @@ const Footer = () => {
                     <div children="flex-1">
                       <StaticImage src="../images/uk-flag.svg" alt="UK" />
                     </div>
-                    <p className="block max-w-[250px] flex-1 text-base text-white">
+                    <Typography
+                      variant="p"
+                      align="left"
+                      className="block max-w-[250px] flex-1 text-base"
+                    >
                       307 Cotton Exchange Old Hall Street Liverpool, UK
-                    </p>
+                    </Typography>
                   </div>
                 </div>
               </div>
@@ -65,9 +74,12 @@ const Footer = () => {
               </div>
             </div>
             <div className="order-4 col-span-2">
-              <p className="mb-5 block text-2xl font-bold text-white lg:text-3xl">
+              <Typography
+                variant="p"
+                className="mb-5 block text-2xl font-bold text-white lg:text-3xl"
+              >
                 Subscribe to our newsletter
-              </p>
+              </Typography>
               <input
                 type="text"
                 className="w-full rounded-md bg-[#222222] px-5 py-3 text-xl outline-none"
@@ -76,9 +88,13 @@ const Footer = () => {
           </div>
           <div className="my-5 text-center  md:my-10">
             <SocialLinks />
-            <p className="mt-5 text-xs text-primary-50 lg:text-sm">
+            <Typography
+              variant="p"
+              className="mt-5 text-xs text-primary-50 lg:text-sm"
+              align="center"
+            >
               All right reserved {new Date().getFullYear()}
-            </p>
+            </Typography>
           </div>
         </div>
       </div>

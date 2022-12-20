@@ -1,6 +1,7 @@
 import { GatsbyImage, StaticImage, getImage } from 'gatsby-plugin-image'
 import React from 'react'
 import Text from '../atoms/Text'
+import Typography from '../atoms/Text'
 
 const InfoBox = ({
   title,
@@ -17,10 +18,12 @@ const InfoBox = ({
         </div>
       )}
       <div>
-        <h5 className="mb-4 text-[20px] font-bold leading-[110%] text-current md:text-[24px]">
+        <Typography variant="h5" className="mb-4" color="current">
           {title}
-        </h5>
-        <Text color="current">{content}</Text>
+        </Typography>
+        <Typography variant="p" color="current">
+          {content}
+        </Typography>
       </div>
     </div>
   )

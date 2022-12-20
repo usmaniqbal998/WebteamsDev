@@ -1,11 +1,11 @@
 import { GatsbyImage, StaticImage, getImage } from 'gatsby-plugin-image'
 import React from 'react'
 import Button from './atoms/Button'
-import ContentHeading from './molecules/ContentHeading'
-import Text from './atoms/Text'
+
 import { TabGroup } from '@statikly/funk'
 import Section from './organisms/Section'
 import { graphql, useStaticQuery } from 'gatsby'
+import Typography from './atoms/Text'
 
 const Services = () => {
   const data = useStaticQuery(graphql`
@@ -52,16 +52,16 @@ const Services = () => {
     <Section>
       <div className="grid grid-cols-1  gap-8 lg:grid-cols-5">
         <div className="flex flex-col gap-8 lg:col-span-3">
-          <ContentHeading>
+          <Typography variant="h3">
             We Provide Experts in every aspect of your product lifecycle.
-          </ContentHeading>
-          <Text>
+          </Typography>
+          <Typography variant="p" align="center">
             Join 100+ Technology Companies that went beyond their goals with us.
             Whether you are a fortune 500 or a startup - we give you top-notch
             Product Managers and Development Squads with relevant experience in
             your niche to help you succeed. You can scale these dedicated squads
             up and down anytime
-          </Text>
+          </Typography>
         </div>
       </div>
       <div className="mt-10 grid grid-cols-1 items-center gap-10 md:mt-20 lg:grid-cols-2">
@@ -107,11 +107,11 @@ const Services = () => {
           >
             <GatsbyImage image={getImage(data.projectui)} alt="Project Ui/Ux" />
 
-            <Text centre>
+            <Typography variant="p" align="center">
               Every squad have top-notch dedicated product designers that
               understand your users and business and create beautiful user
               interfaces accordingly
-            </Text>
+            </Typography>
             <Button name="GET PROJECT ESTIMATION" />
           </TabGroup.TabPanel>
           <TabGroup.TabPanel
@@ -124,11 +124,11 @@ const Services = () => {
               alt="Web and Mobile App Development"
             />
 
-            <Text centre>
+            <Typography variant="p" align="center">
               Every squad have top-notch dedicated product designers that
               understand your users and business and create beautiful user
               interfaces accordingly
-            </Text>
+            </Typography>
             <Button name="GET PROJECT ESTIMATION" />
           </TabGroup.TabPanel>
           <TabGroup.TabPanel
@@ -138,11 +138,11 @@ const Services = () => {
           >
             <GatsbyImage image={getImage(data.cloud)} alt="Cloud Engineering" />
 
-            <Text centre>
+            <Typography variant="p" align="center">
               Every squad have top-notch dedicated product designers that
               understand your users and business and create beautiful user
               interfaces accordingly
-            </Text>
+            </Typography>
             <Button name="GET PROJECT ESTIMATION" />
           </TabGroup.TabPanel>
           <TabGroup.TabPanel
@@ -152,11 +152,11 @@ const Services = () => {
           >
             <GatsbyImage image={getImage(data.qa)} alt="QA" />
 
-            <Text centre>
+            <Typography variant="p" align="center">
               Every squad have top-notch dedicated product designers that
               understand your users and business and create beautiful user
               interfaces accordingly
-            </Text>
+            </Typography>
             <Button name="GET PROJECT ESTIMATION" />
           </TabGroup.TabPanel>
         </TabGroup>

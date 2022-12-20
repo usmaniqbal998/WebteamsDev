@@ -1,8 +1,7 @@
 import React from 'react'
-import ContentHeading from './molecules/ContentHeading'
-import Text from './atoms/Text'
 import InfoBox from './organisms/InfoBox'
 import { graphql, useStaticQuery } from 'gatsby'
+import Typography from './atoms/Text'
 
 const CardClass =
   'rounded-xl bg-[#282828] py-8 px-5 flex flex-col gap-5 text-white'
@@ -38,15 +37,18 @@ const WhyChooseUs = () => {
       <div className="container">
         <div className="py-8 md:py-14">
           <div className="mx-auto flex max-w-4xl flex-col items-center justify-center gap-8">
-            <ContentHeading centre>
-              Why <span className="text-6xl md:text-8xl">98%</span> of SMEs,
-              startups, and scale-ups choose us
-            </ContentHeading>
+            <Typography variant="h3" align="center">
+              Why{' '}
+              <Typography variant="span" className="text-6xl md:text-8xl">
+                98%{' '}
+              </Typography>
+              of SMEs, startups, and scale-ups choose us
+            </Typography>
             <div className="mx-auto  max-w-2xl">
-              <Text centre>
+              <Typography variant="p" align="center">
                 Most of our clients stay with us for longer than 3 years on
                 average and we always have previous clients in our repeat cycle.
-              </Text>
+              </Typography>
             </div>
           </div>
           <div className="mt-10 grid grid-cols-1 gap-5 md:mt-20 md:grid-cols-2 xl:grid-cols-4">
