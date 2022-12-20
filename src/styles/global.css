@@ -102,6 +102,6 @@ html {
     @apply hidden md:block;
   }
   form input {
-    @apply border-b border-white bg-transparent py-3 text-sm outline-none placeholder:text-[#878787] hover:border-[#878787] md:text-base;
+    @apply border-b border-white bg-transparent w-full py-3 text-sm outline-none placeholder:text-[#878787] hover:border-[#878787] md:text-base;
   }
 }
