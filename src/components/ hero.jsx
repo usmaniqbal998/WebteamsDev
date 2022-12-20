@@ -1,10 +1,9 @@
 import { StaticImage } from 'gatsby-plugin-image'
 import React from 'react'
 import Button from './atoms/Button'
-import ContentHeading from './molecules/ContentHeading'
-import Text from './atoms/Text'
 import WatchVideo from './molecules/WatchVideo'
 import SocialLinks from './organisms/SocialLinks'
+import Typography from './atoms/Text'
 
 const Hero = () => {
   return (
@@ -19,19 +18,38 @@ const Hero = () => {
           <div className="absolute inset-0 z-[-1] flex items-center justify-center">
             <div className="gradientBackground my-auto h-1/2 w-full rounded-full bg-clip-content" />
           </div>
-          <h1 className="text-center font-emphasis text-5xl  font-bold leading-[70px] text-white md:text-8xl md:leading-[117%]">
+          <Typography
+            variant="h1"
+            className="text-5xl leading-[70px] md:text-8xl md:leading-[117%]"
+            align="center"
+          >
+            <Typography variant="span" className="font-sans">
+              1
+            </Typography>
+            %<br />
+            World Class
+            <Typography
+              variant="span"
+              className="gradientHeading block font-sans"
+            >
+              Agile squads
+            </Typography>
+            for your Product
+          </Typography>
+
+          {/* <h1 className="text-center font-emphasis text-5xl  font-bold leading-[70px] text-white md:text-8xl md:leading-[117%]">
             <span className="font-sans">1</span>%<br />
             World Class
             <span className="gradientHeading block font-sans">
               Agile squads
             </span>
             for your Product
-          </h1>
-          <Text centre={true}>
+          </h1> */}
+          <Typography variant="p" align="center">
             We are a one-stop-shop partner for all your product development. We
             provide dedicated top 1% agile development Squads that understand
             your business and infrastructure for your next billion-dollar idea.
-          </Text>
+          </Typography>
           <Button name="GET PROJECT ESTIMATION" />
           <div className="z-10 mt-8 translate-x-4 px-4 md:translate-x-8">
             <StaticImage
@@ -41,9 +59,9 @@ const Hero = () => {
               width={250}
             />
           </div>
-          <ContentHeading centre={true}>
+          <Typography variant="h3" align="center">
             Speed up your development process with on-demand teams
-          </ContentHeading>
+          </Typography>
           <WatchVideo />
         </div>
       </div>
