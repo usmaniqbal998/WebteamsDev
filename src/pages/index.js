@@ -1,22 +1,25 @@
-import * as React from 'react';
-import Nav from '../components/navbar';
-import PageLayout from '../components/pagelayout';
+import * as React from 'react'
+import Hero from '../components/ hero'
+import CTA from '../components/CTA'
+import FAQ from '../components/FAQ'
+import PageLayout from '../components/pagelayout'
+import Services from '../components/Services'
+import StaffWorked from '../components/StaffWorked'
+import Technologies from '../components/Technologies'
+import WhyChooseUs from '../components/WhyChooseUs'
 
 const IndexPage = () => {
   return (
     <PageLayout>
-      <Nav />
-      <div className="mt-[142px] flex items-center justify-center">
-        <h1 className="text-center font-emphasis text-5xl font-bold leading-[52px] text-white">
-          <span className="font-sans">1</span>
-          <span>%</span> World Class
-          <span className="gradientHeading font-sans"> Agile squads </span>
-          <br />
-          for your Product
-        </h1>
-      </div>
+      <Hero />
+      <StaffWorked />
+      <Services />
+      <WhyChooseUs />
+      <Technologies />
+      <FAQ />
+      <CTA />
     </PageLayout>
-  );
-};
+  )
+}
 
-export default IndexPage;
+export default IndexPage
