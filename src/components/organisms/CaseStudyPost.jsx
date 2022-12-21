@@ -1,23 +1,15 @@
-import { GatsbyImage, StaticImage, getImage } from 'gatsby-plugin-image';
-import React from 'react';
-import Typography from '../atoms/Text';
-import { ArrowForwardNew } from '../../utils/icons';
-import Button from '../atoms/Button';
+import { GatsbyImage, StaticImage, getImage } from 'gatsby-plugin-image'
+import React from 'react'
+import Typography from '../atoms/Text'
+import { ArrowForwardNew } from '../../utils/icons'
+import Button from '../atoms/Button'
 
 const CaseStudyPost = ({ title, content, img }) => {
-  const image = getImage(img);
+  const image = getImage(img)
   return (
     <div className="flex flex-col gap-5 md:gap-8">
       <div className="w-full">
-        {img ? (
-          <GatsbyImage image={image} alt={title} />
-        ) : (
-          <StaticImage
-            src="../../images/caseStudies/task-mgmt.png"
-            alt="Default"
-            width={500}
-          />
-        )}
+        {img && <GatsbyImage image={image} alt={title} />}
       </div>
 
       <div>
@@ -32,7 +24,7 @@ const CaseStudyPost = ({ title, content, img }) => {
         </Button>
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default CaseStudyPost;
+export default CaseStudyPost
