@@ -1,4 +1,4 @@
-import React from 'react'
+import React from 'react';
 
 export const ArrowRightIcon = () => (
   <svg
@@ -15,7 +15,7 @@ export const ArrowRightIcon = () => (
       d="M17.25 8.25L21 12m0 0l-3.75 3.75M21 12H3"
     />
   </svg>
-)
+);
 export const CursorIcon = () => (
   <svg
     width="18"
@@ -53,7 +53,7 @@ export const CursorIcon = () => (
       fill="#4CAF50"
     />
   </svg>
-)
+);
 
 export const PlayIcon = () => (
   <svg
@@ -101,7 +101,7 @@ export const PlayIcon = () => (
       </filter>
     </defs>
   </svg>
-)
+);
 
 export const CaretDown = () => (
   <svg
@@ -116,7 +116,7 @@ export const CaretDown = () => (
       fill="#999999"
     />
   </svg>
-)
+);
 
 export const CaretUp = () => (
   <svg
@@ -132,7 +132,7 @@ export const CaretUp = () => (
       fill="#999999"
     />
   </svg>
-)
+);
 
 export const ImgBorder = () => (
   <svg
@@ -153,7 +153,7 @@ export const ImgBorder = () => (
       strokeWidth="5"
     />
   </svg>
-)
+);
 
 export const ArrowForward = () => (
   <svg
@@ -170,7 +170,7 @@ export const ArrowForward = () => (
       d="M17.25 8.25L21 12m0 0l-3.75 3.75M21 12H3"
     />
   </svg>
-)
+);
 
 export const ArrowUp = () => (
   <svg
@@ -193,7 +193,7 @@ export const ArrowUp = () => (
       strokeLinecap="round"
     />
   </svg>
-)
+);
 
 export const ArrowDown = () => (
   <svg
@@ -216,7 +216,7 @@ export const ArrowDown = () => (
       strokeLinecap="round"
     />
   </svg>
-)
+);
 
 export const AroowTopRight = () => (
   <svg
@@ -231,7 +231,7 @@ export const AroowTopRight = () => (
       fill="black"
     />
   </svg>
-)
+);
 export const PeopleIcon = () => (
   <svg
     width="58"
@@ -265,7 +265,7 @@ export const PeopleIcon = () => (
       fill="white"
     />
   </svg>
-)
+);
 
 export const GrowthIcon = () => (
   <svg
@@ -296,7 +296,7 @@ export const GrowthIcon = () => (
       fill="white"
     />
   </svg>
-)
+);
 export const EvolveIcon = () => (
   <svg
     width="62"
@@ -342,7 +342,7 @@ export const EvolveIcon = () => (
       fill="white"
     />
   </svg>
-)
+);
 
 export const FairPlayIcon = () => (
   <svg
@@ -373,7 +373,7 @@ export const FairPlayIcon = () => (
       fill="#4CAF50"
     />
   </svg>
-)
+);
 
 export const OpennessIcon = () => (
   <svg
@@ -428,7 +428,7 @@ export const OpennessIcon = () => (
       fill="#F4F4F4"
     />
   </svg>
-)
+);
 export const AgileIcon = () => (
   <svg
     width="52"
@@ -437,7 +437,7 @@ export const AgileIcon = () => (
     fill="none"
     xmlns="http://www.w3.org/2000/svg"
   >
-    <g clip-path="url(#clip0_145_24)">
+    <g clipPath="url(#clip0_145_24)">
       <path
         d="M0.092041 43.2049C9.15194 43.2049 18.21 43.2176 27.2699 43.1995C33.8965 43.1868 39.5747 38.8994 41.3275 32.6395C43.5537 24.6843 38.2028 16.3867 29.9324 14.9721C29.7752 14.9449 29.6125 14.9467 29.3869 14.9304C29.3869 16.8377 29.3869 18.7269 29.3869 20.8117C25.151 17.3557 21.0518 14.0121 16.8769 10.6032C21.0259 7.21423 25.1177 3.87237 29.3222 0.439941C29.3222 2.55917 29.3222 4.56972 29.3222 6.61468C31.737 6.86646 33.989 7.39898 36.1523 8.28652C44.9921 11.9146 50.637 20.7103 50.1323 30.0856C49.5535 40.7977 41.3589 49.5897 30.513 51.0986C29.3056 51.267 28.0742 51.3395 26.8539 51.3431C17.9326 51.3648 9.01327 51.3558 0.092041 51.3558C0.092041 48.6388 0.092041 45.9218 0.092041 43.2049Z"
         fill="#4CAF50"
@@ -462,7 +462,7 @@ export const AgileIcon = () => (
       </clipPath>
     </defs>
   </svg>
-)
+);
 export const TransparencyIcon = () => (
   <svg
     width="40"
@@ -508,7 +508,7 @@ export const TransparencyIcon = () => (
       fill="#64BA67"
     />
   </svg>
-)
+);
 
 export const ExperienceIcon = () => (
   <svg
@@ -535,7 +535,7 @@ export const ExperienceIcon = () => (
       fill="#4CAF50"
     />
   </svg>
-)
+);
 export const ArrowForwardNew = () => (
   <svg
     width="13"
@@ -549,4 +549,4 @@ export const ArrowForwardNew = () => (
       fill="black"
     />
   </svg>
-)
+);
