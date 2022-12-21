@@ -1,9 +1,9 @@
-import React from 'react'
-import { StaticImage } from 'gatsby-plugin-image'
-import { Link } from 'gatsby'
-import CoverFlow from './organisms/CoverFlow'
-import Button from './atoms/Button'
-import { AroowTopRight, ArrowDown, ArrowUp } from '../utils/icons'
+import React from 'react';
+import { StaticImage } from 'gatsby-plugin-image';
+import { Link } from 'gatsby';
+import CoverFlow from './organisms/CoverFlow';
+import Button from './atoms/Button';
+import { AroowTopRight, ArrowDown, ArrowUp } from '../utils/icons';
 
 const navigation = [
   { name: 'Home', href: '/' },
@@ -18,11 +18,11 @@ const navigation = [
   },
   { name: 'Case Studies', href: '/case-studies' },
   { name: 'About Us', href: '/about' },
-]
+];
 
 const Nav = () => {
-  const [navOpen, setNavOpen] = React.useState(false)
-  const [openDropdown, setOpenDropdown] = React.useState(false)
+  const [navOpen, setNavOpen] = React.useState(false);
+  const [openDropdown, setOpenDropdown] = React.useState(false);
   return (
     <div className="">
       <nav className="container">
@@ -42,7 +42,7 @@ const Nav = () => {
               <Link
                 key={item.name}
                 to={item.href}
-                activeClassName="text-secondary-400"
+                activeClassName="activeClassNav"
                 className="group relative pb-2 font-sans font-bold text-[#d9d9d9] transition-colors duration-300 ease-in hover:text-secondary-400 lg:text-lg xl:text-xl"
               >
                 {item.name}
@@ -66,7 +66,7 @@ const Nav = () => {
               navOpen ? '-translate-y-px rotate-90' : ''
             }`}
             onClick={() => {
-              setNavOpen(!navOpen)
+              setNavOpen(!navOpen);
             }}
           >
             <span
@@ -115,7 +115,8 @@ const Nav = () => {
                       <Link
                         key={item.name}
                         to={item.href}
-                        className="text-lg font-bold  group-focus:text-secondary-400"
+                        className="text-lg font-bold flex-1 group-focus:text-secondary-400"
+                        activeClassName="text-secondary-400"
                       >
                         {item.name}
                       </Link>
@@ -140,7 +141,7 @@ const Nav = () => {
                       </div>
                     )}
                   </div>
-                )
+                );
             })}
             <div className="mt-auto mb-10 self-center justify-self-end">
               <Button name="GET PROJECT ESTIMATION" />
@@ -149,7 +150,7 @@ const Nav = () => {
         </div>
       </nav>
     </div>
-  )
-}
+  );
+};
 
-export default Nav
+export default Nav;
