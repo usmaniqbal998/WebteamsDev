@@ -36,7 +36,7 @@ const Nav = () => {
     <div className="">
       <nav className="container">
         <div className="relative z-30 flex items-center justify-between bg-primary-700 py-5 md:py-10">
-          <div className="lg:basis-1/4">
+          <div className="lg:basis-1/5">
             <Link to="/">
               <StaticImage
                 src="../images/logo.svg"
@@ -46,20 +46,20 @@ const Nav = () => {
             </Link>
           </div>
 
-          <div className="mx-auto hidden basis-1/2 lg:flex lg:min-w-0 lg:flex-1 lg:justify-center lg:gap-x-12">
+          <div className="mx-auto hidden basis-3/5 lg:flex lg:min-w-0 lg:flex-1 lg:justify-center lg:gap-x-12">
             {navigation.map((item) => (
-              <li className="list-none group pb-2  relative">
+              <li className="group relative list-none  pb-2">
                 <Link
                   key={item.name}
                   to={item.href}
                   activeClassName="activeClassNav"
-                  className="font-sans inline-flex font-bold text-[#d9d9d9] transition-colors duration-300 ease-in group-hover:text-secondary-400 lg:text-lg xl:text-xl"
+                  className="inline-flex font-sans font-bold text-[#d9d9d9] transition-colors duration-300 ease-in group-hover:text-secondary-400 lg:text-lg xl:text-xl"
                 >
                   {item.name}
                   {item.children && (
                     <Typography
                       variant="span"
-                      className="ml-4 mt-1 self-center group-hover:text-secondary-400 transition-colors duration-300 ease-in"
+                      className="ml-4 mt-1 self-center transition-colors duration-300 ease-in group-hover:text-secondary-400"
                     >
                       <CaretFillDown />
                     </Typography>
@@ -67,13 +67,13 @@ const Nav = () => {
                   <span className="absolute inset-x-1/2 bottom-0 border-b-2 border-transparent transition-all duration-300 ease-in group-hover:inset-x-3 group-hover:border-secondary-400" />
                 </Link>
                 {item.children && (
-                  <ul class="absolute hidden  mt-2  py-2 transition-all duration-500 ease-in flex bg-primary-600 rounded-sm flex-col group-hover:transition-all group-hover:duration-300 group-hover:ease-in group-hover:block">
+                  <ul class="absolute mt-2 hidden flex-col rounded-sm bg-primary-600 py-2 transition-all duration-500 ease-in group-hover:block group-hover:transition-all group-hover:duration-300 group-hover:ease-in">
                     {item.children.map((child, idx) => (
-                      <li className="list-none w-max">
+                      <li className="w-max list-none">
                         <Link
                           to={child.href}
                           key={idx}
-                          className="py-3 px-4 block transition-all duration-300 ease-in  text-md font-medium hover:text-secondary-400"
+                          className="block py-3 px-4 text-sm font-medium transition-all  duration-300 ease-in hover:text-secondary-400"
                         >
                           {child.name}
                         </Link>
@@ -84,7 +84,7 @@ const Nav = () => {
               </li>
             ))}
           </div>
-          <div className="hidden basis-1/4 justify-end lg:flex">
+          <div className="hidden basis-1/5 justify-end lg:flex">
             <Button
               type="button"
               className="flex h-[52px] w-[52px]  items-center justify-center rounded-full bg-white text-black transition-colors duration-300 ease-in hover:bg-secondary-400"
@@ -149,7 +149,7 @@ const Nav = () => {
                       <Link
                         key={item.name}
                         to={item.href}
-                        className="text-lg font-bold flex-1 group-focus:text-secondary-400"
+                        className="flex-1 text-lg font-bold group-focus:text-secondary-400"
                         activeClassName="text-secondary-400"
                       >
                         {item.name}

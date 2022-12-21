@@ -31,6 +31,7 @@ const Hero = () => {
             <Typography
               variant="span"
               className="gradientHeading block font-sans"
+              align="center"
             >
               Agile squads
             </Typography>
