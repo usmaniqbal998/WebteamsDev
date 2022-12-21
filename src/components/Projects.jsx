@@ -5,7 +5,7 @@ import CaseStudyPost from './organisms/CaseStudyPost'
 
 const Projects = ({ id, data }) => {
   return (
-    <div id={`projects-${id}`} className="py-16 md:py-20 lg:py-24">
+    <div id={`projects-${id}`} className="pt-16 md:pt-20 lg:pt-24">
       <Typography variant="h2" className="pb-2 lg:pb-4">
         Case Studies
       </Typography>
