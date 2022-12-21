@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react'
 
 export const ArrowRightIcon = () => (
   <svg
@@ -15,7 +15,7 @@ export const ArrowRightIcon = () => (
       d="M17.25 8.25L21 12m0 0l-3.75 3.75M21 12H3"
     />
   </svg>
-);
+)
 export const CursorIcon = () => (
   <svg
     width="18"
@@ -53,7 +53,7 @@ export const CursorIcon = () => (
       fill="#4CAF50"
     />
   </svg>
-);
+)
 
 export const PlayIcon = () => (
   <svg
@@ -101,7 +101,7 @@ export const PlayIcon = () => (
       </filter>
     </defs>
   </svg>
-);
+)
 
 export const CaretDown = () => (
   <svg
@@ -116,7 +116,7 @@ export const CaretDown = () => (
       fill="#999999"
     />
   </svg>
-);
+)
 
 export const CaretUp = () => (
   <svg
@@ -132,7 +132,7 @@ export const CaretUp = () => (
       fill="#999999"
     />
   </svg>
-);
+)
 
 export const ImgBorder = () => (
   <svg
@@ -153,7 +153,7 @@ export const ImgBorder = () => (
       strokeWidth="5"
     />
   </svg>
-);
+)
 
 export const ArrowForward = () => (
   <svg
@@ -170,7 +170,7 @@ export const ArrowForward = () => (
       d="M17.25 8.25L21 12m0 0l-3.75 3.75M21 12H3"
     />
   </svg>
-);
+)
 
 export const ArrowUp = () => (
   <svg
@@ -193,7 +193,7 @@ export const ArrowUp = () => (
       strokeLinecap="round"
     />
   </svg>
-);
+)
 
 export const ArrowDown = () => (
   <svg
@@ -216,7 +216,7 @@ export const ArrowDown = () => (
       strokeLinecap="round"
     />
   </svg>
-);
+)
 
 export const AroowTopRight = () => (
   <svg
@@ -231,7 +231,7 @@ export const AroowTopRight = () => (
       fill="black"
     />
   </svg>
-);
+)
 export const PeopleIcon = () => (
   <svg
     width="58"
@@ -265,7 +265,7 @@ export const PeopleIcon = () => (
       fill="white"
     />
   </svg>
-);
+)
 
 export const GrowthIcon = () => (
   <svg
@@ -296,7 +296,7 @@ export const GrowthIcon = () => (
       fill="white"
     />
   </svg>
-);
+)
 export const EvolveIcon = () => (
   <svg
     width="62"
@@ -342,7 +342,7 @@ export const EvolveIcon = () => (
       fill="white"
     />
   </svg>
-);
+)
 
 export const FairPlayIcon = () => (
   <svg
@@ -373,7 +373,7 @@ export const FairPlayIcon = () => (
       fill="#4CAF50"
     />
   </svg>
-);
+)
 
 export const OpennessIcon = () => (
   <svg
@@ -428,7 +428,7 @@ export const OpennessIcon = () => (
       fill="#F4F4F4"
     />
   </svg>
-);
+)
 export const AgileIcon = () => (
   <svg
     width="52"
@@ -462,7 +462,7 @@ export const AgileIcon = () => (
       </clipPath>
     </defs>
   </svg>
-);
+)
 export const TransparencyIcon = () => (
   <svg
     width="40"
@@ -508,7 +508,7 @@ export const TransparencyIcon = () => (
       fill="#64BA67"
     />
   </svg>
-);
+)
 
 export const ExperienceIcon = () => (
   <svg
@@ -535,7 +535,7 @@ export const ExperienceIcon = () => (
       fill="#4CAF50"
     />
   </svg>
-);
+)
 export const ArrowForwardNew = () => (
   <svg
     width="13"
@@ -549,4 +549,19 @@ export const ArrowForwardNew = () => (
       fill="black"
     />
   </svg>
-);
+)
+
+export const CaretFillDown = () => (
+  <svg
+    width="11"
+    height="8"
+    viewBox="0 0 11 8"
+    fill="none"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <path
+      d="M5.58615 7.59953C5.38674 7.87876 4.97176 7.87876 4.77236 7.59953L0.387856 1.45989C0.151522 1.12895 0.38809 0.669311 0.794752 0.669311L9.56376 0.669311C9.97042 0.669311 10.207 1.12895 9.97065 1.45989L5.58615 7.59953Z"
+      fill="currentColor"
+    />
+  </svg>
+)

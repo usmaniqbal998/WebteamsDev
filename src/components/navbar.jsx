@@ -1,9 +1,15 @@
-import React from 'react';
-import { StaticImage } from 'gatsby-plugin-image';
-import { Link } from 'gatsby';
-import CoverFlow from './organisms/CoverFlow';
-import Button from './atoms/Button';
-import { AroowTopRight, ArrowDown, ArrowUp } from '../utils/icons';
+import React from 'react'
+import { StaticImage } from 'gatsby-plugin-image'
+import { Link } from 'gatsby'
+import CoverFlow from './organisms/CoverFlow'
+import Button from './atoms/Button'
+import {
+  AroowTopRight,
+  ArrowDown,
+  ArrowUp,
+  CaretFillDown,
+} from '../utils/icons'
+import Typography from './atoms/Text'
 
 const navigation = [
   { name: 'Home', href: '/' },
@@ -11,18 +17,21 @@ const navigation = [
     name: 'Services',
     href: '#',
     children: [
-      { name: 'Web App Development', href: '#' },
-      { name: 'Mobile App Development', href: '#' },
-      { name: 'Ui/Ux Design', href: '#' },
+      { name: 'Ui/Ux Design', href: '/services/ui-ux-design' },
+      { name: 'Web App Development', href: '/services/web-app-development' },
+      {
+        name: 'Mobile App Development',
+        href: '/services/mobile-app-development',
+      },
     ],
   },
   { name: 'Case Studies', href: '/case-studies' },
   { name: 'About Us', href: '/about' },
-];
+]
 
 const Nav = () => {
-  const [navOpen, setNavOpen] = React.useState(false);
-  const [openDropdown, setOpenDropdown] = React.useState(false);
+  const [navOpen, setNavOpen] = React.useState(false)
+  const [openDropdown, setOpenDropdown] = React.useState(false)
   return (
     <div className="">
       <nav className="container">
@@ -39,15 +48,40 @@ const Nav = () => {
 
           <div className="mx-auto hidden basis-1/2 lg:flex lg:min-w-0 lg:flex-1 lg:justify-center lg:gap-x-12">
             {navigation.map((item) => (
-              <Link
-                key={item.name}
-                to={item.href}
-                activeClassName="activeClassNav"
-                className="group relative pb-2 font-sans font-bold text-[#d9d9d9] transition-colors duration-300 ease-in hover:text-secondary-400 lg:text-lg xl:text-xl"
-              >
-                {item.name}
-                <span className="absolute inset-x-1/2 bottom-0 border-b-2 border-transparent transition-all duration-300 ease-in group-hover:inset-x-3 group-hover:border-secondary-400" />
-              </Link>
+              <li className="list-none group pb-2  relative">
+                <Link
+                  key={item.name}
+                  to={item.href}
+                  activeClassName="activeClassNav"
+                  className="font-sans inline-flex font-bold text-[#d9d9d9] transition-colors duration-300 ease-in group-hover:text-secondary-400 lg:text-lg xl:text-xl"
+                >
+                  {item.name}
+                  {item.children && (
+                    <Typography
+                      variant="span"
+                      className="ml-4 mt-1 self-center group-hover:text-secondary-400 transition-colors duration-300 ease-in"
+                    >
+                      <CaretFillDown />
+                    </Typography>
+                  )}
+                  <span className="absolute inset-x-1/2 bottom-0 border-b-2 border-transparent transition-all duration-300 ease-in group-hover:inset-x-3 group-hover:border-secondary-400" />
+                </Link>
+                {item.children && (
+                  <ul class="absolute hidden  mt-2  py-2 transition-all duration-500 ease-in flex bg-primary-600 rounded-sm flex-col group-hover:transition-all group-hover:duration-300 group-hover:ease-in group-hover:block">
+                    {item.children.map((child, idx) => (
+                      <li className="list-none w-max">
+                        <Link
+                          to={child.href}
+                          key={idx}
+                          className="py-3 px-4 block transition-all duration-300 ease-in  text-md font-medium hover:text-secondary-400"
+                        >
+                          {child.name}
+                        </Link>
+                      </li>
+                    ))}
+                  </ul>
+                )}
+              </li>
             ))}
           </div>
           <div className="hidden basis-1/4 justify-end lg:flex">
@@ -66,7 +100,7 @@ const Nav = () => {
               navOpen ? '-translate-y-px rotate-90' : ''
             }`}
             onClick={() => {
-              setNavOpen(!navOpen);
+              setNavOpen(!navOpen)
             }}
           >
             <span
@@ -141,7 +175,7 @@ const Nav = () => {
                       </div>
                     )}
                   </div>
-                );
+                )
             })}
             <div className="mt-auto mb-10 self-center justify-self-end">
               <Button name="GET PROJECT ESTIMATION" />
@@ -150,7 +184,7 @@ const Nav = () => {
         </div>
       </nav>
     </div>
-  );
-};
+  )
+}
 
-export default Nav;
+export default Nav
