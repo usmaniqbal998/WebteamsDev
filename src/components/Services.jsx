@@ -1,13 +1,12 @@
-import { GatsbyImage, StaticImage, getImage } from 'gatsby-plugin-image'
-import React from 'react'
-import Button from './atoms/Button'
-
-import { TabGroup } from '@statikly/funk'
-import Section from './organisms/Section'
-import { graphql, useStaticQuery } from 'gatsby'
-import Typography from './atoms/Text'
+import { GatsbyImage, StaticImage, getImage } from 'gatsby-plugin-image';
+import React from 'react';
+import Button from './atoms/Button';
+import Section from './organisms/Section';
+import { graphql, useStaticQuery } from 'gatsby';
+import Typography from './atoms/Text';
 
 const Services = () => {
+  const [openTab, setOpenTab] = React.useState(1);
   const data = useStaticQuery(graphql`
     query {
       projectui: file(relativePath: { eq: "services/project-ui-ux.png" }) {
@@ -47,7 +46,41 @@ const Services = () => {
         }
       }
     }
-  `)
+  `);
+  const services = [
+    {
+      id: 1,
+      title: 'Product UI/UX Design',
+      href: 'ui-ux',
+      image: data.projectui,
+      content:
+        'Every squad have top-notch dedicated product designers that understand your users and business and create beautiful userinterfaces accordingly',
+    },
+    {
+      id: 2,
+      title: 'Mobile and Web App Development',
+      href: 'mobile-web',
+      image: data.webmobile,
+      content:
+        'Every squad have top-notch dedicated product designers that understand your users and business and create beautiful userinterfaces accordingly',
+    },
+    {
+      id: 3,
+      title: 'Cloud Engineering and Dev Ops',
+      href: 'cloud',
+      image: data.cloud,
+      content:
+        'Every squad have top-notch dedicated product designers that understand your users and business and create beautiful userinterfaces accordingly',
+    },
+    {
+      id: 4,
+      title: 'Quality Assurance and Testing',
+      href: 'qa',
+      image: data.qa,
+      content:
+        'Every squad have top-notch dedicated product designers that understand your users and business and create beautiful userinterfaces accordingly',
+    },
+  ];
   return (
     <Section>
       <div className="grid grid-cols-1  gap-8 lg:grid-cols-5">
@@ -65,104 +98,46 @@ const Services = () => {
         </div>
       </div>
       <div className="mt-10 grid grid-cols-1 items-center gap-10 md:mt-20 lg:grid-cols-2">
-        <TabGroup numTabs={4} direction={TabGroup.direction.VERTICAL}>
-          <TabGroup.TabList>
-            <TabGroup.Tab
-              index={0}
-              className="tab-pane"
-              activeClassName="bg-[#2a2a2a]"
-              inactiveClassName="bg-transparent"
+        <ul className="flex mb-0 list-none flex-col" role="tablist">
+          {services.map((item) => (
+            <li
+              className={
+                'grow border border-primary-200 outline-none  lg:text-left text-xl font-bold w-full lg:text-[40px] lg:leading-[120%] hover:bg-[#2a2a2a] focus:bg-[#2a2a2a] ' +
+                (openTab === item.id ? 'bg-[#2a2a2a]' : 'bg-transparent')
+              }
             >
-              Product UI/UX Design
-            </TabGroup.Tab>
-            <TabGroup.Tab
-              index={1}
-              className="tab-pane"
-              activeClassName="bg-[#2a2a2a]"
-              inactiveClassName="bg-transparent"
-            >
-              Mobile and Web App Development
-            </TabGroup.Tab>
-            <TabGroup.Tab
-              index={2}
-              className="tab-pane"
-              activeClassName="bg-[#2a2a2a]"
-              inactiveClassName="bg-transparent"
-            >
-              Cloud Engineering and Dev Ops
-            </TabGroup.Tab>
-            <TabGroup.Tab
-              index={3}
-              className="tab-pane"
-              activeClassName="bg-[#2a2a2a]"
-              inactiveClassName="bg-transparent"
-            >
-              Quality Assurance and Testing
-            </TabGroup.Tab>
-          </TabGroup.TabList>
-          <TabGroup.TabPanel
-            activeClassName="flex flex-col items-center justify-center gap-10"
-            inactiveClassName="hidden"
-            index={0}
+              <a
+                className="px-10 py-6 block lg:px-20 md:py-10"
+                onClick={(e) => {
+                  e.preventDefault();
+                  setOpenTab(item.id);
+                }}
+                data-toggle="tab"
+                href={`#${item.href}`}
+                role="tablist"
+              >
+                {item.title}
+              </a>
+            </li>
+          ))}
+        </ul>
+        {services.map((item) => (
+          <div
+            className={`${
+              openTab == item.id ? 'flex' : 'hidden'
+            } flex-col items-center justify-center gap-10`}
+            id={item.href}
           >
-            <GatsbyImage image={getImage(data.projectui)} alt="Project Ui/Ux" />
-
+            <GatsbyImage image={getImage(item.image)} alt={item.title} />
             <Typography variant="p" align="center">
-              Every squad have top-notch dedicated product designers that
-              understand your users and business and create beautiful user
-              interfaces accordingly
+              {item.content}
             </Typography>
             <Button name="GET PROJECT ESTIMATION" />
-          </TabGroup.TabPanel>
-          <TabGroup.TabPanel
-            activeClassName="flex flex-col items-center justify-center gap-10"
-            inactiveClassName="hidden"
-            index={1}
-          >
-            <GatsbyImage
-              image={getImage(data.webmobile)}
-              alt="Web and Mobile App Development"
-            />
-
-            <Typography variant="p" align="center">
-              Every squad have top-notch dedicated product designers that
-              understand your users and business and create beautiful user
-              interfaces accordingly
-            </Typography>
-            <Button name="GET PROJECT ESTIMATION" />
-          </TabGroup.TabPanel>
-          <TabGroup.TabPanel
-            activeClassName="flex flex-col items-center justify-center gap-10"
-            inactiveClassName="hidden"
-            index={2}
-          >
-            <GatsbyImage image={getImage(data.cloud)} alt="Cloud Engineering" />
-
-            <Typography variant="p" align="center">
-              Every squad have top-notch dedicated product designers that
-              understand your users and business and create beautiful user
-              interfaces accordingly
-            </Typography>
-            <Button name="GET PROJECT ESTIMATION" />
-          </TabGroup.TabPanel>
-          <TabGroup.TabPanel
-            activeClassName="flex flex-col items-center justify-center gap-10"
-            inactiveClassName="hidden"
-            index={3}
-          >
-            <GatsbyImage image={getImage(data.qa)} alt="QA" />
-
-            <Typography variant="p" align="center">
-              Every squad have top-notch dedicated product designers that
-              understand your users and business and create beautiful user
-              interfaces accordingly
-            </Typography>
-            <Button name="GET PROJECT ESTIMATION" />
-          </TabGroup.TabPanel>
-        </TabGroup>
+          </div>
+        ))}
       </div>
     </Section>
-  )
-}
+  );
+};
 
-export default Services
+export default Services;

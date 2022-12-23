@@ -9,15 +9,7 @@ const CaseStudyPost = ({ title, content, img }) => {
   return (
     <div className="flex flex-col gap-5 md:gap-8">
       <div className="w-full">
-        {img ? (
-          <GatsbyImage image={image} title={title} />
-        ) : (
-          <StaticImage
-            src="../../images/caseStudies/task-mgmt.png"
-            alt="Default"
-            width={500}
-          />
-        )}
+        {img && <GatsbyImage image={image} alt={title} />}
       </div>
 
       <div>

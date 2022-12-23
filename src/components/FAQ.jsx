@@ -1,7 +1,7 @@
-import React from 'react'
-import AccordionUI from './organisms/AccordionUI'
-import Section from './organisms/Section'
-import Typography from './atoms/Text'
+import React from 'react';
+import AccordionUI from './organisms/AccordionUI';
+import Section from './organisms/Section';
+import Typography from './atoms/Text';
 const data = [
   {
     id: 1,
@@ -26,29 +26,27 @@ const data = [
     answer:
       ' a visual object or experience consciously created through an expression of skill or imagination.',
   },
-]
+];
 
 const FAQ = () => {
-  const [Index, setIndex] = React.useState(false)
+  const [Index, setIndex] = React.useState(0);
   return (
     <Section>
       <Typography variant="h3">FAQ</Typography>
       <div className="mt-5 md:mt-10">
-        {data.map((data) => {
-          return (
-            <AccordionUI
-              title={data.question}
-              key={data.id}
-              Id={data.id}
-              children={data.answer}
-              Index={Index}
-              setIndex={setIndex}
-            />
-          )
-        })}
+        {data.map((data) => (
+          <AccordionUI
+            title={data.question}
+            key={data.id}
+            Id={data.id}
+            children={data.answer}
+            Index={Index}
+            setIndex={setIndex}
+          />
+        ))}
       </div>
     </Section>
-  )
-}
+  );
+};
 
-export default FAQ
+export default FAQ;
