@@ -14,7 +14,7 @@ const ValuesClass =
 
 const Values = ({ id = 'about' }) => {
   return (
-    <div id={`process-${id}`} className="py-16 md:py-20 lg:py-24">
+    <div id={`process-${id}`} className="pt-16 md:pt-20 lg:pt-24">
       <Typography variant="h2" className="pb-4 lg:pb-8 ">
         Our Core Values
       </Typography>

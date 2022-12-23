@@ -4,13 +4,7 @@ import InfoBox from './organisms/InfoBox'
 import Typography from './atoms/Text'
 
 const HeadingwithTwoColGridSection = (props) => {
-  const {
-    data,
-    color = 'white',
-    className = 'py-16 md:py-20 lg:py-24',
-    heading,
-    contentBoxClass,
-  } = props
+  const { data, color = 'white', className, heading, contentBoxClass } = props
   return (
     <div className={className}>
       <Typography variant="h3" color={color} className="pb-4 md:pb-8">

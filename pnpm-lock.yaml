@@ -1,7 +1,6 @@
 lockfileVersion: 5.4
 
 specifiers:
-  '@statikly/funk': ^0.3.1
   contentful: ^9.1.33
   cssnano: ^5.1.11
   eslint: ^8.0.0
@@ -27,7 +26,6 @@ specifiers:
   tailwindcss: ^3.0.24
 
 dependencies:
-  '@statikly/funk': 0.3.1_react@18.1.0
   contentful: 9.1.33
   formik: 2.2.9_react@18.1.0
   framer-motion: 7.10.3_ef5jwxihqo6n7gxfmzogljlgcm
@@ -2602,18 +2600,6 @@ packages:
     dependencies:
       escape-string-regexp: 2.0.0
       lodash.deburr: 4.1.0
-
-  /@statikly/funk/0.3.1_react@18.1.0:
-    resolution: {integrity: sha512-WTZCiK31fwAL5zu/GjJJFE9Bc1lTLw4PpDJD6u4ASC7kkMG7xp4EG0lC3wxhwx9UbmfbdnrHCgT+Ro1+qnU1ZA==}
-    engines: {node: '>=10'}
-    peerDependencies:
-      react: '>=16'
-    dependencies:
-      react: 18.1.0
-      react-uid: 2.3.2_react@18.1.0
-    transitivePeerDependencies:
-      - '@types/react'
-    dev: false
 
   /@swc/helpers/0.4.14:
     resolution: {integrity: sha512-4C7nX/dvpzB7za4Ql9K81xK3HPxCpHMgwTZVyf+9JQ6VUbn9jjZVN7/Nkdz/Ugzs2CSjqnL/UPXroiVBVHUWUw==}
@@ -9991,20 +9977,6 @@ packages:
       neo-async: 2.6.2
       react: 18.1.0
       webpack: 5.73.0
-
-  /react-uid/2.3.2_react@18.1.0:
-    resolution: {integrity: sha512-oeaoT4YOjsqHdrEJoO8SONNNBsoGh7AJPbsNqRK6Dv8UMdctWxA4ncj9gAA/Odki5g0GZaDSR7HydBJ8HxwgNg==}
-    engines: {node: '>=12'}
-    peerDependencies:
-      '@types/react': ^16.8.0 || ^17.0.0 || ^18.0.0
-      react: ^16.8.0 || ^17.0.0 || ^18.0.0
-    peerDependenciesMeta:
-      '@types/react':
-        optional: true
-    dependencies:
-      react: 18.1.0
-      tslib: 2.4.0
-    dev: false
 
   /react/18.1.0:
     resolution: {integrity: sha512-4oL8ivCz5ZEPyclFQXaNksK3adutVS8l2xzZU0cqEFrE9Sb7fC0EFK5uEk74wIreL1DERyjvsU915j1pcT2uEQ==}
