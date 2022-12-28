@@ -1,14 +1,22 @@
 import React from 'react'
 import Typography from '../atoms/Text'
 import { PlayIcon } from '../../utils/icons'
-import Button from '../atoms/Button'
+import { motion } from 'framer-motion'
 
 const WatchVideo = () => {
   return (
     <div className="flex flex-col items-center justify-center gap-4 md:flex-row md:pl-20">
-      <Button className="">
+      <motion.button
+        animate={{ scale: 1.1 }}
+        transition={{
+          ease: 'linear',
+          duration: 1.5,
+          repeat: Infinity,
+          repeatType: 'reverse',
+        }}
+      >
         <PlayIcon />
-      </Button>
+      </motion.button>
       <Typography variant="p" className="relative  text-xl italic text-white">
         Watch Video
         <Typography

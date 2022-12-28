@@ -23,7 +23,7 @@ const Values = ({ id = 'about' }) => {
         think of these values as important for our culture and achieving an
         individual sense of accomplishment
       </Typography>
-      <div className="mt-4 grid grid-cols-1 gap-y-6 md:mt-8 md:gap-y-10 ">
+      <div className="mt-8 grid grid-cols-1 gap-y-6 md:mt-8 md:gap-y-10 ">
         <InfoBox
           className={ValuesClass}
           title="People"

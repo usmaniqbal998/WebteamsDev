@@ -1,16 +1,16 @@
-import * as React from 'react';
-import Hero from '../components/ hero';
-import CTA from '../components/CTA';
-import FAQ from '../components/FAQ';
-import PageLayout from '../components/pagelayout';
-import Services from '../components/Services';
-import StaffWorked from '../components/StaffWorked';
-import Technologies from '../components/Technologies';
-import WhyChooseUs from '../components/WhyChooseUs';
+import * as React from 'react'
+import Hero from '../components/ hero'
+import CTA from '../components/CTA'
+import FAQ from '../components/FAQ'
+import Services from '../components/Services'
+import StaffWorked from '../components/StaffWorked'
+import Technologies from '../components/Technologies'
+import WhyChooseUs from '../components/WhyChooseUs'
+import { SEO } from '../components/SEO'
 
 const IndexPage = () => {
   return (
-    <PageLayout>
+    <>
       <Hero />
       <StaffWorked />
       <Services />
@@ -18,8 +18,10 @@ const IndexPage = () => {
       <Technologies />
       <FAQ />
       <CTA />
-    </PageLayout>
-  );
-};
+    </>
+  )
+}
 
-export default IndexPage;
+export default IndexPage
+
+export const Head = () => <SEO />

@@ -2,12 +2,12 @@ import React from 'react'
 import CaseStudyPost from '../components/organisms/CaseStudyPost'
 import PageHeading from '../components/molecules/PageHeading'
 import Section from '../components/organisms/Section'
-import PageLayout from '../components/pagelayout'
 import { graphql } from 'gatsby'
+import { SEO } from '../components/SEO'
 
 const caseStudies = ({ data }) => {
   return (
-    <PageLayout>
+    <>
       <PageHeading
         topText="Case"
         bottomText="Studies"
@@ -27,7 +27,7 @@ const caseStudies = ({ data }) => {
           ))}
         </div>
       </Section>
-    </PageLayout>
+    </>
   )
 }
 
@@ -53,3 +53,4 @@ export const query = graphql`
     }
   }
 `
+export const Head = () => <SEO title="Contact Us" />

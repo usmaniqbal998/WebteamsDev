@@ -13,7 +13,7 @@ const CaseStudyPost = ({ title, content, img }) => {
       </div>
 
       <div>
-        <Typography variant="h5" className="mb-2">
+        <Typography variant="h5" className="mb-2" color="secondary-400">
           {title}
         </Typography>
         <Typography variant="p">{content}</Typography>

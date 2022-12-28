@@ -8,7 +8,8 @@ html {
   color: #fff;
   scroll-behavior: smooth;
 }
-* {
+*,
+button {
   cursor: none;
 }
 
@@ -38,8 +39,8 @@ html {
   );
 }
 .coverFlowImage {
-  height: 175px;
-  /* width: 250px; */
+  height: 187px;
+  /* width: 245px; */
   object-position: top;
   object-fit: cover;
 }
@@ -85,10 +86,10 @@ html {
     @apply flex items-center justify-between gap-x-8 gap-y-16 lg:flex-col lg:items-start;
   }
   .activeClassNav {
-    @apply text-secondary-400 !important
+    @apply text-secondary-400 !important;
   }
   .activeClassNav span {
-    @apply inset-x-3 border-secondary-400
+    @apply inset-x-3 border-secondary-400 visible opacity-100;
   }
   .brief h3 {
     @apply font-emphasis order-1 md:order-2 text-4xl mb-4 md:mb-8 font-bold leading-[47px] text-white md:text-5xl md:leading-[62px];

@@ -25,7 +25,7 @@ const Typography = ({
   return (
     <Component
       // eslint-disable-next-line tailwindcss/no-custom-classname
-      className={`text-${color} text-${align} ${className}`}
+      className={`text-${color} text-${align} ${className || ''}`}
       {...rest}
     >
       {children}

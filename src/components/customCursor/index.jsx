@@ -1,42 +1,47 @@
-import React, { useContext, useEffect } from 'react';
-import CustomCursorContext from './context/CustomCursorContext';
-import { motion, useMotionValue, useSpring } from 'framer-motion';
-import { CursorIcon } from '../../utils/icons';
+import React, { useContext, useEffect, useState } from 'react'
+import CustomCursorContext from './context/CustomCursorContext'
+import { motion } from 'framer-motion'
+import { CursorIcon } from '../../utils/icons'
 
 const CustomCursor = () => {
-  const { type } = useContext(CustomCursorContext);
-  const cursorX = useMotionValue(-100);
-  const cursorY = useMotionValue(-100);
-
-  const springConfig = { damping: 25, stiffness: 700 };
-  const cursorXSpring = useSpring(cursorX, springConfig);
-  const cursorYSpring = useSpring(cursorY, springConfig);
+  const { type } = useContext(CustomCursorContext)
+  const [mousePosition, setMousePosition] = useState({
+    x: 0,
+    y: 0,
+  })
 
   useEffect(() => {
-    const moveCursor = (e) => {
-      cursorX.set(e.clientX - 16);
-      cursorY.set(e.clientY - 16);
-    };
+    const mouseMove = (e) => {
+      setMousePosition({
+        x: e.clientX,
+        y: e.clientY,
+      })
+    }
 
-    window.addEventListener('mousemove', moveCursor);
+    window.addEventListener('mousemove', mouseMove)
 
     return () => {
-      window && window.removeEventListener('mousemove', moveCursor);
-    };
-  }, []);
+      window.removeEventListener('mousemove', mouseMove)
+    }
+  }, [])
 
+  const variants = {
+    default: {
+      x: mousePosition.x - 16,
+      y: mousePosition.y - 16,
+    },
+  }
   return (
     <motion.div
       // eslint-disable-next-line tailwindcss/no-custom-classname
-      className={`cursor-${type} border-primary-50ß pointer-events-none fixed left-0 top-0 z-50 flex h-8 w-8 items-center  justify-center rounded-full border-[0.5px]`}
-      style={{
-        translateX: cursorXSpring,
-        translateY: cursorYSpring,
-      }}
+      className={`mix-blend-differnece pointer-events-none fixed left-0 top-0 z-50 flex  h-8 w-8 items-center  justify-center rounded-full border-[0.5px] border-primary-500`}
+      variants={variants}
+      animate={type}
+      transition={{ ease: [0.17, 0.67, 0.83, 0.67] }}
     >
       <CursorIcon />
     </motion.div>
-  );
-};
+  )
+}
 
-export default CustomCursor;
+export default CustomCursor

@@ -3,8 +3,9 @@ import Footer from './footer'
 import Nav from './navbar'
 import CustomCursorManager from './customCursor/context/manager'
 import CustomCursor from './customCursor'
+import '../styles/global.css'
 
-const PageLayout = ({ children }) => {
+export default function Layout({ children }) {
   return (
     <CustomCursorManager>
       <CustomCursor />
@@ -14,5 +15,3 @@ const PageLayout = ({ children }) => {
     </CustomCursorManager>
   )
 }
-
-export default PageLayout

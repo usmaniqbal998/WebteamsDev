@@ -1,6 +1,7 @@
 module.exports = {
   siteMetadata: {
     title: `Webteams`,
+    image: `/images/logo.svg`,
     siteUrl: `https://www.yourdomain.tld`,
   },
   plugins: [

@@ -1,5 +1,4 @@
 import React from 'react'
-import PageLayout from '../components/pagelayout'
 import SideNav from '../components/organisms/SideNav'
 import SideNavContent from '../components/SideNavContent'
 import Section from '../components/organisms/Section'
@@ -9,6 +8,7 @@ import Projects from '../components/Projects'
 import Brief from '../components/Brief'
 import DesignProcess from '../components/DesignProcess'
 import { GatsbyImage, getImage } from 'gatsby-plugin-image'
+import { SEO } from '../components/SEO'
 
 const ServiceDetails = ({ data }) => {
   const { html } = data.markdownRemark
@@ -29,7 +29,7 @@ const ServiceDetails = ({ data }) => {
 
   const image = getImage(imgPath)
   return (
-    <PageLayout>
+    <>
       <PageHeading
         topText={topTitle}
         bottomText={bottomTitle}
@@ -38,7 +38,7 @@ const ServiceDetails = ({ data }) => {
         buttonText="REACH OUT NOW"
       />
       <Section>
-        <div className="grid grid-cols-1 gap-20 lg:grid-cols-12 lg:gap-2">
+        <div className="grid grid-cols-1 gap-20 lg:grid-cols-12 lg:gap-0.5">
           <SideNav id={slug} />
           <SideNavContent>
             <Brief
@@ -53,7 +53,7 @@ const ServiceDetails = ({ data }) => {
                   dangerouslySetInnerHTML={{ __html: html }}
                 />
                 {imgPath && (
-                  <div className="order-2 w-full  md:order-1 md:basis-1/4">
+                  <div className="order-2 w-full  px-8 md:order-1 md:basis-1/4 md:px-0">
                     <GatsbyImage image={image} alt={title} />
                   </div>
                 )}
@@ -69,11 +69,15 @@ const ServiceDetails = ({ data }) => {
           </SideNavContent>
         </div>
       </Section>
-    </PageLayout>
+    </>
   )
 }
 
 export default ServiceDetails
+
+export const Head = ({ data }) => (
+  <SEO title={data.markdownRemark.frontmatter.title} />
+)
 
 export const query = graphql`
   query ServiceDetails($slug: String) {
@@ -101,7 +105,12 @@ export const query = graphql`
           title
           imgurl {
             childImageSharp {
-              gatsbyImageData(width: 40)
+              gatsbyImageData(
+                width: 50
+                placeholder: BLURRED
+                blurredOptions: { width: 40 }
+                formats: [AUTO, WEBP, AVIF]
+              )
             }
           }
         }
@@ -111,9 +120,10 @@ export const query = graphql`
           imgPath {
             childImageSharp {
               gatsbyImageData(
-                width: 500
+                width: 650
                 placeholder: BLURRED
                 blurredOptions: { width: 100 }
+                formats: [AUTO, WEBP, AVIF]
               )
             }
           }
