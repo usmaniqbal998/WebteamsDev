@@ -3,6 +3,9 @@ import { StaticImage } from 'gatsby-plugin-image'
 import React from 'react'
 import SocialLinks from './organisms/SocialLinks'
 import Typography from './atoms/Text'
+import Button from './atoms/Button'
+import { EnvelopeIcon } from '../utils/icons'
+import { LogoFooter } from '../utils/Logo'
 
 const FooterHead = ({ title }) => (
   <Typography variant="h5" className="mb-3 text-xl text-[#878787]">
@@ -25,10 +28,7 @@ const Footer = () => {
         <div className="pt-10 md:pt-20">
           <div className="mb-5 md:mb-10">
             <Link to="/">
-              <StaticImage
-                src="../images/logo-footer.svg"
-                alt="Logo Web Teams"
-              />
+              <LogoFooter />
             </Link>
           </div>
           <div className="grid grid-cols-2 gap-10 lg:grid-cols-8">
@@ -61,16 +61,22 @@ const Footer = () => {
               <FooterHead title="Company" />
               <div className="mt-5 flex flex-col gap-5">
                 <FooterLinks url="#" name="Privacy Policy" />
-                <FooterLinks url="#" name="About Us" />
-                <FooterLinks url="#" name="Case Study" />
+                <FooterLinks url="/about" name="About Us" />
+                <FooterLinks url="/case-studies" name="Case Study" />
               </div>
             </div>
             <div className="order-2 lg:order-3 lg:col-span-2">
               <FooterHead title="Services" />
               <div className="mt-5 flex flex-col gap-5">
-                <FooterLinks url="#" name="Web App Development" />
-                <FooterLinks url="#" name="Mobile App Development" />
-                <FooterLinks url="#" name="Ui/Ux Design" />
+                <FooterLinks
+                  url="/services/web-app-development"
+                  name="Web App Development"
+                />
+                <FooterLinks
+                  url="/services/mobile-app-development"
+                  name="Mobile App Development"
+                />
+                <FooterLinks url="/services/ui-ux-design" name="Ui/Ux Design" />
               </div>
             </div>
             <div className="order-4 col-span-2">
@@ -80,13 +86,18 @@ const Footer = () => {
               >
                 Subscribe to our newsletter
               </Typography>
-              <input
-                type="text"
-                className="w-full rounded-md bg-[#222222] px-5 py-3 text-xl outline-none"
-              />
+              <div className="relative">
+                <input
+                  type="text"
+                  className="w-full rounded-md bg-[#222222] py-3 pl-5 pr-14 text-xl outline-none"
+                />
+                <Button className="absolute right-0 rounded-md bg-secondary-400 p-3">
+                  <EnvelopeIcon />
+                </Button>
+              </div>
             </div>
           </div>
-          <div className="my-5 text-center  md:my-10">
+          <div className="my-8 text-center  md:my-10">
             <SocialLinks />
             <Typography
               variant="p"

@@ -8,7 +8,7 @@ specifiers:
   eslint-plugin-tailwindcss: ^3.6.0
   formik: ^2.2.9
   framer-motion: ^7.10.2
-  gatsby: ^4.15.2
+  gatsby: ^4.19.0
   gatsby-plugin-google-fonts: ^1.0.1
   gatsby-plugin-image: ^2.20.0
   gatsby-plugin-pnpm: ^1.2.10

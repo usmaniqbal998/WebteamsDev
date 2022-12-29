@@ -1,6 +1,7 @@
 ---
 topTitle: Ui/Ux
 bottomTitle: Design
+title: Ui/Ux Design
 slug: ui-ux-design
 content: Looking for award-winning design teams? look no more!
 description: We Craft delightful UX for your digital products
@@ -68,7 +69,6 @@ caseStudies:
       title: 'Multi-Coffee Shops Dashboard & App',
       content: 'Owner of multi coffee shops can manage sales, inventory and staff through a single dashboard.',
     }
-
 ---
 
 ### Stand out from the Crowd

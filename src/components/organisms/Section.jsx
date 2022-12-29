@@ -1,10 +1,11 @@
 import React from 'react'
 
-const Section = ({ children }) => {
+const Section = ({ children, bgColor = 'current' }) => {
   return (
-    <section>
+    // eslint-disable-next-line tailwindcss/no-custom-classname
+    <section className={`bg-${bgColor}`}>
       <div className="container">
-        <div className="py-6 md:py-12">{children}</div>
+        <div className="py-8 md:py-14">{children}</div>
       </div>
     </section>
   )

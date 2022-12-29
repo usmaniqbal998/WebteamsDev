@@ -8,33 +8,9 @@ const CardClass =
   'rounded-xl bg-[#282828] py-8 px-5 flex flex-col gap-5 text-white'
 
 const WhyChooseUs = () => {
-  const data = useStaticQuery(graphql`
-    query {
-      agile: file(relativePath: { eq: "icons/agile.png" }) {
-        childImageSharp {
-          gatsbyImageData(width: 40, placeholder: BLURRED)
-        }
-      }
-      experience: file(relativePath: { eq: "icons/experience.png" }) {
-        childImageSharp {
-          gatsbyImageData(width: 40, placeholder: BLURRED)
-        }
-      }
-      transparency: file(relativePath: { eq: "icons/transparency.png" }) {
-        childImageSharp {
-          gatsbyImageData(width: 40, placeholder: BLURRED)
-        }
-      }
-      top: file(relativePath: { eq: "icons/1%.png" }) {
-        childImageSharp {
-          gatsbyImageData(width: 40, placeholder: BLURRED)
-        }
-      }
-    }
-  `)
   return (
-    <section className="relative">
-      <div className="gradientBackground absolute inset-0 -z-10 flex items-center justify-center"></div>
+    <section className="relative z-[0]">
+      <div className="gradientBackground absolute inset-0 z-[-1] flex items-center justify-center"></div>
       <div className="container">
         <div className="py-8 md:py-14">
           <div className="mx-auto flex max-w-4xl flex-col items-center justify-center gap-8">

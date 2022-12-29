@@ -4,6 +4,7 @@ import Button from './atoms/Button'
 import WatchVideo from './molecules/WatchVideo'
 import SocialLinks from './organisms/SocialLinks'
 import Typography from './atoms/Text'
+// import AnimatedImage from './organisms/AnimatedImage'
 
 const Hero = () => {
   return (
@@ -20,7 +21,7 @@ const Hero = () => {
           </div>
           <Typography
             variant="h1"
-            className="text-5xl leading-[70px] md:text-8xl md:leading-[117%]"
+            className="text-[64px] leading-[110%] md:text-[100px]"
             align="center"
           >
             <Typography variant="span" className="font-sans">
@@ -46,19 +47,20 @@ const Hero = () => {
             </span>
             for your Product
           </h1> */}
-          <Typography variant="p" align="center">
+          <Typography variant="p" align="center" className="md:text-[20px]">
             We are a one-stop-shop partner for all your product development. We
             provide dedicated top 1% agile development Squads that understand
             your business and infrastructure for your next billion-dollar idea.
           </Typography>
           <Button name="GET PROJECT ESTIMATION" />
-          <div className="z-10 mt-8 translate-x-4 px-4 md:translate-x-8">
+          <div className="z-10 mt-8  translate-x-4  px-4 md:translate-x-8">
             <StaticImage
               src="../images/hero1.svg"
               alt="hero-img"
               placeholder="blurred"
               width={250}
             />
+            {/* <AnimatedImage /> */}
           </div>
           <Typography variant="h3" align="center">
             Speed up your development process with on-demand teams
