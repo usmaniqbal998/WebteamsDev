@@ -1,6 +1,7 @@
 ---
 topTitle: Web App
 bottomTitle: Development
+title: Web App Development
 slug: web-app-development
 content: Grow your business with fully tailored Web Apps
 description: We Create Enterprise level secure Saas apps exactly according to your business requirements with a highly robust tech-stack

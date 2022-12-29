@@ -1,6 +1,7 @@
 ---
 topTitle: Mobile App
 bottomTitle: Development
+title: Mobile App Development
 slug: mobile-app-development
 content: Grow your business with fully tailored Mobile Apps
 description: We develop smart business solutions by utilizing our expertise in mobile development. With the experience in delivering 150+ mobile apps out of which 85% ranked top in AppStore and play store, we are the right app development team for you

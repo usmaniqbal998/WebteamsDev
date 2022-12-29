@@ -1,20 +1,21 @@
-import { GatsbyImage, StaticImage, getImage } from 'gatsby-plugin-image';
-import React from 'react';
-import Button from './atoms/Button';
-import Section from './organisms/Section';
-import { graphql, useStaticQuery } from 'gatsby';
-import Typography from './atoms/Text';
+import { GatsbyImage, getImage } from 'gatsby-plugin-image'
+import React from 'react'
+import Button from './atoms/Button'
+import Section from './organisms/Section'
+import { graphql, useStaticQuery } from 'gatsby'
+import Typography from './atoms/Text'
 
 const Services = () => {
-  const [openTab, setOpenTab] = React.useState(1);
+  const [openTab, setOpenTab] = React.useState(1)
   const data = useStaticQuery(graphql`
     query {
       projectui: file(relativePath: { eq: "services/project-ui-ux.png" }) {
         childImageSharp {
           gatsbyImageData(
             placeholder: BLURRED
-            width: 400
+            width: 350
             blurredOptions: { width: 100 }
+            formats: [AUTO, WEBP, AVIF]
           )
         }
       }
@@ -22,8 +23,9 @@ const Services = () => {
         childImageSharp {
           gatsbyImageData(
             placeholder: BLURRED
-            width: 400
+            width: 350
             blurredOptions: { width: 100 }
+            formats: [AUTO, WEBP, AVIF]
           )
         }
       }
@@ -31,8 +33,9 @@ const Services = () => {
         childImageSharp {
           gatsbyImageData(
             placeholder: BLURRED
-            width: 400
+            width: 350
             blurredOptions: { width: 100 }
+            formats: [AUTO, WEBP, AVIF]
           )
         }
       }
@@ -40,13 +43,14 @@ const Services = () => {
         childImageSharp {
           gatsbyImageData(
             placeholder: BLURRED
-            width: 400
+            width: 350
             blurredOptions: { width: 100 }
+            formats: [AUTO, WEBP, AVIF]
           )
         }
       }
     }
-  `);
+  `)
   const services = [
     {
       id: 1,
@@ -80,11 +84,11 @@ const Services = () => {
       content:
         'Every squad have top-notch dedicated product designers that understand your users and business and create beautiful userinterfaces accordingly',
     },
-  ];
+  ]
   return (
     <Section>
-      <div className="grid grid-cols-1  gap-8 lg:grid-cols-5">
-        <div className="flex flex-col gap-8 lg:col-span-3">
+      <div className="grid grid-cols-1  gap-0 lg:grid-cols-2">
+        <div className="flex flex-col gap-8">
           <Typography variant="h3">
             We Provide Experts in every aspect of your product lifecycle.
           </Typography>
@@ -97,20 +101,24 @@ const Services = () => {
           </Typography>
         </div>
       </div>
-      <div className="mt-10 grid grid-cols-1 items-center gap-10 md:mt-20 lg:grid-cols-2">
-        <ul className="flex mb-0 list-none flex-col" role="tablist">
+      <div className="mt-10 grid grid-cols-1 items-center gap-16 md:mt-20 lg:grid-cols-2 lg:gap-10">
+        <ul
+          className="order-2 mb-0 flex list-none flex-col md:order-1"
+          role="tablist"
+        >
           {services.map((item) => (
             <li
+              key={item.id}
               className={
-                'grow border border-primary-200 outline-none  lg:text-left text-xl font-bold w-full lg:text-[40px] lg:leading-[120%] hover:bg-[#2a2a2a] focus:bg-[#2a2a2a] ' +
+                'grow border border-primary-200 outline-none text-center lg:text-left text-[20px] leading-[25px] font-bold w-full lg:text-[48px] lg:leading-[120%] hover:bg-[#2a2a2a] focus:bg-[#2a2a2a] ' +
                 (openTab === item.id ? 'bg-[#2a2a2a]' : 'bg-transparent')
               }
             >
               <a
-                className="px-10 py-6 block lg:px-20 md:py-10"
+                className="block  py-8 px-20 md:py-16"
                 onClick={(e) => {
-                  e.preventDefault();
-                  setOpenTab(item.id);
+                  e.preventDefault()
+                  setOpenTab(item.id)
                 }}
                 data-toggle="tab"
                 href={`#${item.href}`}
@@ -125,10 +133,12 @@ const Services = () => {
           <div
             className={`${
               openTab == item.id ? 'flex' : 'hidden'
-            } flex-col items-center justify-center gap-10`}
+            } order-1 flex-col items-center justify-center gap-10 md:order-2`}
             id={item.href}
           >
-            <GatsbyImage image={getImage(item.image)} alt={item.title} />
+            <div className="mx-8 md:mx-0">
+              <GatsbyImage image={getImage(item.image)} alt={item.title} />
+            </div>
             <Typography variant="p" align="center">
               {item.content}
             </Typography>
@@ -137,7 +147,7 @@ const Services = () => {
         ))}
       </div>
     </Section>
-  );
-};
+  )
+}
 
-export default Services;
+export default Services

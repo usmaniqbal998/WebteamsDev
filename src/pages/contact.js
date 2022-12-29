@@ -1,19 +1,19 @@
-import React from 'react';
-import PageLayout from '../components/pagelayout';
-import Section from '../components/organisms/Section';
-import Button from '../components/atoms/Button';
-import SocialLinks from '../components/organisms/SocialLinks';
-import Typography from '../components/atoms/Text';
-import { Formik } from 'formik';
+import React from 'react'
+import Section from '../components/organisms/Section'
+import Button from '../components/atoms/Button'
+import SocialLinks from '../components/organisms/SocialLinks'
+import Typography from '../components/atoms/Text'
+import { Formik } from 'formik'
+import { SEO } from '../components/SEO'
 const ErrorMessage = ({ children }) => (
   <Typography variant="span" className="text-sm text-red-500">
     {children}
   </Typography>
-);
+)
 
 const Contact = () => {
   return (
-    <PageLayout>
+    <>
       <Section>
         <div className="mx-auto max-w-5xl">
           <Typography variant="h1" align="center" className="pb-16 md:pb-10">
@@ -27,30 +27,30 @@ const Contact = () => {
               <Formik
                 initialValues={{ name: '', email: '', message: '' }}
                 validate={(values) => {
-                  const errors = {};
+                  const errors = {}
                   if (!values.name) {
-                    errors.name = 'Required';
+                    errors.name = 'Required'
                   }
                   if (!values.message) {
-                    errors.message = 'Required';
+                    errors.message = 'Required'
                   }
                   if (!values.email) {
-                    errors.email = 'Required';
+                    errors.email = 'Required'
                   } else if (
                     !/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i.test(
                       values.email
                     )
                   ) {
-                    errors.email = 'Invalid email address';
+                    errors.email = 'Invalid email address'
                   }
-                  return errors;
+                  return errors
                 }}
                 onSubmit={(values, { setSubmitting, resetForm }) => {
                   setTimeout(() => {
-                    alert(JSON.stringify(values, null, 2));
-                    setSubmitting(false);
-                    resetForm();
-                  }, 400);
+                    alert(JSON.stringify(values, null, 2))
+                    setSubmitting(false)
+                    resetForm()
+                  }, 400)
                 }}
               >
                 {({
@@ -136,8 +136,10 @@ const Contact = () => {
           </div>
         </div>
       </Section>
-    </PageLayout>
-  );
-};
+    </>
+  )
+}
 
-export default Contact;
+export default Contact
+
+export const Head = () => <SEO title="Contact Us" />

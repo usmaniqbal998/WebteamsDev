@@ -10,7 +10,7 @@ const HeadingwithTwoColGridSection = (props) => {
       <Typography variant="h3" color={color} className="pb-4 md:pb-8">
         {heading}
       </Typography>
-      <div className="grid grid-cols-1 gap-6 md:gap-12 lg:grid-cols-2">
+      <div className="grid grid-cols-1 gap-8 md:gap-12 lg:grid-cols-2">
         {data &&
           data.map((item, idx) => (
             <InfoBox
