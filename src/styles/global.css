@@ -59,7 +59,7 @@ button {
 
 @layer components {
   h1 {
-    @apply font-emphasis text-[56px] sm:text-[72px] font-bold  leading-[110%]  md:text-[180px];
+    @apply font-emphasis text-[56px] sm:text-[72px] font-bold  leading-[110%]  lg:text-[180px];
   }
   h2 {
     @apply font-emphasis text-[36px] font-bold leading-[110%] md:text-[64px];

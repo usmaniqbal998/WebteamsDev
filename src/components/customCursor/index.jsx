@@ -34,7 +34,7 @@ const CustomCursor = () => {
   return (
     <motion.div
       // eslint-disable-next-line tailwindcss/no-custom-classname
-      className={`mix-blend-differnece pointer-events-none fixed left-0 top-0 z-50 flex  h-8 w-8 items-center  justify-center rounded-full border-[0.5px] border-primary-500`}
+      className={`mix-blend-differnece pointer-events-none fixed left-0 top-0 z-50 hidden h-8  w-8 items-center justify-center  rounded-full border-[0.5px] border-primary-500 md:flex`}
       variants={variants}
       animate={type}
       transition={{ ease: [0.17, 0.67, 0.83, 0.67] }}

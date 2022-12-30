@@ -19,7 +19,7 @@ const PageHeading = ({
             <Typography variant="h1" align="center">
               <Typography
                 variant="span"
-                className="gradientHeading font-sans md:text-[150px]"
+                className="gradientHeading font-sans lg:text-[150px]"
               >
                 {topText}
               </Typography>{' '}
@@ -29,7 +29,7 @@ const PageHeading = ({
           <Typography
             variant="h2"
             align="center"
-            className="text-center font-emphasis text-[36px] font-bold leading-[110%] text-white md:text-[64px]"
+            className="text-center font-emphasis text-[36px] font-bold leading-[110%] text-white lg:text-[64px]"
           >
             {content || children}
           </Typography>
