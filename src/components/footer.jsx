@@ -89,6 +89,7 @@ const Footer = () => {
               <div className="relative">
                 <input
                   type="text"
+                  placeholder="Email"
                   className="w-full rounded-md bg-[#222222] py-3 pl-5 pr-14 text-xl outline-none"
                 />
                 <Button className="absolute right-0 rounded-md bg-secondary-400 p-3">

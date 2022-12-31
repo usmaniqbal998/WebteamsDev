@@ -199,14 +199,11 @@ const Nav = () => {
             ))}
           </div>
           <div className="hidden basis-1/5 justify-end lg:flex">
-            <Button
-              type="button"
-              className="flex h-[52px] w-[52px]  items-center justify-center rounded-full bg-white text-black transition-colors duration-300 ease-in hover:bg-secondary-400"
-            >
-              <Link to="/contact">
+            <Link to="/contact">
+              <Button className="flex h-[52px] w-[52px]  items-center justify-center rounded-full bg-white text-black transition-colors duration-300 ease-in hover:bg-secondary-400">
                 <AroowTopRight />
-              </Link>
-            </Button>
+              </Button>
+            </Link>
           </div>
           <Button
             id="mobileNavBtn"
@@ -240,17 +237,16 @@ const Nav = () => {
           }`}
         >
           <div className="container flex h-screen flex-col justify-start gap-y-8 pt-28">
-            <div className="mb-2">
-              <div className=" mb-2 flex items-center justify-between text-[#d9d9d9] hover:text-secondary-400">
-                <Link
-                  to="/case-studies"
-                  className="text-lg font-bold"
-                  activeClassName="text-secondary-400"
-                >
-                  Case Studies
-                </Link>
+            <div className="mb-2 text-[#d9d9d9]">
+              <Link
+                to="/case-studies"
+                className=" mb-2 flex items-center justify-between text-lg font-bold   hover:text-secondary-400"
+                activeClassName="text-secondary-400"
+                onClick={() => setNavOpen(false)}
+              >
+                Case Studies
                 <ArrowDown />
-              </div>
+              </Link>
               <div className="w-screen">
                 <CoverFlow />
               </div>
@@ -270,6 +266,7 @@ const Nav = () => {
                         to={item.href}
                         className="flex-1 text-lg font-bold group-focus:text-secondary-400"
                         activeClassName="text-secondary-400"
+                        onClick={() => item.href !== '#' && setNavOpen(false)}
                       >
                         {item.name}
                       </Link>
@@ -286,7 +283,9 @@ const Nav = () => {
                           <Link
                             to={child.href}
                             key={idx}
-                            className="py-0.5 text-sm font-medium text-white hover:text-secondary-400"
+                            className="py-0.5 text-sm font-medium hover:text-secondary-400"
+                            activeClassName="text-secondary-400"
+                            onClick={() => setNavOpen(false)}
                           >
                             {child.name}
                           </Link>

@@ -115,7 +115,7 @@ const Services = () => {
               }
             >
               <a
-                className="block  py-8 px-20 md:py-16"
+                className="block  py-8 px-20 lg:py-14"
                 onClick={(e) => {
                   e.preventDefault()
                   setOpenTab(item.id)
@@ -131,6 +131,7 @@ const Services = () => {
         </ul>
         {services.map((item) => (
           <div
+            key={item.id}
             className={`${
               openTab == item.id ? 'flex' : 'hidden'
             } order-1 flex-col items-center justify-center gap-10 md:order-2`}

@@ -40,7 +40,11 @@ const ServiceDetails = ({ data }) => {
       <Section>
         <div className="grid grid-cols-1 gap-20 lg:grid-cols-12 lg:gap-0.5">
           <SideNav id={slug} />
-          <SideNavContent>
+          <SideNavContent
+            id={slug}
+            designProcess={designProcess}
+            caseStudies={caseStudies}
+          >
             <Brief
               id={slug}
               service={service}
@@ -64,8 +68,6 @@ const ServiceDetails = ({ data }) => {
                 />
               </div>
             </Brief>
-            {designProcess && <DesignProcess id={slug} data={designProcess} />}
-            {caseStudies && <Projects id={slug} data={caseStudies} />}
           </SideNavContent>
         </div>
       </Section>

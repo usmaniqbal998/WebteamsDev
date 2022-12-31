@@ -21,10 +21,10 @@ const Hero = () => {
           </div>
           <Typography
             variant="h1"
-            className="text-[64px] leading-[110%] md:text-[100px]"
+            className="text-[64px] leading-[110%] lg:text-[125px]"
             align="center"
           >
-            <Typography variant="span" className="font-sans">
+            <Typography variant="span" className="font-sans lg:text-[100px]">
               1
             </Typography>
             %<br />
@@ -47,7 +47,7 @@ const Hero = () => {
             </span>
             for your Product
           </h1> */}
-          <Typography variant="p" align="center" className="md:text-[20px]">
+          <Typography variant="p" align="center" className="lg:text-[20px]">
             We are a one-stop-shop partner for all your product development. We
             provide dedicated top 1% agile development Squads that understand
             your business and infrastructure for your next billion-dollar idea.
