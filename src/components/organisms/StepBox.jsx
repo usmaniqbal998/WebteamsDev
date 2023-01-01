@@ -30,7 +30,7 @@ const StepBox = ({
                 'var(--tw-gradient-from) 0%, var(--tw-gradient-to) 99.48%, var(--tw-gradient-to) 100%',
             }}
           >
-            <div className="flex h-full w-full items-center justify-center rounded-full bg-primary-700">
+            <div className="flex h-full w-full items-center justify-center rounded-full bg-[#2b2b2b]">
               <Typography
                 variant="span"
                 className="block h-max align-middle font-emphasis text-5xl font-bold leading-[110%] text-white md:text-[56px]"

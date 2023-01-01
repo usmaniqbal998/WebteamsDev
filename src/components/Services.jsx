@@ -54,7 +54,12 @@ const Services = () => {
   const services = [
     {
       id: 1,
-      title: 'Product UI/UX Design',
+      title: (
+        <Typography variant="span">
+          Product UI/UX <br />
+          Design
+        </Typography>
+      ),
       href: 'ui-ux',
       image: data.projectui,
       content:
@@ -101,7 +106,7 @@ const Services = () => {
           </Typography>
         </div>
       </div>
-      <div className="mt-10 grid grid-cols-1 items-center gap-16 md:mt-20 lg:grid-cols-2 lg:gap-10">
+      <div className="mt-10 grid grid-cols-1 items-center gap-16 md:mt-20 lg:grid-cols-2 lg:gap-16">
         <ul
           className="order-2 mb-0 flex list-none flex-col md:order-1"
           role="tablist"
@@ -110,12 +115,12 @@ const Services = () => {
             <li
               key={item.id}
               className={
-                'grow border border-primary-200 outline-none text-center lg:text-left text-[20px] leading-[25px] font-bold w-full lg:text-[48px] lg:leading-[120%] hover:bg-[#2a2a2a] focus:bg-[#2a2a2a] ' +
+                'grow border border-primary-200 outline-none text-center lg:text-left text-[20px] leading-[25px] font-bold w-full md:text-[32px] xl:text-[48px] lg:leading-[120%] hover:bg-[#2a2a2a] focus:bg-[#2a2a2a] ' +
                 (openTab === item.id ? 'bg-[#2a2a2a]' : 'bg-transparent')
               }
             >
               <a
-                className="block  py-8 px-20 lg:py-14"
+                className="block py-8 px-20 md:px-14 xl:px-20 xl:py-14"
                 onClick={(e) => {
                   e.preventDefault()
                   setOpenTab(item.id)
@@ -133,12 +138,12 @@ const Services = () => {
           <div
             key={item.id}
             className={`${
-              openTab == item.id ? 'flex' : 'hidden'
+              openTab === item.id ? 'flex' : 'hidden'
             } order-1 flex-col items-center justify-center gap-10 md:order-2`}
             id={item.href}
           >
             <div className="mx-8 md:mx-0">
-              <GatsbyImage image={getImage(item.image)} alt={item.title} />
+              <GatsbyImage image={getImage(item.image)} alt={item.href} />
             </div>
             <Typography variant="p" align="center">
               {item.content}

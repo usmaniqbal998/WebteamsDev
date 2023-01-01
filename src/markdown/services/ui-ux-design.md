@@ -9,7 +9,7 @@ service: Design
 imgPath:
 whyHire:
   - {
-      imgurl: '../../images/icons/brand.png',
+      imgurl: '../../images/icons/brand-new.png',
       title: 'Brand Oriented Design',
       content: 'Our designs speak for your brand. We design with a strategic mindset and focuses on continually creating, developing, and maintaining brand identity across consumer and stakeholder. Every aspect of our design depicts your brand.',
     }
