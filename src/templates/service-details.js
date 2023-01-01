@@ -4,9 +4,7 @@ import SideNavContent from '../components/SideNavContent'
 import Section from '../components/organisms/Section'
 import PageHeading from '../components/molecules/PageHeading'
 import { graphql } from 'gatsby'
-import Projects from '../components/Projects'
 import Brief from '../components/Brief'
-import DesignProcess from '../components/DesignProcess'
 import { GatsbyImage, getImage } from 'gatsby-plugin-image'
 import { SEO } from '../components/SEO'
 
@@ -108,7 +106,7 @@ export const query = graphql`
           imgurl {
             childImageSharp {
               gatsbyImageData(
-                width: 50
+                width: 40
                 placeholder: BLURRED
                 blurredOptions: { width: 40 }
                 formats: [AUTO, WEBP, AVIF]

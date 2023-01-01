@@ -8,9 +8,10 @@ html {
   color: #fff;
   scroll-behavior: smooth;
 }
+
 *,
 button {
-  cursor: none;
+  cursor: url(cursor-custom.svg) 4 5, auto;
 }
 
 .gradientHeading {
@@ -48,6 +49,10 @@ button {
 @media screen and (max-width: 767px) {
   .stepbox:nth-child(2n) .svg-border {
     display: none;
+  }
+  *,
+  button {
+    cursor: none;
   }
 }
 

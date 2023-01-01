@@ -45,12 +45,24 @@ const Nav = () => {
   const [navOpen, setNavOpen] = React.useState(false)
   const [openDropdown, setOpenDropdown] = React.useState(false)
   const [megaMenuOpen, setMegaMenuOpen] = React.useState(false)
-  const asPath = typeof window !== 'undefined' ? window.location.pathname : ''
+  const [asPath, setAsPath] = React.useState('')
+
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  React.useEffect(() => {
+    const asPathVal = window.location.pathname
+    setAsPath(asPathVal)
+
+    return () => {
+      setAsPath('')
+    }
+  })
+
   React.useEffect(() => {
     return () => {
       setNavOpen(false)
     }
   }, [])
+
   const handleClick = () => {
     setMegaMenuOpen(false)
   }
@@ -71,6 +83,7 @@ const Nav = () => {
           <div className="mx-auto hidden basis-3/5 lg:flex lg:min-w-0 lg:flex-1 lg:justify-center lg:gap-x-12">
             {navigation.map((item) => (
               <li
+                key={item.name}
                 className="group h-full list-none lg:py-3"
                 onMouseEnter={() => {
                   item.children && setMegaMenuOpen(true)
@@ -78,7 +91,6 @@ const Nav = () => {
                 onMouseLeave={item.children && handleClick}
               >
                 <Link
-                  key={item.name}
                   to={item.href}
                   activeClassName="activeClassNav"
                   className="relative inline-flex pb-2 font-sans font-bold text-[#d9d9d9] transition-colors duration-300 ease-in group-hover:text-secondary-400 lg:text-lg xl:text-xl"
@@ -96,7 +108,7 @@ const Nav = () => {
                 </Link>
                 {item.children && megaMenuOpen && (
                   <div
-                    class={` absolute inset-x-0 top-24 z-40 w-full rounded-sm bg-primary-700 shadow-2xl transition-all duration-500 ease-in 
+                    className={` absolute inset-x-0 top-24 z-40 w-full rounded-sm bg-primary-700 shadow-2xl transition-all duration-500 ease-in 
                   ${!megaMenuOpen ? 'invisible  ' : 'visible '}
                   `}
                   >

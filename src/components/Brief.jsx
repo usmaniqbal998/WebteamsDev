@@ -37,7 +37,7 @@ const Brief = ({
   return (
     <div
       id={`brief-${id}`}
-      className="flex flex-col gap-16 md:gap-20 lg:gap-24"
+      className="flex flex-col gap-16 pb-16 md:gap-20 md:pb-20 lg:gap-24 lg:pb-24"
     >
       {aboutStory && aboutStory}
       {children}
