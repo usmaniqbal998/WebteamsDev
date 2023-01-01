@@ -29,7 +29,7 @@ const SideNav = ({ id = 1, aboutPage = false }) => {
     <aside className="mx-auto w-full lg:col-span-2 lg:pt-5">
       <div className="sidenav">
         <Scrollspy
-          items={[`brief-${id}`, `process-${id}`, `project-${id}`]}
+          items={[`brief-${id}`, `process-${id}`, `projects-${id}`]}
           currentClassName="text-secondary-300 border-secondary-300"
           offset={-20}
         >
