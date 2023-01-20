@@ -9,6 +9,7 @@ import Values from '../components/Values'
 import { StaticImage } from 'gatsby-plugin-image'
 import Typography from '../components/atoms/Text'
 import { SEO } from '../components/SEO'
+import { navigate } from 'gatsby'
 
 const about = () => {
   return (
@@ -18,6 +19,9 @@ const about = () => {
           description="We have helped our clients to change how their users do day-to-day things like banking, listening to music, renting homes and cars etc. Products that we have worked on are featured in Tech Crunch, Business Insider and Product Hunt.
 "
           buttonText="REACH OUT NOW"
+          onButtonClicked={() => {
+            navigate('/contact')
+          }}
         >
           We are the{' '}
           <Typography variant="span" className="text-secondary-400">

@@ -2,6 +2,7 @@ import React from 'react'
 import Section from './organisms/Section'
 import Typography from './atoms/Text'
 import { ArrowForward } from '../utils/icons'
+import { navigate } from 'gatsby'
 
 const CTA = () => {
   return (
@@ -17,6 +18,9 @@ const CTA = () => {
           <button
             type="button"
             className="rounded-xl bg-white p-3 text-secondary-400 transition-all duration-300 hover:bg-[#121212] hover:text-white md:p-5"
+            onClick={() => {
+              navigate('/contact')
+            }}
           >
             <ArrowForward />
           </button>

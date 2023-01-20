@@ -5,6 +5,7 @@ import SocialLinks from '../components/organisms/SocialLinks'
 import Typography from '../components/atoms/Text'
 import { Formik } from 'formik'
 import { SEO } from '../components/SEO'
+
 const ErrorMessage = ({ children }) => (
   <Typography variant="span" className="text-sm text-red-500">
     {children}

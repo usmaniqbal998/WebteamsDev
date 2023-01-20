@@ -60,7 +60,6 @@ const Footer = () => {
             <div className="order-1 lg:order-2">
               <FooterHead title="Company" />
               <div className="mt-5 flex flex-col gap-5">
-                <FooterLinks url="#" name="Privacy Policy" />
                 <FooterLinks url="/about" name="About Us" />
                 <FooterLinks url="/case-studies" name="Case Study" />
               </div>

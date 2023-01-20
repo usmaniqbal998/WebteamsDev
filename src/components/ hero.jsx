@@ -4,7 +4,7 @@ import Button from './atoms/Button'
 import WatchVideo from './molecules/WatchVideo'
 import SocialLinks from './organisms/SocialLinks'
 import Typography from './atoms/Text'
-// import AnimatedImage from './organisms/AnimatedImage'
+import { navigate } from 'gatsby'
 
 const Hero = () => {
   return (
@@ -52,7 +52,12 @@ const Hero = () => {
             provide dedicated top 1% agile development Squads that understand
             your business and infrastructure for your next billion-dollar idea.
           </Typography>
-          <Button name="GET PROJECT ESTIMATION" />
+          <Button
+            name="GET PROJECT ESTIMATION"
+            onClick={() => {
+              navigate('/contact')
+            }}
+          />
           <div className="z-10 mt-8  translate-x-4  px-4 md:translate-x-8">
             <StaticImage
               src="../images/hero1.svg"

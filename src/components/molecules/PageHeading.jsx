@@ -10,6 +10,7 @@ const PageHeading = ({
   description,
   buttonText,
   children,
+  onButtonClicked,
 }) => {
   return (
     <Section>
@@ -36,7 +37,7 @@ const PageHeading = ({
           <Typography variant="p" align="center">
             {description}
           </Typography>
-          <Button name={buttonText} />
+          <Button name={buttonText} onClick={onButtonClicked} />
         </div>
       </div>
     </Section>

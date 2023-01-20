@@ -307,6 +307,13 @@ const Nav = () => {
                   </div>
                 )
             })}
+            <Link
+              to="/contact"
+              className="flex-1 text-lg font-bold group-focus:text-secondary-400"
+              activeClassName="text-secondary-400"
+            >
+              Contact Us
+            </Link>
             <div className="mt-auto mb-10 self-center justify-self-end">
               <Button name="GET PROJECT ESTIMATION" />
             </div>
