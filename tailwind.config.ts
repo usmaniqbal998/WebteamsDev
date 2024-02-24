@@ -1,10 +1,14 @@
-import type { Config } from "tailwindcss";
+import type { Config } from 'tailwindcss'
 
 const config: Config = {
-  content: ["./src/Components/**/*.{ts,tsx}", "./src/app/**/*.{ts,tsx}"],
+  content: ['./src/Components/**/*.{ts,tsx}', './src/app/**/*.{ts,tsx}'],
   theme: {
-    extend: {},
+    extend: {
+      fontFamily: {
+        sans: ['--font-poppins', 'sans-serif']
+      }
+    }
   },
-  plugins: [],
-};
-export default config;
+  plugins: []
+}
+export default config
