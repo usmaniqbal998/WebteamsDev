@@ -1,11 +1,3 @@
 {
-  "extends": ["react-app", "react-app/jest", "plugin:tailwindcss/recommended"],
-  "rules": {
-    "no-console": "error",
-    "no-unused-vars": "warn",
-    "camelcase": "warn",
-    "vars-on-top": "warn",
-    "spaced-comment": "warn",
-    "default-case": "warn"
-  }
+  "extends": "next/core-web-vitals"
 }
