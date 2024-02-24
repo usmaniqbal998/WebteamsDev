@@ -2,7 +2,7 @@ export function ContactUsButton() {
   // jfsdljflsdka
 
   return (
-    <button className="bg-white flex items-center justify-center size-3 font-semibold w-auto h-11 rounded-3xl px-6 py-3">
+    <button className='flex size-3 h-11 w-auto items-center justify-center rounded-3xl bg-white p-6 font-semibold'>
       fdsjaklfjdsa
     </button>
   )

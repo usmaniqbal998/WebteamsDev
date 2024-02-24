@@ -4,5 +4,5 @@ export default function Home() {
     age: 20
   }
 
-  return <div className="text-white font-thin">&#123;</div>
+  return <div className="text-white font-thin text-8xl mt-6">&#123;</div>
 }
