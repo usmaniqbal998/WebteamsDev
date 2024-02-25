@@ -1,7 +1,7 @@
 import type { Metadata } from 'next'
 import { Inter, Poppins } from 'next/font/google'
 import './globals.css'
-import { TopNav } from '@/Components/TopNav'
+import { TopNav } from '../Components/TopNav'
 
 const inter = Inter({ subsets: ['latin'] })
 const poppins = Poppins({
@@ -21,9 +21,9 @@ export default function RootLayout({
   children: React.ReactNode
 }>) {
   return (
-    <html lang="en">
+    <html lang='en'>
       <body
-        className={`${inter.className} ${poppins.className} bg-black antialiased`}
+        className={`${inter.className} ${poppins.className} w-dvw bg-black p-6 px-36 text-white antialiased`}
       >
         <TopNav />
         {children}
