@@ -1,11 +1,8 @@
-import Image from "next/image";
-import { ContactUsButton } from "@/Components/ContactUsButton";
-
 export default function Home() {
   const user = {
-    name: "Test",
-    age: 20,
-  };
+    name: 'Test',
+    age: 20
+  }
 
-  return 'fsdajkl';
+  return <div className="text-white font-thin text-8xl mt-6">&#123;</div>
 }
