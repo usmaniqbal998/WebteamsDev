@@ -15,7 +15,7 @@ export const StudyCase = (props: {
 }) => {
   return (
     <CarouselItem>
-      <div className=' flex size-full items-center justify-center rounded-md bg-neutral-100 p-3'>
+      <div className=' flex size-full items-center justify-center bg-neutral-100 p-3'>
         <Image
           src={props.src}
           alt={props.alt}
