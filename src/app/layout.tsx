@@ -2,6 +2,7 @@ import type { Metadata } from 'next'
 import { Inter, Poppins } from 'next/font/google'
 import './globals.css'
 import { TopNav } from '../Components/TopNav'
+import { BurgerMenu } from '@/Components/BurgerMenu'
 
 const inter = Inter({ subsets: ['latin'] })
 const poppins = Poppins({
@@ -25,7 +26,8 @@ export default function RootLayout({
       <body
         className={`${inter.className} ${poppins.className} w-dvw bg-black p-6 px-36 text-white antialiased`}
       >
-        <TopNav />
+        <TopNav className='sm:hidden' />
+        <BurgerMenu className='hidden sm:block' />
         {children}
       </body>
     </html>
