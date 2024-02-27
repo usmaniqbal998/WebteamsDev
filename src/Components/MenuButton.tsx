@@ -17,7 +17,7 @@ export const MenuButton = (props: MenuButtonProps) => {
     <Link
       href={props.href}
       data-active={props.regex.test(pathname)}
-      className='font-semibold text-gray-400  transition duration-200 ease-in hover:text-white data-[active=true]:text-white'
+      className='font-semibold text-gray-400 transition  duration-200 ease-in hover:text-white data-[active=true]:text-white lg:text-sm'
     >
       {props.children}
     </Link>

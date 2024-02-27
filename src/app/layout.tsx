@@ -24,10 +24,10 @@ export default function RootLayout({
   return (
     <html lang='en'>
       <body
-        className={`${inter.className} ${poppins.className} w-dvw bg-black p-6 px-36 text-white antialiased`}
+        className={`${inter.className} ${poppins.className} flex w-dvw flex-col bg-black px-36 py-6 text-white antialiased sm:!p-5 sm:!py-7`}
       >
         <TopNav className='sm:hidden' />
-        <BurgerMenu className='hidden sm:block' />
+        <BurgerMenu className='hidden sm:flex' />
         {children}
       </body>
     </html>

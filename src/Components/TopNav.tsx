@@ -16,7 +16,7 @@ export const TopNav = (props: { className?: string }) => {
         <Image src={webteamsLogo} alt='webteams logo' />
         <span>webteams</span>
       </div>
-      <div className='flex items-center gap-24'>
+      <div className='flex items-center gap-24 xl:gap-16 lg:gap-12 md:gap-8'>
         <MenuButton href='/' regex={/^\/$/}>
           home
         </MenuButton>

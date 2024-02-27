@@ -6,7 +6,7 @@ export function ContactUsButton() {
   return (
     <Link
       href='/contact'
-      className='flex size-3 h-11 w-auto items-center justify-center rounded-3xl bg-white p-6 text-sm font-semibold text-black'
+      className='flex h-11 w-32 items-center justify-center rounded-full bg-white p-2 text-center text-sm font-semibold text-black lg:w-28 lg:text-xs'
     >
       CONTACT US
     </Link>
