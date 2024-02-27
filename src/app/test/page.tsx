@@ -1,12 +1,5 @@
-import { HomeCard } from '@/Components/HomeCard'
+import { Hero } from '@/Session/Hero'
 
 export default function test() {
-  return (
-    <div>
-      <HomeCard title='aaa'>oi</HomeCard>
-      <HomeCard title='aaa'>oi</HomeCard>
-      <HomeCard title='aaa'>oi</HomeCard>
-      <HomeCard title='aaa'>oi</HomeCard>
-    </div>
-  )
+  return <Hero></Hero>
 }
