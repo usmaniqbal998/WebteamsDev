@@ -24,7 +24,7 @@ export default function RootLayout({
   return (
     <html lang='en'>
       <body
-        className={`${inter.className} ${poppins.className} flex w-dvw flex-col bg-black px-36 py-6 text-white antialiased sm:!p-5 sm:!py-7`}
+        className={`${inter.className} ${poppins.className} flex w-full flex-col bg-black px-36 py-6 text-white antialiased sm:!p-5 sm:!py-7`}
       >
         <TopNav className='sm:hidden' />
         <BurgerMenu className='hidden sm:flex' />
