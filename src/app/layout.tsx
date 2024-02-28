@@ -1,7 +1,8 @@
 import type { Metadata } from 'next'
 import { Inter, Poppins } from 'next/font/google'
 import './globals.css'
-import { TopNav } from '@/Components/TopNav'
+import { TopNav } from '../Components/TopNav'
+import { BurgerMenu } from '@/Components/BurgerMenu'
 
 const inter = Inter({ subsets: ['latin'] })
 const poppins = Poppins({
@@ -21,11 +22,12 @@ export default function RootLayout({
   children: React.ReactNode
 }>) {
   return (
-    <html lang="en">
+    <html lang='en'>
       <body
-        className={`${inter.className} ${poppins.className} bg-black antialiased`}
+        className={`${inter.className} ${poppins.className} flex w-dvw flex-col bg-black px-36 py-6 text-white antialiased sm:!p-5 sm:!py-7`}
       >
-        <TopNav />
+        <TopNav className='sm:hidden' />
+        <BurgerMenu className='hidden sm:flex' />
         {children}
       </body>
     </html>

@@ -11,17 +11,17 @@ export function Hero() {
     <div className='flex flex-col items-center'>
       <div className='flex flex-col items-start'>
         <h1 className='text-9xl text-white'>Scalable</h1>
-        <div className='flex items-center gap-28 text-9xl'>
+        <div className='flex items-center gap-36 text-9xl'>
           <Image src={heroIcon} alt='heroIcon' width={120} height={120} />
-          <h1 className='text-white'>Horizon</h1>
+          <h1 className='text-white'>Horizons</h1>
         </div>
+        <BracketText className='mt-14 w-96' />
       </div>
-      <BracketText />
-      <div>
-        <Image src={shopify} alt='shopify-icon' width={138} height={40}></Image>
-        <Image src={bynder} alt='bynder-icon' width={180} height={40}></Image>
-        <Image src={amazon} alt='amazon-icon' width={132} height={40}></Image>
-        <Image src={ilmiya} alt='ilmiya-icon' width={142} height={40}></Image>
+      <div className='mt-24 flex size-20 items-center justify-center gap-48'>
+        <Image src={shopify} alt='shopify-icon' height={40}></Image>
+        <Image src={bynder} alt='bynder-icon' height={40}></Image>
+        <Image src={amazon} alt='amazon-icon' height={40}></Image>
+        <Image src={ilmiya} alt='ilmiya-icon' height={40}></Image>
       </div>
     </div>
   )
