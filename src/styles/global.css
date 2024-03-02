@@ -1,0 +1,115 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body,
+html {
+  background-color: #121212;
+  color: #fff;
+  scroll-behavior: smooth;
+}
+
+*,
+button {
+  cursor: url(cursor-custom.svg) 4 5, auto;
+}
+
+.gradientHeading {
+  background: radial-gradient(
+    50.67% 605.75% at 9.06% 59.7%,
+    #00ff66 0%,
+    #0035f0 100%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
+}
+.gradientBackground {
+  background: radial-gradient(50% 50% at 50% 50%, #4caf50 0%, #000000 100%);
+  filter: blur(150px);
+}
+
+.linearGradient {
+  background: linear-gradient(
+    270deg,
+    #4caf50 0%,
+    rgba(76, 175, 80, 0.6) 64.39%,
+    rgba(0, 68, 3, 0.974286) 101.32%,
+    #1c441e 101.33%
+  );
+}
+.coverFlowImage {
+  height: 187px;
+  /* width: 245px; */
+  object-position: top;
+  object-fit: cover;
+}
+
+@media screen and (max-width: 767px) {
+  .stepbox:nth-child(2n) .svg-border {
+    display: none;
+  }
+  *,
+  button {
+    cursor: none;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1279px) {
+  .stepbox:nth-child(3n) .svg-border {
+    display: none;
+  }
+}
+
+@layer components {
+  h1 {
+    @apply font-emphasis text-[56px] sm:text-[72px] font-bold  leading-[110%]  lg:text-[180px];
+  }
+  h2 {
+    @apply font-emphasis text-[36px] font-bold leading-[110%] md:text-[64px];
+  }
+  h3 {
+    @apply font-emphasis text-4xl font-bold leading-[47px] md:text-5xl md:leading-[62px];
+  }
+  h4 {
+    @apply text-[20px] font-bold leading-[200%];
+  }
+  h5 {
+    @apply text-[20px] font-bold leading-[110%] md:text-[24px];
+  }
+  p {
+    @apply text-[14px] font-normal leading-[200%]  md:text-[16px];
+  }
+  .aside-fixed {
+    @apply fixed inset-x-0 top-0 shadow-md shadow-primary-700 lg:shadow-none bg-[#1b1b1b] pt-5 z-10 lg:bg-transparent  lg:sticky  lg:pt-10 transition-all duration-300 ease-in;
+  }
+  .aside-fixed ul {
+    @apply container lg:pl-0;
+  }
+  .sidenav ul {
+    @apply flex items-center justify-between gap-x-8 gap-y-16 lg:flex-col lg:items-start;
+  }
+  .activeClassNav {
+    @apply text-secondary-400 !important;
+  }
+  .activeClassNav span {
+    @apply inset-x-3 border-secondary-400 visible opacity-100;
+  }
+  .brief h3 {
+    @apply font-emphasis order-1 md:order-2 text-4xl mb-4 md:mb-8 font-bold leading-[47px] text-white md:text-5xl md:leading-[62px];
+  }
+  .brief p {
+    @apply font-sans text-[14px] order-3 font-normal leading-[200%] text-current md:text-[16px];
+  }
+
+  .brief .mobile p {
+    @apply hidden;
+  }
+  .brief .large h3 {
+    @apply hidden md:block;
+  }
+  form input {
+    @apply border-b border-white bg-transparent w-full py-3 text-sm outline-none placeholder:text-[#878787] hover:border-[#878787] md:text-base;
+  }
+}
