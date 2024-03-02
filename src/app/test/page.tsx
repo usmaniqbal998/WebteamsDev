@@ -1,5 +1,5 @@
-import { Code } from '@/Components/Code'
+import { Hero } from '@/Session/Hero'
 
 export default function test() {
-  return <Code />
+  return <Hero></Hero>
 }
