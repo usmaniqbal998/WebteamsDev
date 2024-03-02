@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-var-requires */
 import type { Config } from 'tailwindcss'
 
 const config: Config = {
@@ -85,9 +86,13 @@ const config: Config = {
 
       sm: { max: '639px' }
       // => @media (max-width: 639px) { ... }
+    },
+    fontFamily: {
+      sans: ['var(--font-poppins)'],
+      mono: ['var(--font-jetbrains-mono)']
     }
   },
-  plugins: [require('tailwindcss-animate')]
+  plugins: [require('tailwindcss-animate'), require('tailwind-scrollbar')]
 } satisfies Config
 
 export default config

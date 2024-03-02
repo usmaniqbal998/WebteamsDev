@@ -6,20 +6,19 @@ import { usePathname } from 'next/navigation'
 
 export type MenuButtonProps = {
   children: ReactNode
-  href: string
-  regex: RegExp
-}
+  regex: string
+} & Parameters<typeof Link>[0]
 
-export const MenuButton = (props: MenuButtonProps) => {
+export const MenuButton = ({ regex, children, ...rest }: MenuButtonProps) => {
   const pathname = usePathname()
 
   return (
     <Link
-      href={props.href}
-      data-active={props.regex.test(pathname)}
-      className='font-semibold text-gray-400 transition  duration-200 ease-in hover:text-white data-[active=true]:text-white lg:text-sm'
+      data-active={new RegExp(regex).test(pathname)}
+      className='font-semibold text-gray-400 transition duration-200 ease-in hover:text-white data-[active=true]:text-white lg:text-sm sm:text-xl sm:font-normal sm:data-[active=true]:text-green-500'
+      {...rest}
     >
-      {props.children}
+      {children}
     </Link>
   )
 }

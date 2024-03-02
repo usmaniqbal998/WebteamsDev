@@ -11,19 +11,22 @@ export const TopNav = (props: { className?: string }) => {
   console.log(pathname)
 
   return (
-    <div className={`flex justify-between ${props.className}`}>
+    <div
+      className={`flex w-full items-center justify-between ${props.className}`}
+    >
       <div className='flex items-center justify-center gap-2'>
         <Image src={webteamsLogo} alt='webteams logo' />
-        <span>webteams</span>
+        <span className='text-xl font-semibold'>webteams</span>
       </div>
+
       <div className='flex items-center gap-24 xl:gap-16 lg:gap-12 md:gap-8'>
-        <MenuButton href='/' regex={/^\/$/}>
+        <MenuButton href='/' regex='^\/$'>
           home
         </MenuButton>
-        <MenuButton href='/about' regex={/^\/about$/}>
+        <MenuButton href='/about' regex='^\/about$'>
           about us
         </MenuButton>
-        <MenuButton href='/services' regex={/^\/services/}>
+        <MenuButton href='/services' regex='^\/services'>
           services
         </MenuButton>
         <ContactUsButton />
