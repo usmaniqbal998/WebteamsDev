@@ -1,12 +1,5 @@
-import { HomeCard } from '@/Components/HomeCard'
+import { Code } from '@/Components/Code'
 
 export default function test() {
-  return (
-    <div>
-      <HomeCard title='aaa'>oi</HomeCard>
-      <HomeCard title='aaa'>oi</HomeCard>
-      <HomeCard title='aaa'>oi</HomeCard>
-      <HomeCard title='aaa'>oi</HomeCard>
-    </div>
-  )
+  return <Code />
 }
