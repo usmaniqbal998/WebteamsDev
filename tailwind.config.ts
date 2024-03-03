@@ -1,15 +1,12 @@
 /* eslint-disable @typescript-eslint/no-var-requires */
 import type { Config } from 'tailwindcss'
 
-const config = {
-  darkMode: ['class'],
+const config: Config = {
   content: [
-    './pages/**/*.{ts,tsx}',
-    './components/**/*.{ts,tsx}',
-    './app/**/*.{ts,tsx}',
-    './src/**/*.{ts,tsx}'
+    './src/Components/**/*.{ts,tsx}',
+    './src/Session/**/*.{ts,tsx}',
+    './src/app/**/*.{ts,tsx}'
   ],
-  prefix: '',
   theme: {
     container: {
       center: true,
