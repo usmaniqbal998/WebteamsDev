@@ -1,5 +1,5 @@
-import { Code } from '@/Components/Code'
+import { CommentCard } from '@/Components/CommentCard'
 
 export default function test() {
-  return <Code />
+  return <CommentCard></CommentCard>
 }
