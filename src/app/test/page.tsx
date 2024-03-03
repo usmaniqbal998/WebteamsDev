@@ -1,5 +1,5 @@
-import { Hero } from '@/Session/Hero'
+import { CommentCard } from '@/Components/CommentCard'
 
 export default function test() {
-  return <Hero></Hero>
+  return <CommentCard></CommentCard>
 }
