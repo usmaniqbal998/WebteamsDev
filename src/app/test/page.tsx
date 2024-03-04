@@ -1,4 +1,5 @@
 import { CommentCard } from '@/Components/CommentCard'
+import { Footer } from '@/Components/Footer'
 import { RecentWorkGallery } from '@/Components/RecentWorkGallery'
 import { Faq, FaqItem } from '@/Components/faq'
 import { RecentWork } from '@/Session/RecentWork'
@@ -15,5 +16,5 @@ const faqItems: FaqItem[] = [
 ]
 
 export default function test() {
-  return <RecentWork />
+  return <div>lsdkfj</div>
 }

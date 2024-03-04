@@ -16,17 +16,8 @@ import Image from 'next/image'
 import linkedinIcon from '@/assets/linkedin-icon.svg'
 import facebookIcon from '@/assets/facebook-icon.svg'
 import emailIcon from '@/assets/email-icon.svg'
-
-const ImageCircle = (props: {
-  src: Parameters<typeof Image>[0]['src']
-  alt: string
-}) => {
-  return (
-    <div className='flex size-10 items-center justify-center rounded-full bg-transparent ring-1 ring-white'>
-      <Image src={props.src} alt={props.alt} height={15} className='stroke-1' />
-    </div>
-  )
-}
+import { cn } from '@/Util'
+import { ImageCircle } from '@/Util/ImageCirclu'
 
 export const BurgerMenu = (props: { className?: string }) => {
   return (
@@ -44,7 +35,7 @@ export const BurgerMenu = (props: { className?: string }) => {
             <div className='h-[2px] w-4 rounded-full bg-white'></div>
           </div>
         </SheetTrigger>
-        <SheetContent className='flex w-11/12 flex-col bg-black'>
+        <SheetContent className='flex w-11/12 flex-col overflow-y-scroll bg-black'>
           <SheetHeader className='mb-4 text-white'>
             <SheetTitle className='text-white'>Menu</SheetTitle>
             {/* <SheetDescription>description</SheeDescription> */}
@@ -77,9 +68,24 @@ export const BurgerMenu = (props: { className?: string }) => {
               Get project estimation
             </button>
             <div className='flex gap-4'>
-              <ImageCircle src={linkedinIcon} alt='linkedin Icon' />
-              <ImageCircle src={facebookIcon} alt='facebook Icon' />
-              <ImageCircle src={emailIcon} alt='email Icon' />
+              <ImageCircle
+                src={linkedinIcon}
+                circleSize={40}
+                imageHeight={15}
+                alt='linkedin Icon'
+              />
+              <ImageCircle
+                src={facebookIcon}
+                circleSize={40}
+                imageHeight={15}
+                alt='facebook Icon'
+              />
+              <ImageCircle
+                src={emailIcon}
+                circleSize={40}
+                imageHeight={15}
+                alt='email Icon'
+              />
             </div>
           </SheetFooter>
         </SheetContent>
