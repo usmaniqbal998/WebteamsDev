@@ -36,7 +36,7 @@ export default function RootLayout({
         className={cn(
           jetBrainsMono.variable,
           poppins.variable,
-          'flex items-center justify-start w-screen max-w-full flex-col bg-black px-36 py-6 font-sans text-white antialiased sm:!p-5 sm:!py-7'
+          'flex items-center justify-start w-screen max-w-full overflow-x-hidden flex-col bg-black px-36 py-6 font-sans text-white antialiased sm:!p-5 sm:!py-7'
         )}
       >
         <TopNav className='mb-10 sm:hidden' />

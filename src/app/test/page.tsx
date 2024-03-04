@@ -1,5 +1,7 @@
 import { CommentCard } from '@/Components/CommentCard'
+import { RecentWorkGallery } from '@/Components/RecentWorkGallery'
 import { Faq, FaqItem } from '@/Components/faq'
+import { RecentWork } from '@/Session/RecentWork'
 
 const faqItems: FaqItem[] = [
   {
@@ -13,5 +15,5 @@ const faqItems: FaqItem[] = [
 ]
 
 export default function test() {
-  return <Faq faqItems={faqItems} />
+  return <RecentWork />
 }
