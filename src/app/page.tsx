@@ -1,3 +1,17 @@
+import { Code } from '@/Session/Code'
+import { Hero } from '@/Session/Hero'
+import { Explore } from '@/Session/Explorer'
+import { FaqSession } from '@/Session/FaqSession'
+import { RecentWork } from '@/Session/RecentWork'
+
 export default function Home() {
-  return <div className='h-[3000px] min-h-[3000px] w-40'>fkdls;afdslkj</div>
+  return (
+    <div className='flex flex-col items-center justify-start gap-44'>
+      <Hero />
+      <Code />
+      <RecentWork />
+      <FaqSession />
+      <Explore />
+    </div>
+  )
 }

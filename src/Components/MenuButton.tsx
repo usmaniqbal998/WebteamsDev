@@ -15,7 +15,7 @@ export const MenuButton = ({ regex, children, ...rest }: MenuButtonProps) => {
   return (
     <Link
       data-active={new RegExp(regex).test(pathname)}
-      className='font-semibold text-gray-400 transition duration-200 ease-in hover:text-white data-[active=true]:text-white lg:text-sm sm:text-xl sm:font-normal sm:data-[active=true]:text-green-500'
+      className='font-semibold text-gray-400 transition duration-200 ease-in data-[active=true]:text-white hover:text-white lg:text-sm sm:text-xl sm:font-normal sm:data-[active=true]:text-green-500'
       {...rest}
     >
       {children}

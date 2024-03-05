@@ -1,7 +1,5 @@
-import { AdvantageSession } from '@/Components/AdvantageSession'
-import { CommentCard } from '@/Components/CommentCard'
-import { ReviewHome } from '@/Components/ReviewHome'
+import { Explore } from '@/Session/Explorer'
 
 export default function test() {
-  return <ReviewHome></ReviewHome>
+  return <Explore />
 }
