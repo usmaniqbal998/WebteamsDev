@@ -43,7 +43,7 @@ export default function RootLayout({
         <TopNav className='mb-10 sm:hidden' />
         <BurgerMenu className='hidden sm:flex' />
         {children}
-        <Footer />
+        {/* <Footer /> */}
       </body>
     </html>
   )

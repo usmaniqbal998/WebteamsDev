@@ -1,12 +1,12 @@
-import { CodeBlock } from '@/Components/Code'
+import { CodeBlock } from '@/Components/CodeBlock'
 import { TechCard } from '@/Components/TechCard'
 import Image from 'next/image'
 import star from '@/assets/star-image.svg'
 
 export const Code = () => {
   return (
-    <div className='flex w-full flex-col items-center justify-center'>
-      <div className='relative mb-20 flex w-full flex-col gap-2 text-8xl'>
+    <div className='flex max-w-full flex-col items-center justify-center'>
+      <div className='relative mb-20 flex min-w-full flex-col gap-2 text-8xl'>
         <h2 className='self-center'>Providing the digital</h2>
         <h2 className='self-start'>toolkit for your ideas to</h2>
         <h2 className='self-end'>sprint towards success</h2>

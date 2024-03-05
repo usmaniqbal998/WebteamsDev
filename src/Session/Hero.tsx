@@ -8,7 +8,7 @@ import ilmiya from '@/assets/ilmiya-icon.svg'
 
 export function Hero() {
   return (
-    <div className='mt-28 flex flex-col items-center'>
+    <div className='mt-28 flex w-full flex-col items-center'>
       <div className='flex flex-col items-start'>
         <h1 className='text-9xl text-white'>Scalable</h1>
         <div className='flex items-center gap-36 text-9xl'>
@@ -17,7 +17,7 @@ export function Hero() {
         </div>
         <BracketText className='mt-14 w-96' />
       </div>
-      <div className='mt-24 flex w-full items-center justify-between'>
+      <div className='mt-24 flex w-full items-center justify-center gap-60'>
         <Image src={shopify} alt='shopify-icon' height={30}></Image>
         <Image src={bynder} alt='bynder-icon' height={30}></Image>
         <Image src={amazon} alt='amazon-icon' height={30}></Image>
