@@ -6,21 +6,30 @@ import linkedinIcon from '@/assets/linkedin-icon.svg'
 import facebookIcon from '@/assets/facebook-icon.svg'
 import emailIcon from '@/assets/email-icon.svg'
 
+const Navigator = (props: { className?: string }) => (
+  <div className={props.className}>
+    <MenuButton href='/about' regex='^\/about$' className='sm:text-sm'>
+      about us
+    </MenuButton>
+    <MenuButton href='/services' regex='^\/services' className='sm:text-sm'>
+      services
+    </MenuButton>
+  </div>
+)
+
 export const Footer = () => {
   return (
-    <footer className='flex h-32 w-screen items-start justify-between bg-neutral-950 px-28 pt-8'>
-      <div className='flex items-center justify-center gap-2'>
-        <Image src={webteamsLogo} alt='webteams logo' />
-        <span className='text-xl font-semibold'>webteams</span>
+    <footer className='flex h-32 w-screen max-w-[100vw] items-start justify-between bg-neutral-950 px-28 py-8 sm:h-40 sm:flex-col sm:px-8 sm:pb-4 sm:pt-10'>
+      <div className='flex w-full items-center justify-between'>
+        <div className='flex items-center justify-center gap-2'>
+          <Image src={webteamsLogo} alt='webteams logo' />
+          <span className='text-xl font-semibold sm:text-base'>webteams</span>
+        </div>
+        <Navigator className='hidden sm:flex sm:gap-8 sm:text-sm' />
       </div>
-      <div className='flex items-center gap-28'>
-        <MenuButton href='/about' regex='^\/about$'>
-          about us
-        </MenuButton>
-        <MenuButton href='/services' regex='^\/services'>
-          services
-        </MenuButton>
-        <div className='flex gap-6'>
+      <div className='flex items-center gap-28 sm:w-full'>
+        <Navigator className='flex gap-28 text-nowrap sm:hidden ' />
+        <div className='flex gap-6 sm:w-full sm:justify-center'>
           <ImageCircle
             src={linkedinIcon}
             circleSize={35}

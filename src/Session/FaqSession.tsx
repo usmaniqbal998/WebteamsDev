@@ -29,10 +29,8 @@ export const FaqSession = () => {
   ]
 
   return (
-    <div>
-      <h2 className='mb-8 flex flex-col items-start justify-center text-4xl'>
-        Frequently asked questions
-      </h2>
+    <div className='flex w-full flex-col items-center justify-start'>
+      <h2 className='mb-8 text-4xl sm:mb-4'>Frequently asked questions</h2>
       <Faq faqItems={faqItems} />
     </div>
   )

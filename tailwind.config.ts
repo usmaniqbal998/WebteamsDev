@@ -15,7 +15,11 @@ const config: Config = {
         '2xl': '1400px'
       }
     },
+
     extend: {
+      fontSize: {
+        xm: ['12px', '16px']
+      },
       colors: {
         border: 'hsl(var(--border))',
         input: 'hsl(var(--input))',

@@ -1,5 +1,6 @@
-import { Explore } from '@/Session/Explorer'
+import { AdvantageSession } from '@/Components/AdvantageSession'
+import { Hero } from '@/Session'
 
 export default function test() {
-  return <Explore />
+  return <div></div>
 }

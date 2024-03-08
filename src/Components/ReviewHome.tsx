@@ -87,9 +87,9 @@ const comments4 = [
 
 export function ReviewHome() {
   return (
-    <div className='mb-4 flex gap-5 leading-relaxed'>
-      <div className='flex flex-col gap-5'>
-        <h2 className='text-6xl font-semibold'>Reviews</h2>
+    <div className='mb-4 flex gap-5 leading-relaxed sm:gap-1'>
+      <div className='flex flex-col gap-5 sm:gap-4'>
+        <h2 className='text-6xl font-semibold sm:text-4xl'>Reviews</h2>
         {comments1.map(comment => (
           <CommentCard
             comment={comment.text}
@@ -98,9 +98,14 @@ export function ReviewHome() {
             photo={comment.photo}
           />
         ))}
-        <Image className='mt-6' height={152} src={starIcon} alt='staricon' />
+        <Image
+          className='mt-6 sm:mt-0 sm:size-24'
+          height={152}
+          src={starIcon}
+          alt='staricon'
+        />
       </div>
-      <div className='flex flex-col gap-5'>
+      <div className='flex flex-col gap-5  sm:hidden'>
         {comments2.map(comment => (
           <CommentCard
             comment={comment.text}
@@ -110,7 +115,7 @@ export function ReviewHome() {
           />
         ))}
       </div>
-      <div className='flex flex-col gap-5 self-end'>
+      <div className='flex flex-col gap-5 self-end sm:hidden'>
         {comments3.map(comment => (
           <CommentCard
             comment={comment.text}
@@ -120,7 +125,7 @@ export function ReviewHome() {
           />
         ))}
       </div>
-      <div className='mb-8 flex flex-col gap-5 self-end'>
+      <div className='mb-8 flex flex-col gap-5 self-end sm:gap-1'>
         {comments4.map(comment => (
           <CommentCard
             comment={comment.text}
