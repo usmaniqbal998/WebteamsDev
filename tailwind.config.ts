@@ -16,6 +16,12 @@ const config: Config = {
       }
     },
     extend: {
+      padding: {
+        '84': '352px',
+        '82': '328px',
+        '81': '324px',
+        '83': '332px'
+      },
       colors: {
         border: 'hsl(var(--border))',
         input: 'hsl(var(--input))',
