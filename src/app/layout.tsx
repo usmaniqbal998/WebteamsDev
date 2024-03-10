@@ -32,27 +32,27 @@ export const viewport: Viewport = {
   initialScale: 1
 }
 
-export default function RootLayout({
-  children
-}: Readonly<{
-  children: React.ReactNode
-}>) {
+export default function RootLayout(
+  props: Readonly<{
+    children: React.ReactNode
+  }>
+) {
   return (
     <html
       lang='en'
-      className='w-screen !max-w-full scrollbar scrollbar-track-black scrollbar-thumb-neutral-600'
+      className='h-screen w-screen !max-w-full scrollbar scrollbar-track-neutral-700 scrollbar-thumb-neutral-500'
     >
       <body
         className={cn(
           jetBrainsMono.variable,
           poppins.variable,
-          'flex items-center justify-start overflow-x-hidden max-w-full flex-col bg-black px-36 pt-6 font-sans text-white antialiased sm:!px-5 sm:!pt-7'
+          'flex items-center h-screen justify-start overflow-x-hidden max-w-full flex-col bg-black px-36 pt-6 font-sans text-white antialiased sm:!px-5 sm:!pt-7'
         )}
       >
         <TopNav className='mb-10 flex sm:invisible sm:hidden' />
         <BurgerMenu className='invisible hidden sm:visible sm:flex' />
-        {children}
-        <Footer />
+        {props.children}
+        <Footer className='group/footer' />
       </body>
     </html>
   )

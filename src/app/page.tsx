@@ -13,7 +13,7 @@ export default function Home() {
       <Code />
       <RecentWork />
       <FaqSession />
-      <Explore className='sm:mb-10' />
+      <Explore className='mb-20 sm:mb-10' />
     </div>
   )
 }
