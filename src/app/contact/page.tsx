@@ -1,6 +1,23 @@
+'use client'
+
 import { Input } from '@/Components/ui/input'
+import { useForm } from 'react-hook-form'
+import {} from '@hookform/resolvers/zod'
+import { z } from 'zod'
+
+const numbersRegex = /^\d+$/
+
+const formSchema = z.object({
+  name: z.string().min(1),
+  email: z.string().email(),
+  phone: z.string().refine(value => numbersRegex.test(value)),
+  aboutProject: z.string().min(1)
+})
 
 export default function Contract() {
+  const { register, formState } = useForm()
+  const { errors } = formState
+
   return (
     <div
       className='grid size-full grid-cols-12 grid-rows-1 group-first/footer:bg-red-500'
@@ -14,11 +31,15 @@ export default function Contract() {
         </div>
       </div>
       <div className='col-span-7 flex w-full flex-col items-start justify-center gap-16 pl-28'>
-        <form action='' className='flex w-3/6 flex-col gap-8'>
-          <Input type='text' placeholder='Name' name='name' />
-          <Input type='email' placeholder='Email' name='email' />
-          <Input type='number' placeholder='Phone' name='phone' />
-          <Input type='text' placeholder='Tell us about your project' />
+        <form action='' className='flex w-3/6 flex-col gap-y-[2vh]'>
+          <Input type='text' placeholder='Name' {...register('name')} />
+          <Input type='email' placeholder='Email' {...register('email')} />
+          <Input type='number' placeholder='Phone' {...register('phone')} />
+          <Input
+            type='text'
+            placeholder='Tell us about your project'
+            {...register('aboutProject')}
+          />
           <button
             type='submit'
             className='w-min rounded-full bg-white px-4 py-2 text-sm font-semibold text-black'
