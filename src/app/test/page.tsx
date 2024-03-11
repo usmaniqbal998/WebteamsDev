@@ -1,6 +1,6 @@
-import { AdvantageSession } from '@/Components/AdvantageSession'
-import { Hero } from '@/Session'
+import { HeroSideBar } from '@/Components/HeroSideBar'
+import { DesignHero } from '@/Session/DesignHero'
 
 export default function test() {
-  return <div></div>
+  return <DesignHero />
 }

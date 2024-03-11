@@ -17,6 +17,12 @@ const config: Config = {
     },
 
     extend: {
+      padding: {
+        '84': '352px',
+        '82': '328px',
+        '81': '324px',
+        '83': '332px'
+      },
       fontSize: {
         xm: ['12px', '16px']
       },
