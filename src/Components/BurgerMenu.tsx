@@ -22,7 +22,7 @@ import { ImageCircle } from '@/Util/ImageCirclu'
 export const BurgerMenu = (props: { className?: string }) => {
   return (
     <div
-      className={`${props.className} flex flex-row items-center justify-between`}
+      className={`${props.className} z-50 flex w-full flex-row items-center justify-between`}
     >
       <div className='flex items-center justify-center gap-2'>
         <Image src={webteamsLogo} alt='webteams logo' />
@@ -35,7 +35,7 @@ export const BurgerMenu = (props: { className?: string }) => {
             <div className='h-[2px] w-4 rounded-full bg-white'></div>
           </div>
         </SheetTrigger>
-        <SheetContent className='flex w-11/12 flex-col overflow-y-scroll bg-black'>
+        <SheetContent className='absolute flex w-11/12 flex-col overflow-y-scroll bg-black'>
           <SheetHeader className='mb-4 text-white'>
             <SheetTitle className='text-white'>Menu</SheetTitle>
             {/* <SheetDescription>description</SheeDescription> */}

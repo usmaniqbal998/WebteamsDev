@@ -15,12 +15,16 @@ const config: Config = {
         '2xl': '1400px'
       }
     },
+
     extend: {
       padding: {
         '84': '352px',
         '82': '328px',
         '81': '324px',
         '83': '332px'
+      },
+      fontSize: {
+        xm: ['12px', '16px']
       },
       colors: {
         border: 'hsl(var(--border))',

@@ -12,7 +12,7 @@ export const TopNav = (props: { className?: string }) => {
 
   return (
     <div
-      className={`flex w-full items-center justify-between ${props.className}`}
+      className={`z-50 flex w-full items-center justify-between ${props.className}`}
     >
       <div className='flex items-center justify-center gap-2'>
         <Image src={webteamsLogo} alt='webteams logo' />

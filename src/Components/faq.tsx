@@ -23,7 +23,10 @@ export const Faq = ({ className, faqItems }: FaqProps) => {
     <Accordion
       type='single'
       collapsible
-      className={cn('w-[800px] duration-700', className)}
+      className={cn(
+        'w-6/12 sm:w-11/12 duration-700 sm:text-xs text-left',
+        className
+      )}
     >
       {faqItems.map(({ answer, question }) => (
         <AccordionItem value={question} key={question}>
