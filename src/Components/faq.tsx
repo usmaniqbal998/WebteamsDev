@@ -24,13 +24,15 @@ export const Faq = ({ className, faqItems }: FaqProps) => {
       type='single'
       collapsible
       className={cn(
-        'w-6/12 sm:w-11/12 duration-700 sm:text-xs text-left',
+        'w-11/12 sm:w-11/12 duration-700 sm:text-xs text-left',
         className
       )}
     >
       {faqItems.map(({ answer, question }) => (
-        <AccordionItem value={question} key={question}>
-          <AccordionTrigger>{question}</AccordionTrigger>
+        <AccordionItem value={question} key={question} className='min-w-full'>
+          <AccordionTrigger className='w-full py-8 text-3xl'>
+            {question}
+          </AccordionTrigger>
           <AccordionContent className='mb-8'>{answer}</AccordionContent>
         </AccordionItem>
       ))}

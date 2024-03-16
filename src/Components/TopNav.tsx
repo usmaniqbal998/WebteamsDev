@@ -23,11 +23,11 @@ export const TopNav = (props: { className?: string }) => {
         <MenuButton href='/' regex='^\/$'>
           home
         </MenuButton>
-        <MenuButton href='/about' regex='^\/about$'>
-          about us
-        </MenuButton>
         <MenuButton href='/services' regex='^\/services'>
           services
+        </MenuButton>
+        <MenuButton href='/about' regex='^\/about$'>
+          about us
         </MenuButton>
         <ContactUsButton />
       </div>

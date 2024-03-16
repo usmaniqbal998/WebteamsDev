@@ -74,7 +74,7 @@ export const TechCard = async ({ techKey }: TechCardProps) => {
 
   return (
     <div className='flex flex-col items-center justify-center gap-6'>
-      <div className='flex h-20 w-24 items-center justify-center rounded-3xl p-4 ring-2 ring-white'>
+      <div className='flex h-[88px] w-28 items-center justify-center rounded-3xl p-4 ring-2 ring-white'>
         <Image
           src={await tech.icon()}
           width={64}

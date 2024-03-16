@@ -35,7 +35,7 @@ const AccordionTrigger = React.forwardRef<
     <AccordionPrimitive.Trigger
       ref={ref}
       className={cn(
-        'flex flex-1 items-center justify-between text-left py-4 font-medium duration-200 hover:underline peer group',
+        'flex flex-1 items-center justify-between text-left py-4 duration-200 hover:underline peer group',
         className
       )}
       {...props}
@@ -45,14 +45,14 @@ const AccordionTrigger = React.forwardRef<
         fill='white'
         stroke='black'
         strokeWidth={0.8}
-        className='invisible size-6 shrink-0 transition-transform duration-200 group-data-[state=open]:visible'
+        className='invisible size-12 shrink-0 transition-transform duration-200 group-data-[state=open]:visible'
       />
 
       <PlusCircle
         fill='white'
         stroke='black'
         strokeWidth={0.8}
-        className='size-6 shrink-0 transition-transform duration-200 group-data-[state=open]:hidden'
+        className='size-12 shrink-0 transition-transform duration-200 group-data-[state=open]:hidden'
       />
     </AccordionPrimitive.Trigger>
   </AccordionPrimitive.Header>

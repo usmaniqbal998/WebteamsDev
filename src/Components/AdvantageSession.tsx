@@ -1,16 +1,66 @@
 import session2 from '@/assets/picksession2.svg'
 import Image from 'next/image'
 import { HomeCard } from './HomeCard'
+import { cn } from '@/Util'
 
-export function AdvantageSession() {
+type HomeCard = {
+  title: Exclude<React.ReactNode, boolean | null | undefined>
+  children: string
+}
+
+const homeCards: HomeCard[] = [
+  {
+    title: (
+      <>
+        Top <mark className='text-[#BACAFE]'>In-House</mark> Teams
+      </>
+    ),
+    children:
+      'We offer top 1% in-house development squads. We do all the heavy lifting of making your product scalable with the best development processes.'
+  },
+  {
+    title: (
+      <>
+        <mark className='text-[#A3D9A1]'>Agile</mark> on Steroids
+      </>
+    ),
+    children:
+      'We provide cross-functional Agile teams that are self-organising, adapting to your business needs, taking ownership, and delivering to their full potential.'
+  },
+  {
+    title: (
+      <>
+        Complete <mark className='text-[#DDBCFD]'>Transparency</mark>
+      </>
+    ),
+    children:
+      'This continuous knowledge transfer is a guarantee that the final product will be handed over without unnecessary stages of knowledge and documentation.'
+  },
+  {
+    title: (
+      <>
+        Team <mark className='text-[#B6D3FF]'>Synergy</mark>
+      </>
+    ),
+    children:
+      'All team members from our core developers to Product Managers and CTO’s have years of experience in different niches and together they bring a lot to the table.'
+  }
+]
+
+export function AdvantageSession(props: { className?: string }) {
   return (
-    <div className='flex w-full max-w-full flex-col items-center'>
-      <div className='mb-9 flex items-end gap-16 px-44 sm:flex-col sm:items-start sm:gap-6'>
-        <h2 className='text-nowrap text-6xl sm:text-wrap sm:text-4xl'>
+    <div
+      className={cn(
+        'flex w-full max-w-full flex-col items-center',
+        props.className
+      )}
+    >
+      <div className='mb-12 grid w-full grid-cols-11 items-end px-32 sm:flex-col sm:items-start sm:gap-6'>
+        <h2 className='col-span-7 text-nowrap text-8xl leading-[1.1] sm:text-wrap sm:text-4xl'>
           Unlock expert <br className='sm:hidden' /> guidance <br /> across your
           <br /> product lifecycle
         </h2>
-        <p className='w-96 text-xs leading-relaxed text-neutral-400 sm:text-sm'>
+        <p className='col-span-4 col-start-8 leading-loose text-neutral-400 sm:text-sm'>
           Join 100+ Technology Companies that went beyond their goals with us.
           Whether you are a fortune 500 or a startup - we give you top-notch
           Product Managers and <br className='sm:hidden' />
@@ -18,43 +68,25 @@ export function AdvantageSession() {
           succeed. You can scale these dedicated squads up and down anytime.
         </p>
       </div>
-      <Image className='mb-16' priority src={session2} alt='pick session2' />
-      <div className='mb-12 flex items-end gap-16 px-44 sm:flex-col sm:items-start sm:gap-6'>
-        <h2 className='text-nowrap text-6xl sm:text-wrap sm:text-4xl'>
+      <Image className='mb-44' priority src={session2} alt='pick session2' />
+      <div className='mb-12 grid w-full grid-cols-11 items-end px-32 sm:flex-col sm:items-start sm:gap-6'>
+        <h2 className='col-span-7 text-nowrap text-8xl sm:text-wrap sm:text-4xl'>
           Join 98% of SMEs, <br />
           startups, and <br /> scale-ups in <br />
           choosing us
         </h2>
-        <p className=' w-96 text-xs leading-relaxed text-neutral-400 sm:text-sm'>
+        <p className=' col-span-4 col-start-8 leading-relaxed text-neutral-400 sm:text-sm'>
           Experience the enduring partnership our clients enjoy, with an average
           tenure exceeding 3 years. <br />
           Our commitment to long-term relationships is evident in the continuous
-          presence of previous clients <br />
-          in our repeat cycle, showcasing the trust and satisfaction they
-          consistently find in our services.
+          presence of previous clients in our repeat cycle, showcasing the trust
+          and satisfaction they consistently find in our services.
         </p>
       </div>
-      <div className='flex min-w-full flex-wrap items-center justify-center gap-5 '>
-        <HomeCard title='Top In-House Teams'>
-          We offer top 1% in-house development squads. We do all the heavy
-          lifting of making your product scalable with the best development
-          processes.
-        </HomeCard>
-        <HomeCard title='Agile on Steroids'>
-          We provide cross-functional Agile teams that are self-organising,
-          adapting to your business needs, taking ownership, and delivering to
-          their full potential.
-        </HomeCard>
-        <HomeCard title='Complete Transparency '>
-          This continuous knowledge transfer is a guarantee that the final
-          product will be handed over without unnecessary stages of knowledge
-          and documentation.
-        </HomeCard>
-        <HomeCard title='Team Synergy'>
-          All team members from our core developers to Product Managers and
-          CTO’s have years of experience in different niches and together they
-          bring a lot to the table.
-        </HomeCard>
+      <div className='grid grid-cols-2 grid-rows-2 gap-5'>
+        {homeCards.map(homeCard => (
+          <HomeCard key={homeCard.title.toString()} {...homeCard} />
+        ))}
       </div>
     </div>
   )

@@ -49,7 +49,7 @@ export default function RootLayout(
           'flex items-center h-screen justify-start overflow-y-scroll overflow-x-hidden max-w-full flex-col bg-black px-36 pt-6 font-sans text-white antialiased sm:!px-5 sm:!pt-7'
         )}
       >
-        <TopNav className='mb-10 flex sm:invisible sm:hidden' />
+        <TopNav className='mb-10 flex px-4 sm:invisible sm:hidden' />
         <BurgerMenu className='invisible hidden sm:visible sm:flex' />
         {props.children}
         <Footer className='group/footer' />

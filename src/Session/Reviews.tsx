@@ -1,4 +1,3 @@
-import { CommentCard } from './CommentCard'
 import starIcon from '@/assets/star-icon.svg'
 import Image from 'next/image'
 
@@ -13,6 +12,8 @@ import person8 from '@/assets/person/Web teams/person8.png'
 import person9 from '@/assets/person/Web teams/person9.png'
 import person10 from '@/assets/person/Web teams/person10.png'
 import person11 from '@/assets/person/Web teams/person11.png'
+import { CommentCard } from '@/Components/CommentCard'
+import { cn } from '@/Util'
 
 const comments1 = [
   {
@@ -85,11 +86,16 @@ const comments4 = [
   }
 ]
 
-export function ReviewHome() {
+export function Reviews(props: { className?: string }) {
   return (
-    <div className='mb-4 flex gap-5 leading-relaxed sm:gap-1'>
+    <div
+      className={cn(
+        'mb-4 flex gap-5 leading-relaxed sm:gap-1',
+        props.className
+      )}
+    >
       <div className='flex flex-col gap-5 sm:gap-4'>
-        <h2 className='text-6xl font-semibold sm:text-4xl'>Reviews</h2>
+        <h2 className='text-[4rem] font-semibold sm:text-4xl'>Reviews</h2>
         {comments1.map(comment => (
           <CommentCard
             comment={comment.text}

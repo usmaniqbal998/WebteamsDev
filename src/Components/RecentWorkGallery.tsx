@@ -12,42 +12,49 @@ import recentWork10 from '@/assets/recentWork/recentWork10.jpg'
 import recentWork11 from '@/assets/recentWork/recentWork11.jpg'
 
 export const RecentWorkGallery = () => {
+  const imageHight = 300
   const imageClassName =
-    'max-h-80 min-h-80 rounded-3xl h-80 w-auto sm:min-h-24 sm:max-h-24 sm:h-24 sm:rounded-md  '
+    'max-h-80 min-h-80 rounded-3xl h-[360px] w-auto sm:min-h-24 sm:max-h-24 sm:h-24 sm:rounded-md '
 
   return (
-    <div className='inline w-max flex-col items-center justify-center overflow-hidden'>
+    <div className='relative inline w-max flex-col items-center justify-center overflow-hidden'>
+      <div className='absolute size-full bg-gradient-to-b from-black/90 to-transparent'></div>
       <div className='inline-flex gap-2 overflow-hidden sm:gap-1 '>
         <Image
           src={recentWork1}
           alt='recent work 1'
           className={imageClassName}
-          height={30}
+          height={imageHight}
         />
         <Image
           src={recentWork2}
           alt='recent work 2'
           className={imageClassName}
+          height={imageHight}
         />
         <Image
           src={recentWork3}
           alt='recent work 3'
           className={imageClassName}
+          height={imageHight}
         />
         <Image
           src={recentWork4}
           alt='recent work 4'
           className={imageClassName}
+          height={imageHight}
         />
         <Image
           src={recentWork5}
           alt='recent work 5'
           className={imageClassName}
+          height={imageHight}
         />
         <Image
           src={recentWork6}
           alt='recent work 6'
           className={imageClassName}
+          height={imageHight}
         />
       </div>
       <div className='flex items-center gap-2 overflow-hidden'>
@@ -55,21 +62,25 @@ export const RecentWorkGallery = () => {
           src={recentWork7}
           alt='recent work 7'
           className={imageClassName}
+          height={imageHight}
         />
         <Image
           src={recentWork8}
           alt='recent work 8'
           className={imageClassName}
+          height={imageHight}
         />
         <Image
           src={recentWork9}
           alt='recent work 9'
           className={imageClassName}
+          height={imageHight}
         />
         <Image
           src={recentWork10}
           alt='recent work 10'
           className={imageClassName}
+          height={imageHight}
         />
         <span className='text-left text-9xl sm:text-4xl'>
           Recent <br /> work
@@ -78,6 +89,7 @@ export const RecentWorkGallery = () => {
           src={recentWork11}
           alt='recent work 11'
           className={imageClassName}
+          height={imageHight}
         />
       </div>
     </div>

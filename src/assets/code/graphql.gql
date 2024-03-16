@@ -1,0 +1,36 @@
+mutation CreateEvent($input: CreateEventInput!) {
+  createEvent(input: $input) {
+    event {
+      id
+      title
+      description
+      date
+      location {
+        name
+        address
+        city
+        country
+      }
+      attendees {
+        id
+        name
+        email
+        rsvpStatus
+      }
+      topics {
+        name
+        speaker {
+          id
+          name
+          bio
+          socialLinks {
+            type
+            url
+          }
+        }
+        startTime
+        endTime
+      }
+    }
+  }
+}
