@@ -30,7 +30,7 @@ export const Faq = ({ className, faqItems }: FaqProps) => {
     >
       {faqItems.map(({ answer, question }) => (
         <AccordionItem value={question} key={question} className='min-w-full'>
-          <AccordionTrigger className='w-full py-8 text-3xl'>
+          <AccordionTrigger className='w-full py-8 text-3xl sm:py-4 sm:text-sm'>
             {question}
           </AccordionTrigger>
           <AccordionContent className='mb-8'>{answer}</AccordionContent>

@@ -1,0 +1,73 @@
+AWSTemplateFormatVersion: '2010-09-09'
+Description: A basic AWS CloudFormation template to set up an AWS infrastructure with a VPC, subnet, Internet Gateway, Route Table, and an EC2 instance.
+
+Resources:
+  MyVPC:
+    Type: 'AWS::EC2::VPC'
+    Properties:
+      CidrBlock: 10.0.0.0/16
+      EnableDnsSupport: true
+      EnableDnsHostnames: true
+      Tags:
+        - Key: Name
+          Value: MyVPC
+
+  MySubnet:
+    Type: 'AWS::EC2::Subnet'
+    Properties:
+      VpcId: !Ref MyVPC
+      CidrBlock: 10.0.1.0/24
+      MapPublicIpOnLaunch: true
+      Tags:
+        - Key: Name
+          Value: MySubnet
+
+  MyInternetGateway:
+    Type: 'AWS::EC2::InternetGateway'
+    Properties:
+      Tags:
+        - Key: Name
+          Value: MyInternetGateway
+
+  AttachGateway:
+    Type: 'AWS::EC2::VPCGatewayAttachment'
+    Properties:
+      VpcId: !Ref MyVPC
+      InternetGatewayId: !Ref MyInternetGateway
+
+  MyRouteTable:
+    Type: 'AWS::EC2::RouteTable'
+    Properties:
+      VpcId: !Ref MyVPC
+      Tags:
+        - Key: Name
+          Value: MyRouteTable
+
+  MyRoute:
+    Type: 'AWS::EC2::Route'
+    DependsOn: AttachGateway
+    Properties:
+      RouteTableId: !Ref MyRouteTable
+      DestinationCidrBlock: 0.0.0.0/0
+      GatewayId: !Ref MyInternetGateway
+
+  MyEC2Instance:
+    Type: 'AWS::EC2::Instance'
+    Properties:
+      ImageId: ami-0c02fb55956c7d316  # Example AMI ID, replace with a current one
+      InstanceType: t2.micro
+      SubnetId: !Ref MySubnet
+      Tags:
+        - Key: Name
+          Value: MyEC2Instance
+
+Outputs:
+  VPCId:
+    Description: The ID of the VPC
+    Value: !Ref MyVPC
+  SubnetId:
+    Description: The ID of the Subnet
+    Value: !Ref MySubnet
+  InstanceId:
+    Description: The ID of the EC2 instance
+    Value: !Ref MyEC2Instance

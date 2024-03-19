@@ -82,7 +82,7 @@ export const RecentWorkGallery = () => {
           className={imageClassName}
           height={imageHight}
         />
-        <span className='text-left text-9xl sm:text-4xl'>
+        <span className='text-left text-9xl sm:text-4xl font-semibold'>
           Recent <br /> work
         </span>
         <Image

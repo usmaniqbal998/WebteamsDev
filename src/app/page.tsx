@@ -8,14 +8,14 @@ import { Reviews } from '@/Session/Reviews'
 
 export default function Home() {
   return (
-    <div className='flex max-w-full flex-col items-center justify-start sm:gap-14'>
+    <div className='flex max-w-full flex-col items-center justify-start'>
       <Hero className='mt-40 sm:mt-10' />
-      <AdvantageSession className='mt-36' />
-      <Code className='mt-36' />
-      <RecentWork className='mt-40' />
-      <Reviews className='mt-40' />
-      <FaqSession className='mt-20' />
-      <Explore className='mb-20 mt-32 sm:mb-10' />
+      <AdvantageSession className='mt-36 sm:mt-8' />
+      <Code className='mt-36 sm:mt-10' />
+      <RecentWork className='mt-40 sm:mt-10' />
+      <Reviews className='mt-40 sm:mt-10' />
+      <FaqSession className='mt-20 sm:mt-10' />
+      <Explore className='mb-20 mt-32 sm:my-10' />
     </div>
   )
 }

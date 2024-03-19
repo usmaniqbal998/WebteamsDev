@@ -1,4 +1,4 @@
-import session2 from '@/assets/picksession2.svg'
+import session2 from '@/assets/picksession2.png'
 import Image from 'next/image'
 import { HomeCard } from './HomeCard'
 import { cn } from '@/Util'
@@ -55,12 +55,13 @@ export function AdvantageSession(props: { className?: string }) {
         props.className
       )}
     >
-      <div className='mb-12 grid w-full grid-cols-11 items-end px-32 sm:flex-col sm:items-start sm:gap-6'>
-        <h2 className='col-span-7 text-nowrap text-8xl leading-[1.1] sm:text-wrap sm:text-4xl'>
-          Unlock expert <br className='sm:hidden' /> guidance <br /> across your
+      <div className='mb-12 grid w-full grid-cols-11 items-end px-32 sm:mb-0 sm:grid-cols-1 sm:grid-rows-2 sm:flex-col sm:items-start sm:gap-6 sm:px-2'>
+        <h2 className='col-span-7 text-8xl leading-[1.1] 2xl:text-6xl lg:text-5xl sm:col-span-1 sm:text-4xl'>
+          Unlock expert <br className='sm:hidden' /> guidance
+          <br className='sm:hidden' /> across your
           <br /> product lifecycle
         </h2>
-        <p className='col-span-4 col-start-8 leading-loose text-neutral-400 sm:text-sm'>
+        <p className='col-span-4 col-start-8 leading-loose text-neutral-400 sm:col-span-1 sm:text-sm'>
           Join 100+ Technology Companies that went beyond their goals with us.
           Whether you are a fortune 500 or a startup - we give you top-notch
           Product Managers and <br className='sm:hidden' />
@@ -68,14 +69,19 @@ export function AdvantageSession(props: { className?: string }) {
           succeed. You can scale these dedicated squads up and down anytime.
         </p>
       </div>
-      <Image className='mb-44' priority src={session2} alt='pick session2' />
-      <div className='mb-12 grid w-full grid-cols-11 items-end px-32 sm:flex-col sm:items-start sm:gap-6'>
-        <h2 className='col-span-7 text-nowrap text-8xl sm:text-wrap sm:text-4xl'>
+      <Image
+        className='mb-44 h-[720px] w-auto sm:mb-10 sm:h-auto'
+        src={session2}
+        alt='pick session2'
+        height={400}
+      />
+      <div className='mb-12 grid w-full grid-cols-11 items-end px-32 sm:mb-0 sm:grid-cols-1 sm:grid-rows-2 sm:flex-col sm:items-start sm:gap-6 sm:px-2'>
+        <h2 className='col-span-7 text-8xl 2xl:text-6xl xl:text-5xl sm:col-span-1 sm:text-wrap sm:text-4xl'>
           Join 98% of SMEs, <br />
           startups, and <br /> scale-ups in <br />
           choosing us
         </h2>
-        <p className=' col-span-4 col-start-8 leading-relaxed text-neutral-400 sm:text-sm'>
+        <p className=' col-span-4 col-start-8 leading-relaxed text-neutral-400 sm:col-span-1 sm:text-sm'>
           Experience the enduring partnership our clients enjoy, with an average
           tenure exceeding 3 years. <br />
           Our commitment to long-term relationships is evident in the continuous
@@ -83,7 +89,7 @@ export function AdvantageSession(props: { className?: string }) {
           and satisfaction they consistently find in our services.
         </p>
       </div>
-      <div className='grid grid-cols-2 grid-rows-2 gap-5'>
+      <div className='grid grid-cols-2 grid-rows-2 gap-5 sm:grid-cols-1 sm:grid-rows-none'>
         {homeCards.map(homeCard => (
           <HomeCard key={homeCard.title.toString()} {...homeCard} />
         ))}

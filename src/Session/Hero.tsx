@@ -30,30 +30,30 @@ export function Hero(props: { className?: string }) {
         </div>
         <BracketText className='mt-16 w-96 self-start' />
       </div>
-      <div className='mt-36 flex w-screen min-w-[100vw] items-center justify-between px-40 sm:mt-12'>
+      <div className='mt-36 flex w-screen min-w-[100vw] items-center justify-between px-40 sm:mt-8 sm:px-4'>
         <Image
           src={shopify}
           alt='shopify-icon'
           height={40}
-          className='sm:h-10'
+          className='sm:h-4'
         ></Image>
         <Image
           src={bynder}
           alt='bynder-icon'
           height={40}
-          className='sm:h-10'
+          className='sm:h-4'
         ></Image>
         <Image
           src={amazon}
           alt='amazon-icon'
           height={40}
-          className='sm:h-10'
+          className='sm:h-4'
         ></Image>
         <Image
           src={ilmiya}
           alt='ilmiya-icon'
           height={40}
-          className='sm:h-10'
+          className='sm:h-4'
         ></Image>
       </div>
     </div>

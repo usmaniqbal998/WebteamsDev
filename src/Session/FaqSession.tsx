@@ -36,7 +36,7 @@ export const FaqSession = (props: { className?: string }) => {
         props.className
       )}
     >
-      <h2 className='mb-8 w-11/12 text-6xl sm:mb-4'>
+      <h2 className='mb-8 w-11/12 text-6xl sm:mb-4 sm:text-4xl'>
         Frequently asked questions
       </h2>
       <Faq faqItems={faqItems} />
