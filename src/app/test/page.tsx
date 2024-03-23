@@ -1,5 +1,5 @@
-import { AboutUsHero } from '@/Session/AboutUsHero'
+import { MobileDevSection } from '@/Session/MobileDevSection'
 
 export default function test() {
-  return <AboutUsHero />
+  return <MobileDevSection />
 }
