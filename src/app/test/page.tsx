@@ -1,7 +1,5 @@
-import { HeroSideBar } from '@/Components/HeroSideBar'
-import { DesignHero } from '@/Session/DesignHero'
-import { Test } from '@/Session/test'
+import { WebAppDevHero } from '@/Session/WebAppDevHero'
 
 export default function test() {
-  return <Test />
+  return <WebAppDevHero />
 }
