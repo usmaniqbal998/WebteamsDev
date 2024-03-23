@@ -1,3 +1,5 @@
+import { AboutUsHero } from '@/Session/AboutUsHero'
+
 export default function test() {
-  return <div></div>
+  return <AboutUsHero />
 }
