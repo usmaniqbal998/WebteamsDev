@@ -1,6 +1,7 @@
 import { Faq, FaqItem } from '@/Components/faq'
+import { cn } from '@/Util'
 
-export const FaqSession = () => {
+export const FaqSession = (props: { className?: string }) => {
   const faqItems: FaqItem[] = [
     {
       question: 'How can I get started with my project?',
@@ -29,8 +30,15 @@ export const FaqSession = () => {
   ]
 
   return (
-    <div className='flex w-full flex-col items-center justify-start'>
-      <h2 className='mb-8 text-4xl sm:mb-4'>Frequently asked questions</h2>
+    <div
+      className={cn(
+        'flex w-full flex-col items-center justify-start',
+        props.className
+      )}
+    >
+      <h2 className='mb-8 w-11/12 text-6xl sm:mb-4 sm:text-4xl'>
+        Frequently asked questions
+      </h2>
       <Faq faqItems={faqItems} />
     </div>
   )

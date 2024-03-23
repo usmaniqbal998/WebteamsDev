@@ -15,44 +15,44 @@ export function Hero(props: { className?: string }) {
         props.className
       )}
     >
-      <div className='flex flex-col items-center text-9xl sm:text-6xl'>
+      <div className='flex flex-col items-center text-[209px] leading-[0.90] sm:text-6xl'>
         <h1 className='self-start text-white'>Scalable</h1>
-        <div className='flex items-center gap-36 sm:gap-5'>
+        <div className='flex items-center gap-64 sm:gap-5'>
           <Image
             src={heroIcon}
             alt='heroIcon'
-            width={120}
-            height={120}
+            width={162}
+            height={162}
             className='sm:size-12'
             priority
           />
           <h1 className='text-white'>Horizons</h1>
         </div>
-        <BracketText className='mt-14 w-96 self-start' />
+        <BracketText className='mt-16 w-96 self-start' />
       </div>
-      <div className='mt-24 flex min-w-full max-w-full items-center justify-evenly sm:mt-12'>
+      <div className='mt-36 flex w-screen min-w-[100vw] items-center justify-between px-40 sm:mt-8 sm:px-4'>
         <Image
           src={shopify}
           alt='shopify-icon'
-          height={30}
+          height={40}
           className='sm:h-4'
         ></Image>
         <Image
           src={bynder}
           alt='bynder-icon'
-          height={30}
+          height={40}
           className='sm:h-4'
         ></Image>
         <Image
           src={amazon}
           alt='amazon-icon'
-          height={30}
+          height={40}
           className='sm:h-4'
         ></Image>
         <Image
           src={ilmiya}
           alt='ilmiya-icon'
-          height={30}
+          height={40}
           className='sm:h-4'
         ></Image>
       </div>

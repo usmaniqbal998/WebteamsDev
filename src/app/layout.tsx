@@ -40,16 +40,20 @@ export default function RootLayout(
   return (
     <html
       lang='en'
-      className='h-screen w-screen !max-w-full scrollbar scrollbar-track-neutral-700 scrollbar-thumb-neutral-500'
+      className='h-screen w-screen !max-w-full scrollbar scrollbar-track-neutral-700 scrollbar-thumb-neutral-500 sm:overflow-x-hidden'
     >
       <body
         className={cn(
           jetBrainsMono.variable,
           poppins.variable,
+<<<<<<< HEAD
           'flex items-center min-h-screen justify-start overflow-y-scroll overflow-x-hidden max-w-full flex-col bg-black px-36 pt-6 font-sans text-white antialiased sm:!px-5 sm:!pt-7'
+=======
+          'flex items-center h-screen justify-start overflow-y-scroll overflow-x-hidden max-w-full flex-col bg-black px-36 pt-6 font-sans text-white antialiased sm:!px-4 sm:!pt-7'
+>>>>>>> 6ed360c707f5ef97e4da7e4d5152142bcd0417a1
         )}
       >
-        <TopNav className='mb-10 flex sm:invisible sm:hidden' />
+        <TopNav className='mb-10 flex px-4 sm:invisible sm:hidden' />
         <BurgerMenu className='invisible hidden sm:visible sm:flex' />
         {props.children}
         <Footer className='group/footer' />
