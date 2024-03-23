@@ -1,0 +1,19 @@
+[] Adjust states (hover, pressed)
+
+[] Adjust the text in braket
+
+[] Add color in the title of home cards
+
+[] Adjust the textss with star
+
+[] Code need to be selected
+
+[] Padding erros on code
+
+[] Add the overall layer on recent work
+
+[] Adjust recent work weight
+
+[] add the review section
+
+[] adjust the width of faq
