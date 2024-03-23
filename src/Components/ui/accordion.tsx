@@ -45,14 +45,14 @@ const AccordionTrigger = React.forwardRef<
         fill='white'
         stroke='black'
         strokeWidth={0.8}
-        className='invisible size-12 shrink-0 transition-transform duration-200 group-data-[state=open]:visible'
+        className='invisible size-12 shrink-0 fill-[#CEDCF6] transition-transform duration-200 group-data-[state=open]:visible sm:size-7'
       />
 
       <PlusCircle
         fill='white'
         stroke='black'
         strokeWidth={0.8}
-        className='size-12 shrink-0 transition-transform duration-200 group-data-[state=open]:hidden'
+        className='size-12 shrink-0 transition-transform duration-200 group-hover:fill-[#ECFAE5] group-data-[state=open]:hidden sm:size-7'
       />
     </AccordionPrimitive.Trigger>
   </AccordionPrimitive.Header>

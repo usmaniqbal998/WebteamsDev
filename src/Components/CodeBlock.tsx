@@ -8,27 +8,14 @@ import typescriptIcon from '@/assets/tech/typescript-icon.svg'
 import Image from 'next/image'
 import { useRef } from 'react'
 import { cn } from '@/Util'
+import { CodeBlockLanguage } from '@/Util/CodeBlockLanguage'
 
-const code = `import axios from 'axios';
-import { z } from 'zod';
+type CodeBlockProps = {
+  code: string
+  language: CodeBlockLanguage
+}
 
-// Define a schema for user data using zod
-const UserSchema = z.object({
-  id: z.number(),
-  username: z.string(),
-  email: z.string(),
-});
-
-// Type definition is automatically inferred from Zod schema
-type User = z.infer<typeof UserSchema>;
-
-async function fetchUserData(userId: number): Promise<User> {
-    const response = await axios.get(\`https://api.example.com/users/\${userId}\`);
-    // Validate response data against the UserSchema
-    return UserSchema.parse(response.data);
-}`
-
-export const CodeBlock = () => {
+export const CodeBlock = (props: CodeBlockProps) => {
   const CodeBlockRef = useRef(null)
   return (
     <div className='flex w-[70vw] flex-col items-center justify-center divide-y-[1px] rounded-3xl border-2 sm:w-full '>
@@ -54,12 +41,12 @@ export const CodeBlock = () => {
       <div
         className={cn(
           'h-[600px] sm:h-[450px] w-full max-w-full [&_span]:z-10 [&_span]:max-h-full sm:text-sm',
-          '[&_span]:scrollbar-thin [&_span]:scrollbar-track-neutral-600 [&_span]:scrollbar-thumb-neutral-900'
+          '[&_span]:scrollbar-thin [&_span]:scrollbar-track-neutral-600 [&_span]:scrollbar-thumb-neutral-900 overflow-x-hidden'
         )}
       >
         <_CodeBlock
-          text={code}
-          language='typescript'
+          text={props.code}
+          language={props.language}
           theme={irBlack}
           ref={CodeBlockRef}
           wrapLongLines={false}
