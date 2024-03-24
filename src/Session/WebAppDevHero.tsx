@@ -14,9 +14,9 @@ export function WebAppDevHero() {
           Let&#39; discuss
         </button>
       </div>
-      <div className='relative mb-8 mt-20 flex items-end gap-10 px-40 leading-relaxed'>
+      <div className='relative mb-8 mt-20 flex items-end gap-10 leading-relaxed'>
         <HeroSideBar
-          className=' absolute -left-4 top-9 gap-24'
+          className=' absolute -left-28 top-9 gap-24'
           tags={['Brief', 'Why', 'Process']}
           highlight='Brief'
         />
