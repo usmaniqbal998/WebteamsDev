@@ -5,19 +5,21 @@ import group3 from '@/assets/whysection/group3.svg'
 import group4 from '@/assets/whysection/Group4.svg'
 import { StaticImport } from 'next/dist/shared/lib/get-img-props'
 
+export type Reason = {
+  image: StaticImport
+  name: string
+  text: string
+}
+
 type WhySectionProps = {
   question: string
-  reasons: {
-    image: StaticImport
-    name: string
-    text: string
-  }[]
+  reasons: Reason[]
 }
 
 export function WhySection(props: WhySectionProps) {
   return (
     <div className='flex flex-col gap-16'>
-      <h2 className='w-4/6 text-8xl'>{props.question}</h2>
+      <h2 className='mt-24 w-5/6 text-8xl'>{props.question}</h2>
       <div className='grid grid-cols-2 gap-10'>
         {props.reasons.map(reason => (
           <div key={reason.name} className='flex flex-col gap-3'>

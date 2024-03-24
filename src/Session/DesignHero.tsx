@@ -9,7 +9,7 @@ import { HeroSideBar } from '@/Components/HeroSideBar'
 
 export function DesignHero() {
   return (
-    <div className=' flex flex-col items-center px-[345px] '>
+    <div className=' flex flex-col items-center '>
       <h1 className=' text-9xl'>Design</h1>
       <Image className='mt-6' src={flowerIcon} alt='flowericon' />
       <span className='mt-14 text-center text-3xl'>
