@@ -1,7 +1,5 @@
-import { WhySection } from '@/Session/WhySection'
+import { ServiceDropdown } from '@/Components/ServiceDropdown'
 
 export default function test() {
-  return (
-    <WhySection reasons={[]} question='Why you should hire our design team?' />
-  )
+  return <ServiceDropdown />
 }

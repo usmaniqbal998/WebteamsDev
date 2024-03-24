@@ -6,6 +6,7 @@ import webteamsLogo from '@/assets/webteams-logo.svg'
 import Image from 'next/image'
 import { usePathname } from 'next/navigation'
 import Link from 'next/link'
+import { ServiceDropdown } from '@/Components/ServiceDropdown'
 
 export const TopNav = (props: { className?: string }) => {
   const pathname = usePathname()
@@ -24,9 +25,7 @@ export const TopNav = (props: { className?: string }) => {
         <MenuButton href='/' regex='^\/$'>
           home
         </MenuButton>
-        <MenuButton href='/services' regex='^\/services'>
-          services
-        </MenuButton>
+        <ServiceDropdown />
         <MenuButton href='/about' regex='^\/about$'>
           about us
         </MenuButton>

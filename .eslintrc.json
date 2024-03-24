@@ -24,6 +24,7 @@
     "react/react-in-jsx-scope": "off",
     "@typescript-eslint/no-unused-vars": "warn",
     "prettier/prettier": "warn",
+    "no-use-before-define": "off",
     // "space-before-function-paren": "off",
     "react/jsx-filename-extension": "off"
     // "react/jsx-first-prop-new-line": [2, "multiline"],
