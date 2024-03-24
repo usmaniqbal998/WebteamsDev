@@ -3,6 +3,7 @@
 import Link from 'next/link'
 import { ReactNode } from 'react'
 import { usePathname } from 'next/navigation'
+import { cn } from '@/Util'
 
 export type MenuButtonProps = {
   children: ReactNode
@@ -15,7 +16,10 @@ export const MenuButton = ({ regex, children, ...rest }: MenuButtonProps) => {
   return (
     <Link
       data-active={new RegExp(regex).test(pathname)}
-      className='font-semibold text-gray-400 transition duration-200 ease-in data-[active=true]:text-white hover:text-white lg:text-sm sm:text-xl sm:font-normal sm:data-[active=true]:text-green-500'
+      className={cn(
+        'font-semibold text-white transition duration-300 ease-in',
+        'data-[active=true]:text-[#CEDCF6] hover:text-[#DAF9CA] lg:text-sm sm:text-xl sm:font-normal sm:data-[active=true]:text-[#DAF9CA]'
+      )}
       {...rest}
     >
       {children}
