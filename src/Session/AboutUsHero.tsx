@@ -5,8 +5,8 @@ import { HeroSideBar } from '@/Components/HeroSideBar'
 export function AboutUsHero() {
   return (
     <div className='flex w-full flex-col items-center'>
-      <div className=' flex h-[80vh] w-screen min-w-[100vw] flex-col items-center justify-center bg-zinc-800  text-center  text-8xl'>
-        <span className='px-64 '>
+      <div className=' flex h-[80vh] w-screen min-w-[100vw] flex-col items-center justify-center bg-zinc-800  text-center  text-6xl'>
+        <span className='px-64  '>
           We are the <mark className='text-green-500'>fastest growing </mark>
           digital consultancy in Europe and the North America
         </span>
@@ -14,9 +14,9 @@ export function AboutUsHero() {
           Let&apos;s discuss
         </button>
       </div>
-      <div className='relative mt-20 flex flex-col gap-12 px-96 leading-loose'>
+      <div className='relative mt-20 flex flex-col gap-12 leading-loose'>
         <HeroSideBar
-          className='absolute left-52 top-20 gap-28'
+          className='absolute -left-40 top-20 gap-28'
           highlight='Brief'
           tags={['Brief', 'Who', 'Values']}
         />
@@ -38,7 +38,7 @@ export function AboutUsHero() {
           development of digital product from start to finish.
         </p>
       </div>
-      <div className='mt-12 flex items-start justify-center gap-16  px-96'>
+      <div className='mt-12 flex items-start justify-center gap-16 '>
         <Image src={IconAboutHero} alt='img' />
         <div className='flex flex-col items-start gap-16 leading-loose'>
           <span className='text-7xl'>Who do we help? </span>
