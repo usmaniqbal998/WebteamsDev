@@ -2,7 +2,7 @@ import Image from 'next/image'
 import mobiledev from '@/assets/mobiledev-image.svg'
 import { HeroSideBar } from '@/Components/HeroSideBar'
 
-export function MobileDevSection() {
+export function MobileDevHero() {
   return (
     <div className='flex flex-col items-center text-center'>
       <h1 className='text-9xl'>Mobile App Development</h1>
@@ -12,9 +12,9 @@ export function MobileDevSection() {
       <button className='mt-6 h-11 w-36 rounded-full border-white bg-white text-sm font-semibold text-black'>
         Lets discuss
       </button>
-      <div className='relative mt-24 flex w-full flex-row justify-between px-40'>
+      <div className='relative mt-24 flex w-full flex-row justify-between'>
         <HeroSideBar
-          className='absolute left-8 top-11 gap-28'
+          className='absolute -left-40 top-11 gap-28'
           tags={['Brief', 'Why', 'Process']}
           highlight='Brief'
         />
@@ -25,7 +25,7 @@ export function MobileDevSection() {
         </h2>
         <Image src={mobiledev} alt='imagemobiledev' />
       </div>
-      <p className='mt-9 px-40 text-left font-normal'>
+      <p className='mt-10 px-2 text-left font-normal '>
         Choosing the right web development partner is very crucial for the
         success of your digital products. We offer highly technical developers
         and product managers that are involved in your development lifecycle

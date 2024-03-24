@@ -1,3 +1,4 @@
+import { cn } from '@/Util'
 import { ReactNode } from 'react'
 
 export type Step = {
@@ -8,13 +9,19 @@ export type Step = {
 type OurDesignCardProps = {
   title: ReactNode
   steps: Step[]
+  className?: string
 }
 
 export function OurDesignCard(props: OurDesignCardProps) {
   return (
-    <div className='mt-14 flex w-screen flex-col gap-10 bg-zinc-900 px-72 '>
+    <div
+      className={cn(
+        ' flex w-screen flex-col gap-10 bg-zinc-900 px-72 ',
+        props.className
+      )}
+    >
       <h2 className='mt-12 text-8xl '>{props.title}</h2>
-      <div className=' flex w-full flex-row items-start justify-center gap-4'>
+      <div className=' flex w-full flex-row items-start justify-between gap-4'>
         {props.steps.map((step, index) => (
           <>
             <div className='flex w-36 flex-col gap-2'>
@@ -28,7 +35,6 @@ export function OurDesignCard(props: OurDesignCardProps) {
           </>
         ))}
       </div>
-      <div className=''></div>
     </div>
   )
 }
