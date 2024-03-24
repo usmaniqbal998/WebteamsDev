@@ -1,23 +1,28 @@
-export function OurDesignCard() {
+type OurDesignCardProps = {
+  title: string
+  steps: {
+    subtitle: string
+    text: string
+  }[]
+}
+
+export function OurDesignCard(props: OurDesignCardProps) {
   return (
-    <div className='w-full'>
+    <div className='flex w-screen flex-col gap-10 bg-zinc-900 px-72 '>
       <h2 className='text-8xl '>
         Our design <br /> process
       </h2>
-      <div className='flex w-full flex-row items-center justify-center gap-10'>
-        {Array.from({ length: 5 }).map(() => (
+      <div className=' flex w-full flex-row items-start justify-center gap-10'>
+        {props.steps.map((step, index) => (
           <>
-            <div className='flex w-32 flex-col'>
+            <div className='flex w-32 flex-col gap-2'>
               <span className='flex size-11 items-center justify-center rounded-full bg-green-300 text-xl text-black'>
-                1
+                {index + 1}
               </span>
-              <span className='text-xl'>Empathize </span>
-              <p className=' text-stone-400'>
-                Move around the problem what the user says, thinks, and feels.
-                Create persona of the user.
-              </p>
+              <span className='text-xl'>{step.subtitle} </span>
+              <p className=' text-stone-400'>{step.text}</p>
             </div>
-            <div className=''></div>
+            <div className='h-full w-[1px] bg-white last-of-type:hidden'></div>
           </>
         ))}
       </div>
