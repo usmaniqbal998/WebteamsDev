@@ -2,7 +2,7 @@ import { cn } from '@/Util'
 
 type HeroSideBarProps = {
   tags: string[]
-  className: string
+  className?: string
   highlight?: string
 }
 
@@ -13,8 +13,8 @@ export function HeroSideBar(props: HeroSideBarProps) {
         <span
           key={tag}
           className={cn(
-            'flex items-center justify-center border-l-2 border-green-600 pl-5',
-            tag === props.highlight ? 'text-green-500' : ''
+            'flex items-center justify-center border-l-2 border-white pl-5',
+            tag === props.highlight ? 'text-green-500 border-green-600' : ''
           )}
         >
           {tag}
