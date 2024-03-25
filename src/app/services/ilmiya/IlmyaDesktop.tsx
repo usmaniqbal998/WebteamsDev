@@ -1,3 +1,5 @@
+'use client'
+
 import Image from 'next/image'
 import img1 from '@/assets/ilmya/img1-ilmya.svg'
 import img2 from '@/assets/ilmya/img2-ilmya.svg'

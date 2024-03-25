@@ -1,3 +1,5 @@
+'use client'
+
 import Image from 'next/image'
 import img1 from '@/assets/office/img1-office.svg'
 import img2 from '@/assets/office/img2-office.svg'
