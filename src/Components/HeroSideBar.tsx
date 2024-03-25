@@ -8,12 +8,13 @@ type HeroSideBarProps = {
 
 export function HeroSideBar(props: HeroSideBarProps) {
   return (
-    <div className={cn('flex flex-col gap-20', props.className)}>
+    <div className={cn('flex flex-col sm:flex-row gap-20', props.className)}>
       {props.tags.map(tag => (
         <span
           key={tag}
           className={cn(
-            'flex items-center justify-center border-l-2 border-white pl-5',
+            'flex items-center justify-start border-l-2 border-white pl-5',
+            'sm:border-l-0 sm:border-t-2 sm:pl-0 sm:pt-2',
             tag === props.highlight ? 'text-green-500 border-green-600' : ''
           )}
         >

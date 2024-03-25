@@ -1,12 +1,10 @@
 import { DesignHero } from '@/Session/DesignHero'
 import { Reason, WhySection } from '@/Session/WhySection'
-import { propagateServerField } from 'next/dist/server/lib/render-server'
 import reasonIcon1 from '@/assets/DesignPage/reason-icon1.svg'
 import reasonIcon2 from '@/assets/DesignPage/reason-icon2.svg'
 import reasonIcon3 from '@/assets/DesignPage/reason-icon3.svg'
 import reasonIcon4 from '@/assets/DesignPage/reason-icon4.svg'
 import { OurDesignCard, Step } from '@/Components/OurDesignCard'
-import { setHeapSnapshotNearHeapLimit } from 'v8'
 
 const reasons: Reason[] = [
   {
@@ -60,10 +58,10 @@ const steps: Step[] = [
 
 export default function Design() {
   return (
-    <div className='flex max-w-full flex-col items-center justify-start px-32'>
+    <div className='flex max-w-full flex-col items-center justify-start px-32 sm:px-0'>
       <DesignHero />
       <WhySection
-        question='Why you should hire our design team?  '
+        question='Why you should hire our design team?'
         reasons={reasons}
       />
       <OurDesignCard

@@ -9,24 +9,30 @@ import { HeroSideBar } from '@/Components/HeroSideBar'
 
 export function DesignHero() {
   return (
-    <div className=' flex flex-col items-center '>
-      <h1 className=' text-9xl'>Design</h1>
-      <Image className='mt-6' src={flowerIcon} alt='flowericon' />
-      <span className='mt-14 text-center text-3xl'>
-        Looking for award-winning design teams? look no <br /> more!
+    <div className='flex max-w-full flex-col items-center'>
+      <h1 className='text-9xl sm:text-6xl'>Design</h1>
+      <Image
+        className='mt-6 sm:h-14'
+        src={flowerIcon}
+        alt='flowericon'
+        height={96}
+      />
+      <span className='mt-14 text-center text-3xl sm:mt-4 sm:px-6 sm:text-xl'>
+        Looking for award-winning design teams? look no
+        <br className='sm:hidden' /> more!
       </span>
-      <span className='mt-12 text-lg'>
+      <span className='mt-12 text-lg sm:text-sm'>
         We Craft delightful UX for your digital products
       </span>
       <button className='mt-5 rounded-full bg-white px-6 py-3 text-sm font-bold text-black'>
         Let’s discuss
       </button>
-      <h2 className='mt-8 self-start text-8xl'>
+      <h2 className='mt-8 self-start text-8xl sm:text-4xl'>
         Case <br /> studies
       </h2>
-      <div className=' relative mt-8 flex flex-wrap items-center justify-between gap-y-10'>
+      <div className='relative mt-8 flex flex-wrap items-center justify-between gap-y-10 sm:flex-col'>
         <HeroSideBar
-          className='absolute -left-40 -top-32 z-50'
+          className='absolute -left-40 -top-32 z-50 sm:static sm:left-0 sm:top-0'
           tags={['Projects', 'Why', 'Process']}
           highlight='Projects'
         />
