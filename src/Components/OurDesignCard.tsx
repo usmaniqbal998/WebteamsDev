@@ -13,7 +13,7 @@ type OurDesignCardProps = {
 
 export function OurDesignCard(props: OurDesignCardProps) {
   return (
-    <div className='mt-14 flex w-screen flex-col gap-10 bg-zinc-900 px-72 pb-12 sm:px-4'>
+    <div className='flex w-screen flex-col gap-10 bg-zinc-900 px-72 pb-12 sm:px-4'>
       <h2 className='mt-12 text-8xl sm:text-4xl'>{props.title}</h2>
       <div className=' flex w-full flex-row items-start justify-between gap-4 sm:grid sm:grid-cols-11 sm:gap-0 sm:gap-y-8'>
         {props.steps.map((step, index) => (

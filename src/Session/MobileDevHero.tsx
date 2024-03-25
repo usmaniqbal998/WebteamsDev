@@ -5,27 +5,34 @@ import { HeroSideBar } from '@/Components/HeroSideBar'
 export function MobileDevHero() {
   return (
     <div className='flex flex-col items-center text-center'>
-      <h1 className='text-9xl'>Mobile App Development</h1>
+      <h1 className='text-9xl sm:text-6xl'>Mobile App Development</h1>
       <span className='mt-16 text-3xl'>
         Grow your business with fully tailored MobileApps
       </span>
       <button className='mt-6 h-11 w-36 rounded-full border-white bg-white text-sm font-semibold text-black'>
-        Lets discuss
+        Let&#39;s discuss
       </button>
-      <div className='relative mt-24 flex w-full flex-row justify-between'>
+      <div className='relative mt-24 flex w-full flex-row justify-between sm:flex-col sm:items-start sm:gap-4'>
         <HeroSideBar
-          className='absolute -left-40 top-11 gap-28'
+          className='absolute -left-40 top-11 gap-28 sm:static sm:left-0 sm:top-0 sm:w-full sm:justify-center'
           tags={['Brief', 'Why', 'Process']}
           highlight='Brief'
         />
-        <h2 className='text-left text-8xl [&_mark]:text-green-500'>
-          <mark className='font-semibold'>7</mark> weeks <br /> to get <br />{' '}
-          ready <br />
-          your MVP
-        </h2>
-        <Image src={mobiledev} alt='imagemobiledev' />
+        <div className='flex w-full items-start justify-between'>
+          <h2 className='text-left text-8xl sm:text-4xl [&_mark]:font-semibold [&_mark]:text-green-500'>
+            <mark>7</mark> weeks <br /> to get <br />
+            ready <br />
+            your MVP
+          </h2>
+          <Image
+            src={mobiledev}
+            alt='imagemobiledev'
+            height={307}
+            className='sm:h-36 sm:w-auto'
+          />
+        </div>
       </div>
-      <p className='mt-10 px-2 text-left font-normal '>
+      <p className='mt-10 px-2 text-left font-normal text-neutral-400 sm:px-0'>
         Choosing the right web development partner is very crucial for the
         success of your digital products. We offer highly technical developers
         and product managers that are involved in your development lifecycle

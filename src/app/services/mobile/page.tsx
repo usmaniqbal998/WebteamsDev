@@ -55,7 +55,7 @@ const steps: Step[] = [
 
 export default function Mobile() {
   return (
-    <div className='flex max-w-full flex-col items-center justify-start px-32'>
+    <div className='flex max-w-full flex-col items-center justify-start px-32 sm:px-0'>
       <MobileDevHero />
       <WhySection
         question='Why you should hire our development Team?'

@@ -13,7 +13,7 @@ export function WebAppDevHero() {
           Grow your business with fully tailored Web Apps
         </span>
         <button className='mt-4 h-11 w-36 rounded-full bg-white text-sm font-semibold text-black'>
-          Let&#39; discuss
+          Let&#39;s discuss
         </button>
       </div>
       <div className='relative mb-8 mt-20 flex items-end gap-10 leading-relaxed sm:flex-col sm:items-start sm:gap-4'>
