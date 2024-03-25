@@ -54,10 +54,10 @@ const steps: Step[] = [
 
 export default function Web() {
   return (
-    <div className='flex max-w-full flex-col items-center justify-start px-32'>
+    <div className='flex max-w-full flex-col items-center justify-start px-32 sm:px-0'>
       <WebAppDevHero />
       <WhySection
-        question='Why you should hire our Development Team? '
+        question='Why you should hire our Development Team?'
         reasons={reasons}
       />
       <OurDesignCard

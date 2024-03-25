@@ -23,7 +23,7 @@ const menuItems: Omit<MenuItemProps, 'isSelected'>[] = [
     description: 'Grow your business with fully tailored Web Apps'
   },
   {
-    href: '/services/modile',
+    href: '/services/mobile',
     title: 'Mobile App Development',
     description: 'Grow your business with fully tailored MobileApps'
   }

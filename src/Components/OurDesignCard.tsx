@@ -13,9 +13,9 @@ type OurDesignCardProps = {
 
 export function OurDesignCard(props: OurDesignCardProps) {
   return (
-    <div className='mt-14 flex w-screen flex-col gap-10 bg-zinc-900 px-72 sm:px-0'>
+    <div className='mt-14 flex w-screen flex-col gap-10 bg-zinc-900 px-72 pb-12 sm:px-4'>
       <h2 className='mt-12 text-8xl sm:text-4xl'>{props.title}</h2>
-      <div className=' flex w-full flex-row items-start justify-between gap-4 px-4 sm:grid sm:grid-cols-11 sm:gap-0 sm:gap-y-8'>
+      <div className=' flex w-full flex-row items-start justify-between gap-4 sm:grid sm:grid-cols-11 sm:gap-0 sm:gap-y-8'>
         {props.steps.map((step, index) => (
           <Fragment key={step.subtitle}>
             <div
@@ -32,7 +32,7 @@ export function OurDesignCard(props: OurDesignCardProps) {
             </div>
             <div
               data-is-odd={index % 2 === 0}
-              className='col-span-1 h-full w-[1px] bg-white last-of-type:hidden sm:data-[is-odd=false]:hidden'
+              className='col-span-1 h-full w-[1px] bg-white last-of-type:hidden sm:last-of-type:block sm:data-[is-odd=false]:hidden'
               key={step.subtitle}
             ></div>
           </Fragment>

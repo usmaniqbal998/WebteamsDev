@@ -14,8 +14,8 @@ type WhySectionProps = {
 
 export function WhySection(props: WhySectionProps) {
   return (
-    <div className='flex flex-col gap-16'>
-      <h2 className='mt-24 w-5/6 text-8xl sm:w-4/6 sm:text-3xl'>
+    <div className='flex flex-col gap-16 sm:gap-4'>
+      <h2 className='mt-24 w-5/6 text-8xl sm:mt-10 sm:w-4/6 sm:text-3xl'>
         {props.question}
       </h2>
       <div className='grid grid-cols-2 gap-10 sm:grid-cols-1'>

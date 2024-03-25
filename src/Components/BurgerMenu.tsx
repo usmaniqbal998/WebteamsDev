@@ -22,7 +22,7 @@ import { ImageCircle } from '@/Util/ImageCirclu'
 export const BurgerMenu = (props: { className?: string }) => {
   return (
     <div
-      className={`${props.className} z-50 flex w-full flex-row items-center justify-between`}
+      className={`${props.className} z-50 mb-8 flex w-full flex-row items-center justify-between`}
     >
       <div className='flex items-center justify-center gap-2'>
         <Image src={webteamsLogo} alt='webteams logo' />
