@@ -1,5 +1,4 @@
 import Image from 'next/image'
-import GroupHero from '@/assets/GroupHero.svg'
 import { StaticImport } from 'next/dist/shared/lib/get-img-props'
 
 type CaseStudyCardProps = {
@@ -10,9 +9,9 @@ type CaseStudyCardProps = {
 
 export function CaseStudyCard(props: CaseStudyCardProps) {
   return (
-    <div className='flex w-min flex-col'>
-      <div className='mb-6 flex h-[388px] w-[451px] justify-center rounded-lg border bg-neutral-200'>
-        <Image src={props.image} alt='grouphero' />
+    <div className='flex w-min flex-col sm:w-full'>
+      <div className='mb-6 flex h-[388px] w-[451px] justify-center rounded-lg border bg-neutral-200 sm:h-[80vw] sm:w-full'>
+        <Image src={props.image} alt='grouphero' width={451} />
       </div>
       <span className=''>{props.name}</span>
       <span className='mt-1 text-neutral-300'>{props.text}</span>
