@@ -1,4 +1,4 @@
-import { Fragment, ReactNode } from 'react'
+import { ReactNode, Fragment } from 'react'
 
 export type Step = {
   subtitle: string
@@ -8,17 +8,18 @@ export type Step = {
 type OurDesignCardProps = {
   title: ReactNode
   steps: Step[]
+  className?: string
 }
 
 export function OurDesignCard(props: OurDesignCardProps) {
   return (
     <div className='mt-14 flex w-screen flex-col gap-10 bg-zinc-900 px-72 sm:px-0'>
       <h2 className='mt-12 text-8xl sm:text-4xl'>{props.title}</h2>
-      <div className=' flex w-full flex-row items-start justify-center gap-10 px-4 sm:grid sm:grid-cols-11 sm:gap-0 sm:gap-y-8'>
+      <div className=' flex w-full flex-row items-start justify-between gap-4 px-4 sm:grid sm:grid-cols-11 sm:gap-0 sm:gap-y-8'>
         {props.steps.map((step, index) => (
           <Fragment key={step.subtitle}>
             <div
-              className='col-span-5 flex w-32 flex-col gap-2 sm:w-40'
+              className='col-span-5 flex w-36 flex-col gap-2 sm:w-40'
               key={step.subtitle}
             >
               <span className='flex size-11 items-center justify-center rounded-full bg-green-300 text-xl text-black'>
@@ -30,14 +31,13 @@ export function OurDesignCard(props: OurDesignCardProps) {
               </p>
             </div>
             <div
-              data-isOdd={index % 2 === 0}
-              className='col-span-1 h-full w-[1px] bg-white last-of-type:hidden sm:data-[isOdd=false]:hidden'
+              data-is-odd={index % 2 === 0}
+              className='col-span-1 h-full w-[1px] bg-white last-of-type:hidden sm:data-[is-odd=false]:hidden'
               key={step.subtitle}
             ></div>
           </Fragment>
         ))}
       </div>
-      <div className=''></div>
     </div>
   )
 }

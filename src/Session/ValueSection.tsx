@@ -7,7 +7,7 @@ import IconFairPlay from '@/assets/ValueCard/icon-fairplay.svg'
 
 export function ValueSection() {
   return (
-    <div className='flex flex-col gap-12 p-16'>
+    <div className='flex flex-col gap-12'>
       <h2 className='text-8xl'>
         Our <br /> core values
       </h2>

@@ -1,11 +1,11 @@
 export function ReactNativeAdvantages() {
   return (
-    <div className='flex min-h-screen w-screen flex-col items-start justify-center gap-8 bg-[#A5D6A7] px-56 text-black'>
+    <div className='mt-40 flex min-h-screen w-screen flex-col items-start justify-center gap-8 bg-[#A5D6A7] px-72 py-24 text-black'>
       <h2 className='text-8xl'>
         Advantages of <br />{' '}
         <mark className='font-semibold text-green-500'>React</mark> Native{' '}
       </h2>
-      <div className=' grid grid-cols-2 grid-rows-2 gap-x-20 gap-y-12 leading-loose'>
+      <div className=' grid grid-cols-2 grid-rows-2 gap-x-20 gap-y-5 leading-loose'>
         <div>
           <span className='text-2xl font-semibold'>Cross Platform </span>
           <p>
@@ -36,10 +36,11 @@ export function ReactNativeAdvantages() {
         <div>
           <span className='text-2xl font-semibold'>Native APIs </span>
           <p>
-            Because of cross-platform development native Api’s like camera and,
-            GPS, etc are to be integrated natively along with react native. Our
-            engineers are experts in that, we can easily bridge between native
-            and cross-platform API's so your users don't have to hassle
+            Because of cross-platform development native Api&apos;s like camera
+            and, GPS, etc are to be integrated natively along with react native.
+            Our engineers are experts in that, we can easily bridge between
+            native and cross-platform API&apos;s so your users don&apos;t have
+            to hassle
           </p>
         </div>
       </div>
