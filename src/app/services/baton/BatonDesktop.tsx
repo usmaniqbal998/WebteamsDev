@@ -1,16 +1,16 @@
 'use client'
 
 import Image from 'next/image'
-import img1 from '@/assets/baton/img1-baton.svg'
-import img2 from '@/assets/baton/img2-baton.svg'
-import img3 from '@/assets/baton/img3-baton.svg'
-import img4 from '@/assets/baton/img4-baton.svg'
-import img5 from '@/assets/baton/img5-baton.svg'
-import img6 from '@/assets/baton/img6-baton.svg'
-import img7 from '@/assets/baton/img7-baton.svg'
-import img8 from '@/assets/baton/img8-baton.svg'
-import img9 from '@/assets/baton/img9-baton.svg'
-import img10 from '@/assets/baton/img10-baton.svg'
+import img1 from '@/assets/baton/img1-baton.png'
+import img2 from '@/assets/baton/img2-baton.png'
+import img3 from '@/assets/baton/img3-batonn.png'
+import img4 from '@/assets/baton/img4-baton.png'
+import img5 from '@/assets/baton/img5-baton.png'
+import img6 from '@/assets/baton/img6-baton.png'
+import img7 from '@/assets/baton/img7-baton.png'
+import img8 from '@/assets/baton/img8-baton.png'
+import img9 from '@/assets/baton/img9-baton.png'
+import img10 from '@/assets/baton/img10-baton.png'
 
 export function BatonDesktop() {
   return (
@@ -53,7 +53,7 @@ export function BatonDesktop() {
         alt='Icon-BatonTeamManagement'
       />
       <Image
-        className='w-auto'
+        className='min-w-full'
         height={1156}
         src={img7}
         alt='Icon-BatonTeamManagement'
@@ -71,7 +71,7 @@ export function BatonDesktop() {
         alt='Icon-BatonTeamManagement'
       />
       <Image
-        className='w-auto'
+        className='min-w-full'
         height={1156}
         src={img10}
         alt='Icon-BatonTeamManagement'
