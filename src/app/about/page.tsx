@@ -1,3 +1,5 @@
+import { AboutUsHero } from '@/Session/AboutUsHero'
+
 export default function About() {
-  return <div className='h-full'>about</div>
+  return <AboutUsHero />
 }

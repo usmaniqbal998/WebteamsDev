@@ -1,15 +1,17 @@
 import Image from 'next/image'
 import { StaticImport } from 'next/dist/shared/lib/get-img-props'
+import { cn } from '@/Util'
 
 type CaseStudyCardProps = {
   image: string | StaticImport
   name: string
   text: string
+  className?: string
 }
 
 export function CaseStudyCard(props: CaseStudyCardProps) {
   return (
-    <div className='flex w-min flex-col sm:w-full'>
+    <div className={cn('flex w-min flex-col sm:w-full', props.className)}>
       <div className='mb-6 flex h-[388px] w-[451px] justify-center rounded-lg border bg-neutral-200 sm:h-[80vw] sm:w-full'>
         <Image src={props.image} alt='grouphero' width={451} />
       </div>

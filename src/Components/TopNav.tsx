@@ -1,17 +1,11 @@
-'use client'
-
 import { MenuButton } from '@/Components/MenuButton'
 import { ContactUsButton } from './ContactUsButton'
 import webteamsLogo from '@/assets/webteams-logo.svg'
 import Image from 'next/image'
-import { usePathname } from 'next/navigation'
 import Link from 'next/link'
 import { ServiceDropdown } from '@/Components/ServiceDropdown'
 
 export const TopNav = (props: { className?: string }) => {
-  const pathname = usePathname()
-  console.log(pathname)
-
   return (
     <div
       className={`z-50 flex w-full items-center justify-between ${props.className}`}

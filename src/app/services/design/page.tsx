@@ -58,13 +58,19 @@ const steps: Step[] = [
 
 export default function Design() {
   return (
-    <div className='flex max-w-full flex-col items-center justify-start px-32 sm:px-0'>
+    <div
+      className='flex max-w-full flex-col items-center justify-start px-32 sm:px-0'
+      id='design-projects'
+    >
       <DesignHero />
       <WhySection
+        id='design-why'
         question='Why you should hire our design team?'
         reasons={reasons}
+        className='mb-20'
       />
       <OurDesignCard
+        id='design-process'
         title={
           <>
             Our design <br /> process

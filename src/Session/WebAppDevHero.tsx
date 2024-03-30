@@ -4,7 +4,7 @@ import { HeroSideBar } from '@/Components/HeroSideBar'
 
 export function WebAppDevHero() {
   return (
-    <div className='flex flex-col items-center justify-start '>
+    <div className='flex flex-col items-center justify-start'>
       <div className=' flex flex-col items-center justify-center'>
         <h1 className=' text-center text-9xl sm:text-6xl'>
           Web App Development
@@ -16,11 +16,17 @@ export function WebAppDevHero() {
           Let&#39;s discuss
         </button>
       </div>
-      <div className='relative mb-8 mt-20 flex items-end gap-10 leading-relaxed sm:flex-col sm:items-start sm:gap-4'>
+      <div
+        className='relative mb-8 mt-20 flex items-end gap-10 leading-relaxed sm:flex-col sm:items-start sm:gap-4'
+        id='web-brief'
+      >
         <HeroSideBar
           className='absolute -left-28 top-9 gap-24 sm:static sm:left-0 sm:top-0 sm:w-full sm:justify-center'
-          tags={['Brief', 'Why', 'Process']}
-          highlight='Brief'
+          tags={[
+            { display: 'Brief', id: 'web-brief' },
+            { display: 'Why', id: 'web-display' },
+            { display: 'Process', id: 'web-process' }
+          ]}
         />
         <h2 className='text-7xl sm:w-3/6 sm:text-3xl'>Agile scalable team</h2>
         <p className='text-neutral-400'>

@@ -1,19 +1,39 @@
-[] Adjust states (hover, pressed)
+[x] Adjust states (hover, pressed)
 
-[] Adjust the text in braket
+[x] Adjust the text in braket
 
-[] Add color in the title of home cards
+[x] Add color in the title of home cards
 
-[] Adjust the textss with star
+[x] Adjust the textss with star
 
-[] Code need to be selected
+[x] Code need to be selected
 
-[] Padding erros on code
+[x] Padding erros on code
 
-[] Add the overall layer on recent work
+[x] Add the overall layer on recent work
 
-[] Adjust recent work weight
+[x] Adjust recent work weight
 
-[] add the review section
+[x] add the review section
 
-[] adjust the width of faq
+[x] adjust the width of faq
+
+[X] case studies (change to grid to force two rows and two cols)
+
+[x] Why you should hire our design team? (bottom padding)
+
+[] Our design process
+    - Adjust the line
+    - Line padding
+    - Gap between title and steps
+
+[X] make the side nav work
+[] breaks Web App Development title
+[] Web App Development align the brief text
+[] Make the Agile scalable team image larger to fit the page
+[] Why you should hire our Development Team? should be in 4 lines
+[] Mobile App Development needs to fit the title
+[] "Why you should hire our development Team?" need to be in 4 lines
+[] Advantages of React Native section padding top and botton
+[] In mobile, adjust navigator bars
+[] adjust menu drawler

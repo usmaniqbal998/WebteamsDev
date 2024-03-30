@@ -60,9 +60,12 @@ export default function Mobile() {
       <WhySection
         question='Why you should hire our development Team?'
         reasons={reasons}
+        id='mobile-why'
+        className='mb-20'
       />
       <ReactNativeAdvantages />
       <OurDesignCard
+        id='mobile-process'
         className='pb-4'
         title={
           <>

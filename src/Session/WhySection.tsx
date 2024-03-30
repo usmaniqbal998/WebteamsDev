@@ -1,5 +1,7 @@
 import Image from 'next/image'
 import { StaticImport } from 'next/dist/shared/lib/get-img-props'
+import { HTMLAttributes } from 'react'
+import { cn } from '@/Util'
 
 export type Reason = {
   image: StaticImport
@@ -10,11 +12,11 @@ export type Reason = {
 type WhySectionProps = {
   question: string
   reasons: Reason[]
-}
+} & HTMLAttributes<HTMLDivElement>
 
-export function WhySection(props: WhySectionProps) {
+export function WhySection({ className, ...props }: WhySectionProps) {
   return (
-    <div className='flex flex-col gap-16 sm:gap-4'>
+    <div className={cn('flex flex-col gap-16 sm:gap-4', className)} {...props}>
       <h2 className='mt-24 w-5/6 text-8xl sm:mt-10 sm:w-4/6 sm:text-3xl'>
         {props.question}
       </h2>

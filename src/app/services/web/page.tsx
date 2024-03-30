@@ -57,10 +57,13 @@ export default function Web() {
     <div className='flex max-w-full flex-col items-center justify-start px-32 sm:px-0'>
       <WebAppDevHero />
       <WhySection
+        id='web-display'
         question='Why you should hire our Development Team?'
         reasons={reasons}
+        className='mb-20'
       />
       <OurDesignCard
+        id='web-process'
         title={
           <>
             Our development <br /> process
