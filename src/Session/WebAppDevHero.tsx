@@ -7,7 +7,7 @@ export function WebAppDevHero() {
     <div className='flex flex-col items-center justify-start'>
       <div className=' flex flex-col items-center justify-center'>
         <h1 className=' text-center text-9xl sm:text-6xl'>
-          Web App Development
+          Web App <br /> Development
         </h1>
         <span className='mt-16 text-3xl sm:mt-4 sm:px-6 sm:text-center sm:text-xl'>
           Grow your business with fully tailored Web Apps
@@ -17,7 +17,7 @@ export function WebAppDevHero() {
         </button>
       </div>
       <div
-        className='relative mb-8 mt-20 flex items-end gap-10 leading-relaxed sm:flex-col sm:items-start sm:gap-4'
+        className='relative mb-8 mt-20 flex w-full items-end justify-between gap-10 leading-relaxed sm:flex-col sm:items-start sm:gap-4'
         id='web-brief'
       >
         <HeroSideBar
@@ -28,8 +28,10 @@ export function WebAppDevHero() {
             { display: 'Process', id: 'web-process' }
           ]}
         />
-        <h2 className='text-7xl sm:w-3/6 sm:text-3xl'>Agile scalable team</h2>
-        <p className='text-neutral-400'>
+        <h2 className='text-7xl sm:w-3/6 sm:text-3xl'>
+          Agile <br /> scalable <br /> team
+        </h2>
+        <p className=' w-80 text-neutral-400'>
           Choosing the right web development partner is very crucial for the
           success of your digital products. We offer highly technical developers
           and product managers that are involved in your development lifecycle
