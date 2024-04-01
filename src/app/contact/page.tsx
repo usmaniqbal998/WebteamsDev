@@ -64,22 +64,22 @@ export default function Contract() {
           'sm:col-span-1 sm:row-span-3 sm:translate-y-0 -translate-x-1/2 sm:h-full sm:w-[400%]'
         )}
       >
-        <div className='flex h-[45%] w-1/2 items-start sm:h-full sm:items-center sm:text-center'>
-          <span className='block w-8/12 text-[84px] leading-[1.05] lg:text-6xl md:text-3xl sm:w-6/12 [&_mark]:font-semibold [&_mark]:text-green-500'>
-            <mark>&quot;</mark>We love to <br className='hidden sm:block' />{' '}
-            hear from you<mark>&quot;</mark>
+        <div className='flex h-[40%] w-1/2 items-start sm:h-full sm:items-center sm:text-center'>
+          <span className='block text-[84px] leading-[110%] lg:text-6xl md:text-3xl sm:w-6/12 [&_mark]:font-semibold [&_mark]:text-green-500'>
+            <mark>&quot;</mark>We love <br /> to hear <br /> from <br /> you
+            <mark>&quot;</mark>
           </span>
         </div>
       </div>
       <div
         className={cn(
-          'col-span-7 flex w-full flex-col items-start justify-center gap-16 pl-28 sm:gap-8',
+          'col-span-7 flex w-full flex-col items-start justify-center gap-16 pl-84 sm:gap-8',
           'sm:row-span-9 sm:pl-0'
         )}
       >
         <form
           onSubmit={handleSubmit(handleContactForm)}
-          className='flex w-3/6 flex-col gap-y-[2vh] sm:w-full'
+          className='flex w-4/6 flex-col gap-y-[2vh] sm:w-full'
           method='POST'
         >
           <Input
