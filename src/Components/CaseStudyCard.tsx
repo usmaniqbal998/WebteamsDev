@@ -12,7 +12,7 @@ type CaseStudyCardProps = {
 export function CaseStudyCard(props: CaseStudyCardProps) {
   return (
     <div className={cn('flex w-min flex-col sm:w-full', props.className)}>
-      <div className='mb-6 flex h-[388px] w-[451px] justify-center rounded-lg border bg-neutral-200 sm:h-[80vw] sm:w-full'>
+      <div className='mb-6 flex h-[388px] w-[451px] justify-center rounded-lg border bg-neutral-200 sm:size-[42vw]'>
         <Image src={props.image} alt='grouphero' width={451} />
       </div>
       <span className=''>{props.name}</span>

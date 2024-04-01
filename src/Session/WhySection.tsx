@@ -1,6 +1,6 @@
 import Image from 'next/image'
 import { StaticImport } from 'next/dist/shared/lib/get-img-props'
-import { HTMLAttributes } from 'react'
+import { HTMLAttributes, ReactNode } from 'react'
 import { cn } from '@/Util'
 
 export type Reason = {
@@ -10,7 +10,7 @@ export type Reason = {
 }
 
 type WhySectionProps = {
-  question: string
+  question: ReactNode
   reasons: Reason[]
 } & HTMLAttributes<HTMLDivElement>
 

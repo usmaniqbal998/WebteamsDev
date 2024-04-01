@@ -71,11 +71,16 @@ export function HeroSideBar({ className, tags, ...rest }: HeroSideBarProps) {
           href={`#${tag.id}`}
           key={tag.id}
           className={cn(
-            'flex items-center justify-start border-l-2 border-white pl-5',
-            'sm:border-l-0 sm:border-t-2 sm:pl-0 sm:pt-2',
+            'flex gap-4 items-center justify-start border-white min-h-full bg-transparent sm:flex-col sm:gap-2',
             tag.id === highlightId ? 'text-green-500 border-green-600' : ''
           )}
         >
+          <div
+            className={cn(
+              'z-50 h-8 w-[2px] bg-white sm:w-10 sm:h-[2px]',
+              tag.id === highlightId ? 'bg-green-500' : ''
+            )}
+          ></div>
           {tag.display}
         </Link>
       ))}

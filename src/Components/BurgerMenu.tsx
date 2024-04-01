@@ -16,13 +16,14 @@ import Image from 'next/image'
 import linkedinIcon from '@/assets/linkedin-icon.svg'
 import facebookIcon from '@/assets/facebook-icon.svg'
 import emailIcon from '@/assets/email-icon.svg'
-import { cn } from '@/Util'
 import { ImageCircle } from '@/Util/ImageCirclu'
+
+import { MobileServiceDropdown } from '@/Components/MobileServiceDropdown'
 
 export const BurgerMenu = (props: { className?: string }) => {
   return (
     <div
-      className={`${props.className} z-50 mb-8 flex w-full flex-row items-center justify-between`}
+      className={`${props.className} z-50 mb-8 flex w-screen flex-row items-center justify-between px-4`}
     >
       <div className='flex items-center justify-center gap-2'>
         <Image src={webteamsLogo} alt='webteams logo' />
@@ -35,7 +36,7 @@ export const BurgerMenu = (props: { className?: string }) => {
             <div className='h-[2px] w-4 rounded-full bg-white'></div>
           </div>
         </SheetTrigger>
-        <SheetContent className='absolute flex w-11/12 flex-col overflow-y-scroll bg-black'>
+        <SheetContent className='absolute flex min-w-[100vw] flex-col overflow-y-scroll bg-black'>
           <SheetHeader className='mb-4 text-white'>
             <SheetTitle className='text-white'>Menu</SheetTitle>
             {/* <SheetDescription>description</SheeDescription> */}
@@ -51,14 +52,10 @@ export const BurgerMenu = (props: { className?: string }) => {
                 home
               </MenuButton>
             </SheetClose>
+            <MobileServiceDropdown />
             <SheetClose asChild>
               <MenuButton href='/about' regex='^\/about$'>
                 about us
-              </MenuButton>
-            </SheetClose>
-            <SheetClose asChild>
-              <MenuButton href='/services' regex='^\/services'>
-                services
               </MenuButton>
             </SheetClose>
           </div>

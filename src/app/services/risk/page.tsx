@@ -1,4 +1,4 @@
-import { RiskDesktop } from '@/app/services/risk/RiskDesktop'
+import { RiskDesktop } from '@/app/study-case/risk/RiskDesktop'
 
 export default function Risk() {
   return <div></div>

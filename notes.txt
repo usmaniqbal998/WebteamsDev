@@ -22,18 +22,22 @@
 
 [x] Why you should hire our design team? (bottom padding)
 
-[] Our design process
+[X] Our design process
     - Adjust the line
     - Line padding
     - Gap between title and steps
 
 [X] make the side nav work
-[] breaks Web App Development title
-[] Web App Development align the brief text
-[] Make the Agile scalable team image larger to fit the page
-[] Why you should hire our Development Team? should be in 4 lines
-[] Mobile App Development needs to fit the title
-[] "Why you should hire our development Team?" need to be in 4 lines
-[] Advantages of React Native section padding top and botton
-[] In mobile, adjust navigator bars
-[] adjust menu drawler
+[X] breaks Web App Development title
+[X] Web App Development align the brief text
+[X] Make the Agile scalable team image larger to fit the page
+[X] Why you should hire our Development Team? should be in 4 lines
+[X] Mobile App Development needs to fit the title
+[X] "Why you should hire our development Team?" need to be in 4 lines
+[X] Advantages of React Native section padding top and botton
+[X] In mobile, adjust navigator bars
+[X] desktop service dropdown
+[X] mobile services dropdown
+[X] adjust menu drawler
+[] fix mobile version
+[] build about us

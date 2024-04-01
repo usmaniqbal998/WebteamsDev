@@ -4,8 +4,8 @@ import { HeroSideBar } from '@/Components/HeroSideBar'
 
 export function WebAppDevHero() {
   return (
-    <div className='flex flex-col items-center justify-start'>
-      <div className=' flex flex-col items-center justify-center'>
+    <div className='flex w-full flex-col items-center justify-start'>
+      <div className='flex w-full flex-col items-center justify-center'>
         <h1 className=' text-center text-9xl sm:text-6xl'>
           Web App <br /> Development
         </h1>
@@ -17,7 +17,7 @@ export function WebAppDevHero() {
         </button>
       </div>
       <div
-        className='relative mb-8 mt-20 flex w-full items-end justify-between gap-10 leading-relaxed sm:flex-col sm:items-start sm:gap-4'
+        className='relative mb-8 mt-20 flex min-w-full items-end justify-start gap-20 leading-relaxed sm:flex-col sm:items-start sm:gap-4'
         id='web-brief'
       >
         <HeroSideBar
@@ -31,7 +31,7 @@ export function WebAppDevHero() {
         <h2 className='text-7xl sm:w-3/6 sm:text-3xl'>
           Agile <br /> scalable <br /> team
         </h2>
-        <p className=' w-80 text-neutral-400'>
+        <p className='w-[600px] leading-relaxed text-neutral-400 sm:w-full'>
           Choosing the right web development partner is very crucial for the
           success of your digital products. We offer highly technical developers
           and product managers that are involved in your development lifecycle
@@ -40,7 +40,7 @@ export function WebAppDevHero() {
           passion and years of experience with them.
         </p>
       </div>
-      <Image src={WebAppHero} alt='iconWebApp' />
+      <Image src={WebAppHero} className='h-auto w-full' alt='iconWebApp' />
     </div>
   )
 }

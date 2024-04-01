@@ -1,6 +1,6 @@
-import { BatonDesktop } from '@/app/services/baton/BatonDesktop'
+import { BatonDesktop } from '@/app/study-case/baton-team/BatonDesktop'
 
 export default function Baton() {
-  // return <BatonDesktop />
-  return <div></div>
+  return <BatonDesktop />
+  // return <div></div>
 }

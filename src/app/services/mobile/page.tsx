@@ -58,7 +58,11 @@ export default function Mobile() {
     <div className='flex max-w-full flex-col items-center justify-start px-32 sm:px-0'>
       <MobileDevHero />
       <WhySection
-        question='Why you should hire our development Team?'
+        question={
+          <>
+            Why you should <br /> hire our <br /> Development <br /> Team?
+          </>
+        }
         reasons={reasons}
         id='mobile-why'
         className='mb-20'

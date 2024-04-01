@@ -58,7 +58,11 @@ export default function Web() {
       <WebAppDevHero />
       <WhySection
         id='web-display'
-        question='Why you should hire our Development Team?'
+        question={
+          <>
+            Why you should <br /> hire our <br /> Development <br /> Team?
+          </>
+        }
         reasons={reasons}
         className='mb-20'
       />

@@ -43,7 +43,11 @@ export function OurDesignCard(props: OurDesignCardProps) {
                 {step.text}
               </p>
             </div>
-            <SVG src={(lineSvg as StaticImageData).src}></SVG>
+            <SVG
+              data-is-odd={index % 2 === 0}
+              src={(lineSvg as StaticImageData).src}
+              className='h-full last-of-type:hidden sm:last-of-type:block sm:data-[is-odd=false]:hidden'
+            ></SVG>
           </Fragment>
         ))}
       </div>

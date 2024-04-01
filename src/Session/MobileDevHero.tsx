@@ -34,7 +34,7 @@ export function MobileDevHero() {
             src={mobiledev}
             alt='imagemobiledev'
             height={307}
-            className='sm:h-36 sm:w-auto'
+            className='h-full w-auto sm:h-36 sm:w-auto'
           />
         </div>
       </div>

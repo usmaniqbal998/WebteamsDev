@@ -10,24 +10,12 @@ import {
 import { usePathname } from 'next/navigation'
 import Link from 'next/link'
 import { cn } from '@/Util'
+import { MobileCaseStudies } from '@/Components/MobileCaseStudies'
 
-const menuItems: Omit<MenuItemProps, 'isSelected'>[] = [
-  {
-    href: '/services/design',
-    title: 'Design',
-    description: 'Looking for award-winning design teams? look no more!'
-  },
-  {
-    href: '/services/web',
-    title: 'Web Development',
-    description: 'Grow your business with fully tailored Web Apps'
-  },
-  {
-    href: '/services/mobile',
-    title: 'Mobile App Development',
-    description: 'Grow your business with fully tailored MobileApps'
-  }
-]
+const linkCardClassName = cn(
+  'flex flex-col items-start justify-center gap-2 rounded-xl p-3 text-sm hover:bg-black hover:text-accent',
+  'data-[selected=true]:bg-black data-[selected=true]:text-accent data-[selected=true]:cursor-default'
+)
 
 export const ServiceDropdown = () => {
   const pathName = usePathname()
@@ -35,7 +23,7 @@ export const ServiceDropdown = () => {
 
   return (
     <div>
-      <NavigationMenu>
+      <NavigationMenu className='flex justify-center'>
         <NavigationMenuItem className='bg-black'>
           <NavigationMenuTrigger
             data-selected={isServicePage}
@@ -46,16 +34,59 @@ export const ServiceDropdown = () => {
           >
             services
           </NavigationMenuTrigger>
-          <NavigationMenuContent className='flex flex-col gap-4 bg-black p-4 '>
-            {menuItems.map(item => (
-              <MenuItem
-                key={item.href}
-                href={item.href}
-                description={item.description}
-                title={item.title}
-                isSelected={item.href === pathName}
-              />
-            ))}
+          <NavigationMenuContent className='flex w-[99vw] flex-col px-[10%]'>
+            <div className='flex items-start justify-between py-8'>
+              <div className='flex w-4/12 flex-col gap-4'>
+                <span className='font-medium'>Development</span>
+                <hr className='h-[2px] w-full bg-neutral-800' />
+                <div className='flex gap-1'>
+                  <Link
+                    href='/services/web'
+                    data-selected={pathName === '/services/web'}
+                    className={linkCardClassName}
+                  >
+                    <span className='text-sm font-medium'>
+                      Web App Development
+                    </span>
+                    <span className='text-xs'>
+                      Java, Html-Css, Angular, Django
+                    </span>
+                  </Link>
+                  <Link href='/services/mobile' className={linkCardClassName}>
+                    <span className='text-sm font-medium'>
+                      Mobile App Development
+                    </span>
+                    <span className='text-xs'>Android, IOS</span>
+                  </Link>
+                </div>
+              </div>
+
+              <div className='flex w-4/12 flex-col gap-4'>
+                <span className='font-medium'>Design</span>
+                <hr className='h-[2px] w-full bg-neutral-800'></hr>
+                <Link href='/services/design' className={linkCardClassName}>
+                  <span className='text-sm font-medium'>UI/UX Design</span>
+                  <span className='text-xs'>
+                    User Flows, Prototype, Design System, Research
+                  </span>
+                </Link>
+              </div>
+
+              <div className='flex w-3/12 flex-col gap-4'>
+                <span className='text-3xl font-semibold'>Team of Experts</span>
+                <Link
+                  href='/contact'
+                  className='w-min text-nowrap rounded-full px-4 py-2 text-sm font-semibold ring-1 ring-black hover:bg-black hover:text-accent'
+                >
+                  Get quotation
+                </Link>
+              </div>
+            </div>
+            <div className='flex h-full flex-col gap-4'>
+              <span className='font-semibold'>Case study</span>
+              <hr className='h-[2px] w-4/12 bg-neutral-800' />
+              <MobileCaseStudies height={200} scale={25} />
+            </div>
           </NavigationMenuContent>
         </NavigationMenuItem>
       </NavigationMenu>
@@ -75,7 +106,7 @@ const MenuItem = (props: MenuItemProps) => (
     data-selected={props.isSelected}
     asChild
     className={cn(
-      'group flex w-64 flex-col bg-black p-4 text-white hover:bg-neutral-600 transition-colors duration-300 rounded-xl',
+      'group flex w-64 flex-col bg-black p-4 text-white hover:bg-neutral-600 transition-colors duration-300 rounded',
       'data-[selected=true]:bg-neutral-600'
     )}
   >

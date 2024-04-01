@@ -65,7 +65,11 @@ export default function Design() {
       <DesignHero />
       <WhySection
         id='design-why'
-        question='Why you should hire our design team?'
+        question={
+          <>
+            Why you should <br /> hire our design <br /> team?
+          </>
+        }
         reasons={reasons}
         className='mb-20'
       />

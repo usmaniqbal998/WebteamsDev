@@ -27,14 +27,14 @@ export function DesignHero() {
       <button className='mt-5 rounded-full bg-white px-6 py-3 text-sm font-bold text-black'>
         Let’s discuss
       </button>
-      <h2 className='relative mt-8 self-start text-8xl sm:text-4xl'>
+      <h2 className='relative mt-8 self-start text-8xl sm:flex sm:w-full sm:flex-col-reverse sm:text-4xl'>
         Case <br /> studies
         <HeroSideBar
           style={{
             left: '-160px ',
             top: '100px '
           }}
-          className='absolute z-50 sm:static sm:left-0 sm:top-0'
+          className='absolute z-50 sm:static sm:left-0 sm:top-0 sm:self-center'
           tags={[
             { id: 'design-projects', display: 'Projects' },
             { id: 'design-why', display: 'Why' },
@@ -44,7 +44,7 @@ export function DesignHero() {
       </h2>
 
       <div
-        className=' mt-8 grid w-full grid-cols-2 grid-rows-2 items-start gap-x-80 gap-y-10 overflow-visible sm:flex-col'
+        className=' mt-8 grid w-full grid-cols-2 grid-rows-2 items-start gap-x-80 gap-y-10 overflow-visible sm:gap-2'
         id='design-projects'
       >
         <CaseStudyCard
