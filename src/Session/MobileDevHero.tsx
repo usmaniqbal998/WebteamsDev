@@ -12,11 +12,17 @@ export function MobileDevHero() {
       <button className='mt-6 h-11 w-36 rounded-full border-white bg-white text-sm font-semibold text-black'>
         Let&#39;s discuss
       </button>
-      <div className='relative mt-24 flex w-full flex-row justify-between sm:flex-col sm:items-start sm:gap-4'>
+      <div
+        className='relative mt-24 flex w-full flex-row justify-between sm:flex-col sm:items-start sm:gap-4'
+        id='mobile-brief'
+      >
         <HeroSideBar
           className='absolute -left-40 top-11 gap-28 sm:static sm:left-0 sm:top-0 sm:w-full sm:justify-center'
-          tags={['Brief', 'Why', 'Process']}
-          highlight='Brief'
+          tags={[
+            { display: 'Brief', id: 'mobile-brief' },
+            { display: 'Why', id: 'mobile-why' },
+            { display: 'Process', id: 'mobile-process' }
+          ]}
         />
         <div className='flex w-full items-start justify-between'>
           <h2 className='text-left text-8xl sm:text-4xl [&_mark]:font-semibold [&_mark]:text-green-500'>
@@ -28,7 +34,7 @@ export function MobileDevHero() {
             src={mobiledev}
             alt='imagemobiledev'
             height={307}
-            className='sm:h-36 sm:w-auto'
+            className='h-full w-auto sm:h-36 sm:w-auto'
           />
         </div>
       </div>

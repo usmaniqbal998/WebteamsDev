@@ -9,7 +9,7 @@ import { HeroSideBar } from '@/Components/HeroSideBar'
 
 export function DesignHero() {
   return (
-    <div className='flex max-w-full flex-col items-center'>
+    <div className='flex min-w-full max-w-full flex-col items-center'>
       <h1 className='text-9xl sm:text-6xl'>Design</h1>
       <Image
         className='mt-6 sm:h-14'
@@ -27,15 +27,26 @@ export function DesignHero() {
       <button className='mt-5 rounded-full bg-white px-6 py-3 text-sm font-bold text-black'>
         Let’s discuss
       </button>
-      <h2 className='mt-8 self-start text-8xl sm:text-4xl'>
+      <h2 className='relative mt-8 self-start text-8xl sm:flex sm:w-full sm:flex-col-reverse sm:text-4xl'>
         Case <br /> studies
-      </h2>
-      <div className='relative mt-8 flex flex-wrap items-center justify-between gap-y-10 sm:flex-col'>
         <HeroSideBar
-          className='absolute -left-40 -top-32 z-50 sm:static sm:left-0 sm:top-0'
-          tags={['Projects', 'Why', 'Process']}
-          highlight='Projects'
+          style={{
+            left: '-160px ',
+            top: '100px '
+          }}
+          className='absolute z-50 sm:static sm:left-0 sm:top-0 sm:self-center'
+          tags={[
+            { id: 'design-projects', display: 'Projects' },
+            { id: 'design-why', display: 'Why' },
+            { id: 'design-process', display: 'Process' }
+          ]}
         />
+      </h2>
+
+      <div
+        className=' mt-8 grid w-full grid-cols-2 grid-rows-2 items-start gap-x-80 gap-y-10 overflow-visible sm:gap-2'
+        id='design-projects'
+      >
         <CaseStudyCard
           name='Risk Management Dashboard'
           text='Web application for assessing risks, providing essential insights to avoid potential problems.'

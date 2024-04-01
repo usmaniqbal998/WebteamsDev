@@ -7,17 +7,17 @@ import IconFairPlay from '@/assets/ValueCard/icon-fairplay.svg'
 
 export function ValueSection() {
   return (
-    <div className='flex flex-col gap-12'>
-      <h2 className='text-8xl'>
+    <div className='flex flex-col gap-12' id='about-values'>
+      <h2 className='text-8xl sm:text-4xl'>
         Our <br /> core values
       </h2>
-      <p className='text-2xl leading-loose'>
+      <p className='text-2xl leading-loose sm:hidden'>
         During this journey, we learned a lot and we are still learning. we
         think of these values as important for our culture and achieving an
         individual sense of accomplishment.
       </p>
 
-      <div className='flex flex-col gap-16'>
+      <div className='flex flex-col gap-16 sm:gap-4'>
         <ValueCard
           title='People'
           text='People working at the WebTeams are the greatest asset that we have. they are no ordinary minds and its them who we owe to who we are today. We work with them and for them to make them feel appreciated and satisfied.'

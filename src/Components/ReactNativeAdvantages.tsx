@@ -1,6 +1,6 @@
 export function ReactNativeAdvantages() {
   return (
-    <div className='mt-40 flex min-h-screen w-screen flex-col items-start justify-center gap-8 bg-[#A5D6A7] px-72 py-24 text-black sm:px-8 sm:py-10'>
+    <div className='flex w-screen flex-col items-start justify-center gap-8 bg-[#A5D6A7] px-72 py-24 text-black sm:px-8 sm:py-10'>
       <h2 className='text-8xl sm:text-3xl sm:font-semibold'>
         Advantages of <br />
         <mark className='font-semibold text-green-500'>React</mark> Native
