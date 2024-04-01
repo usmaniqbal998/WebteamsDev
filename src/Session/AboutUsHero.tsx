@@ -6,7 +6,7 @@ export function AboutUsHero() {
   return (
     <div className='flex max-w-full flex-col items-center'>
       <div
-        className=' flex w-screen min-w-[100vw] flex-col items-center justify-center bg-zinc-800 py-28 text-center text-6xl sm:py-8'
+        className=' flex w-screen min-w-[100vw] flex-col items-center justify-center bg-zinc-800 py-52 text-center text-[64px] leading-[110%] sm:py-8'
         id='about-brief'
       >
         <span className='px-64 sm:px-0 sm:text-4xl sm:leading-tight'>

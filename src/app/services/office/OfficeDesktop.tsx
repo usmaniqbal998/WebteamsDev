@@ -13,7 +13,7 @@ import img11 from '@/assets/office/img11-office.png'
 import img12 from '@/assets/office/img12-office.png'
 import img13 from '@/assets/office/img13-office.png'
 
-export default function OfficeDesktop() {
+export function OfficeDesktop() {
   return (
     <div className='flex max-w-full flex-col items-center justify-start gap-14'>
       <h1 className='text-center text-8xl'>Office 20 Dashboard</h1>

@@ -39,5 +39,8 @@
 [X] desktop service dropdown
 [X] mobile services dropdown
 [X] adjust menu drawler
-[] fix mobile version
-[] build about us
+[X] fix mobile version
+[X] build about us
+
+[] Adjust contact us form alignment
+[] add arrows on services dropdown
