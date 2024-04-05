@@ -1,5 +1,3 @@
-'use client'
-
 import Image from 'next/image'
 import img from '@/assets/RiskManagement/img.svg'
 import img2 from '@/assets/RiskManagement/img2-risk.svg'

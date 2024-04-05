@@ -40,7 +40,7 @@ export default function RootLayout(
   return (
     <html
       lang='en'
-      className='h-screen w-screen !max-w-full scroll-smooth scrollbar scrollbar-track-neutral-700 scrollbar-thumb-neutral-500 sm:overflow-x-hidden'
+      className='h-screen w-screen !max-w-full scroll-smooth scrollbar scrollbar-track-neutral-700 scrollbar-thumb-neutral-500'
     >
       <body
         className={cn(

@@ -1,5 +1,3 @@
-'use client'
-
 import Image from 'next/image'
 import img1 from '@/assets/ilmya/img1-ilmya.png'
 import img2 from '@/assets/ilmya/img2-ilmya.png'
@@ -12,7 +10,7 @@ import img8 from '@/assets/ilmya/img8-ilmya.png'
 import img9 from '@/assets/ilmya/img9-ilmya.png'
 import img10 from '@/assets/ilmya/img10-ilmya.png'
 
-export default function IlmyaDesktop() {
+export function IlmyaDesktop() {
   return (
     <div className='flex max-w-full flex-col items-center justify-center gap-14'>
       <h1 className='text-center text-8xl'>Ilmiya Edtech Platform</h1>

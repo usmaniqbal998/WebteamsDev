@@ -1,5 +1,24 @@
-import IlmyaDesktop from '@/app/services/ilmiya/IlmyaDesktop'
+import { CaseLoader } from '@/Components/CaseLoader'
+import dynamic from 'next/dynamic'
+import { useMediaQuery } from 'react-responsive'
+
+const IlmyaDesktop = dynamic(
+  () =>
+    import('@/app/services/ilmiya/IlmyaDesktop').then(
+      module => module.IlmyaDesktop
+    ),
+  { ssr: false, loading: () => <CaseLoader /> }
+)
+const IlmyaMobile = dynamic(
+  () =>
+    import('@/app/services/ilmiya/IlmyaMobile').then(
+      module => module.IlmyaMobile
+    ),
+  { ssr: false, loading: () => <CaseLoader /> }
+)
 
 export default function Ilmya() {
-  return <IlmyaDesktop />
+  const isMobile = useMediaQuery({ maxWidth: 767 })
+
+  return isMobile ? <IlmyaMobile /> : <IlmyaDesktop />
 }
