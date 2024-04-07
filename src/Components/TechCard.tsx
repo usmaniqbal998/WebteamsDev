@@ -1,6 +1,5 @@
 'use client'
 
-import Image from 'next/image'
 import { TechLabel } from '@/Util/TechLabel'
 import { HTMLAttributes } from 'react'
 import { cn } from '@/Util'
@@ -13,10 +12,7 @@ import pythonIcon from '@/assets/tech/python-icon.svg'
 import reactIcon from '@/assets/tech/react-icon.svg'
 import restIcon from '@/assets/tech/rest-icon.svg'
 import typescriptIcon from '@/assets/tech/typescript-icon.svg'
-import {
-  StaticImageData,
-  StaticImport
-} from 'next/dist/shared/lib/get-img-props'
+import { StaticImageData } from 'next/dist/shared/lib/get-img-props'
 
 import SVG from 'react-inlinesvg'
 

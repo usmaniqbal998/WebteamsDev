@@ -1,13 +1,9 @@
 'use client'
 
-import { VerticalLine } from '@/Components/VerticalLine'
 import { ReactNode, Fragment } from 'react'
 import SVG from 'react-inlinesvg'
 import lineSvg from '@/assets/vertical-line.svg'
-import {
-  StaticImageData,
-  StaticImport
-} from 'next/dist/shared/lib/get-img-props'
+import { StaticImageData } from 'next/dist/shared/lib/get-img-props'
 
 export type Step = {
   subtitle: string

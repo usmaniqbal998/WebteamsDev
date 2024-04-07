@@ -3,13 +3,7 @@
 
 import * as React from 'react'
 import * as AccordionPrimitive from '@radix-ui/react-accordion'
-import {
-  ChevronDown,
-  ChevronDownCircle,
-  ChevronUp,
-  ChevronUpCircle,
-  PlusCircle
-} from 'lucide-react'
+import { ChevronDownCircle, PlusCircle } from 'lucide-react'
 
 import { cn } from '@/Util'
 

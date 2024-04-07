@@ -4,7 +4,6 @@ import {
   NavigationMenu,
   NavigationMenuContent,
   NavigationMenuItem,
-  NavigationMenuLink,
   NavigationMenuTrigger
 } from '@/Components/ui/navigation-menu'
 import { usePathname } from 'next/navigation'
@@ -93,26 +92,3 @@ export const ServiceDropdown = () => {
     </div>
   )
 }
-
-type MenuItemProps = {
-  href: string
-  title: string
-  description: string
-  isSelected: boolean
-}
-
-const MenuItem = (props: MenuItemProps) => (
-  <NavigationMenuLink
-    data-selected={props.isSelected}
-    asChild
-    className={cn(
-      'group flex w-64 flex-col bg-black p-4 text-white hover:bg-neutral-600 transition-colors duration-300 rounded',
-      'data-[selected=true]:bg-neutral-600'
-    )}
-  >
-    <Link href={props.href}>
-      <span className='font-bold'>{props.title}</span>
-      <p className='text-sm text-neutral-300 '>{props.description}</p>
-    </Link>
-  </NavigationMenuLink>
-)

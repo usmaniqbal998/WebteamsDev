@@ -6,10 +6,8 @@ import Image from 'next/image'
 import star from '@/assets/star-image.svg'
 import { cn } from '@/Util'
 import { TechLabel, techLabels } from '@/Util/TechLabel'
-import { useEffect, useMemo, useState } from 'react'
+import { useEffect, useState } from 'react'
 import { CodeBlockLanguage } from '@/Util/CodeBlockLanguage'
-import axios from 'axios'
-import { getCodeSamples } from '@/Session/getCodeSamples'
 
 type CodeSample = {
   file: string
