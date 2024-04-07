@@ -1,6 +1,7 @@
 import Image from 'next/image'
 import IconAboutHero from '@/assets/iconAboutHero.svg'
 import { HeroSideBar } from '@/Components/HeroSideBar'
+import Link from 'next/link'
 
 export function AboutUsHero() {
   return (
@@ -9,16 +10,20 @@ export function AboutUsHero() {
         className=' flex w-screen min-w-[100vw] flex-col items-center justify-center bg-zinc-800 py-52 text-center text-[64px] leading-[110%] sm:py-8'
         id='about-brief'
       >
-        <span className='px-64 sm:px-0 sm:text-4xl sm:leading-tight'>
-          We are the <br className='hidden sm:block' />{' '}
+        <span className='px-64 sm:px-0 sm:text-3xl sm:leading-tight'>
+          We are the <br className='hidden sm:block' />
           <mark className='text-green-500'>fastest growing </mark>
-          <br className='sm:hidden' />
-          digital consultancy in Europe <br className='sm:hidden' /> and the
-          North America
+          <br />
+          digital consultancy <br className='hidden sm:block' /> in Europe
+          <br className='sm:hidden' /> and the{' '}
+          <br className='hidden sm:block' /> North America
         </span>
-        <button className='mt-9 h-14 w-40 rounded-full bg-white text-base font-semibold text-black'>
+        <Link
+          href='/contact'
+          className='mt-9 flex h-14 w-40 items-center justify-center rounded-full bg-white text-base font-semibold text-black'
+        >
           Let&apos;s discuss
-        </button>
+        </Link>
       </div>
       <div className='relative mt-12 flex flex-col gap-12 leading-loose sm:mt-0 sm:items-center sm:gap-0'>
         <HeroSideBar
@@ -56,9 +61,12 @@ export function AboutUsHero() {
             see us as a long-term strategic partner and trusted adviser for
             product design, development, DevOps, and cloud computing work.
           </p>
-          <button className='mt-9 h-14 w-40 rounded-full bg-white text-lg font-semibold text-black sm:hidden'>
-            Lets discuss
-          </button>
+          <Link
+            href='/contact'
+            className='mt-9 flex h-14 w-40 items-center justify-center rounded-full bg-white text-lg font-semibold text-black sm:hidden'
+          >
+            Let&apos;s discuss
+          </Link>
         </div>
       </div>
       <p className='hidden sm:mt-4 sm:block sm:leading-relaxed'>
@@ -66,9 +74,12 @@ export function AboutUsHero() {
         us as a long-term strategic partner and trusted adviser for product
         design, development, DevOps, and cloud computing work.
       </p>
-      <button className='mt-4 hidden h-14 w-40 self-start rounded-full bg-white text-lg font-semibold text-black sm:block'>
-        Lets discuss
-      </button>
+      <Link
+        href='/contact'
+        className='mt-4 hidden h-14 w-40 items-center justify-center self-start rounded-full bg-white text-lg font-semibold text-black sm:flex'
+      >
+        Let&apos;s discuss
+      </Link>
     </div>
   )
 }

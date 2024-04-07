@@ -128,10 +128,10 @@ export const Code = (props: CodeProps) => {
           />
         ))}
       </div>
-      {/* <CodeBlock
+      <CodeBlock
         code={codeSample?.code ?? 'loading'}
         language={codeSample?.language ?? 'typescript'}
-      /> */}
+      />
     </div>
   )
 }

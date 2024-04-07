@@ -34,7 +34,7 @@ export const ServiceDropdown = () => {
           >
             services
           </NavigationMenuTrigger>
-          <NavigationMenuContent className='flex w-[99vw] flex-col px-[10%]'>
+          <NavigationMenuContent className='flex w-[99vw] flex-col px-[10%] pb-4'>
             <div className='flex items-start justify-between py-8'>
               <div className='flex w-4/12 flex-col gap-4'>
                 <span className='font-medium'>Development</span>

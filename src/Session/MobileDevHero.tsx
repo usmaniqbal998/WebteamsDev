@@ -1,19 +1,24 @@
 import Image from 'next/image'
 import mobiledev from '@/assets/mobiledev-image.svg'
 import { HeroSideBar } from '@/Components/HeroSideBar'
+import Link from 'next/link'
 
 export function MobileDevHero() {
   return (
     <div className='flex flex-col items-center text-center'>
-      <h1 className='text-9xl sm:text-6xl'>Mobile App Development</h1>
-      <span className='mt-16 text-3xl'>
-        Grow your business with fully tailored MobileApps
+      <h1 className='text-9xl sm:text-5xl'>Mobile App Development</h1>
+      <span className='mt-16 text-3xl sm:text-2xl'>
+        Grow your business with fully tailored
+        <br className='hidden sm:block' /> MobileApps
       </span>
-      <button className='mt-6 h-11 w-36 rounded-full border-white bg-white text-sm font-semibold text-black'>
+      <Link
+        href='/contact'
+        className='mt-6 flex h-11 w-36 items-center justify-center rounded-full border-white bg-white text-sm font-semibold text-black'
+      >
         Let&#39;s discuss
-      </button>
+      </Link>
       <div
-        className='relative mt-24 flex w-full flex-row justify-between sm:flex-col sm:items-start sm:gap-4'
+        className='relative mt-24 flex h-auto w-full flex-row justify-between sm:flex-col sm:items-start sm:gap-4'
         id='mobile-brief'
       >
         <HeroSideBar
@@ -24,8 +29,8 @@ export function MobileDevHero() {
             { display: 'Process', id: 'mobile-process' }
           ]}
         />
-        <div className='flex w-full items-start justify-between'>
-          <h2 className='text-left text-8xl sm:text-4xl [&_mark]:font-semibold [&_mark]:text-green-500'>
+        <div className='flex h-auto w-full items-start justify-between'>
+          <h2 className='text-nowrap text-left text-8xl xl:text-7xl sm:text-4xl [&_mark]:font-semibold [&_mark]:text-green-500'>
             <mark>7</mark> weeks <br /> to get <br />
             ready <br />
             your MVP

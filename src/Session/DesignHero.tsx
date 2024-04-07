@@ -6,6 +6,7 @@ import studyCase2 from '@/assets/study-case/study-case-2.svg'
 import studyCase3 from '@/assets/study-case/study-case-3.svg'
 import studyCase4 from '@/assets/study-case/study-case-4.svg'
 import { HeroSideBar } from '@/Components/HeroSideBar'
+import Link from 'next/link'
 
 export function DesignHero() {
   return (
@@ -24,9 +25,12 @@ export function DesignHero() {
       <span className='mt-12 text-lg sm:text-sm'>
         We Craft delightful UX for your digital products
       </span>
-      <button className='mt-5 rounded-full bg-white px-6 py-3 text-sm font-bold text-black'>
-        Let’s discuss
-      </button>
+      <Link
+        href='/contact'
+        className='mt-5 flex items-center justify-center rounded-full bg-white px-6 py-3 text-sm font-semibold text-black'
+      >
+        Let&apos;s discuss
+      </Link>
       <h2 className='relative mt-8 self-start text-8xl sm:flex sm:w-full sm:flex-col-reverse sm:text-4xl'>
         Case <br /> studies
         <HeroSideBar
@@ -50,21 +54,25 @@ export function DesignHero() {
         <CaseStudyCard
           name='Risk Management Dashboard'
           text='Web application for assessing risks, providing essential insights to avoid potential problems.'
+          href='/cases/risk'
           image={studyCase1}
         />
         <CaseStudyCard
           name='Ilmiya Edtech Platform'
           text='Ilmiya serves as an EdTech platform that enables educators to design courses and educational games.'
+          href='/cases/ilmiya'
           image={studyCase2}
         />
         <CaseStudyCard
           name='Baton Team Management'
           text='Baton team management functions as a component within the broader Baton tool.'
+          href='/cases/baton'
           image={studyCase3}
         />
         <CaseStudyCard
           name='Office 20 Dashboard'
           text='A dashboard designed for an owner to manage their business and all subsidiary branches'
+          href='/cases/office'
           image={studyCase4}
         />
       </div>

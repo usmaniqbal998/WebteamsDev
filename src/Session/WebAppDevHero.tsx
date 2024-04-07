@@ -1,20 +1,24 @@
 import Image from 'next/image'
 import WebAppHero from '@/assets/webappdev-icon.svg'
 import { HeroSideBar } from '@/Components/HeroSideBar'
+import Link from 'next/link'
 
 export function WebAppDevHero() {
   return (
     <div className='flex w-full flex-col items-center justify-start'>
       <div className='flex w-full flex-col items-center justify-center'>
-        <h1 className=' text-center text-9xl sm:text-6xl'>
+        <h1 className=' text-center text-9xl sm:text-5xl'>
           Web App <br /> Development
         </h1>
         <span className='mt-16 text-3xl sm:mt-4 sm:px-6 sm:text-center sm:text-xl'>
           Grow your business with fully tailored Web Apps
         </span>
-        <button className='mt-4 h-11 w-36 rounded-full bg-white text-sm font-semibold text-black'>
+        <Link
+          href='/contact'
+          className='mt-4 flex h-11 w-36 items-center justify-center rounded-full bg-white text-sm font-semibold text-black'
+        >
           Let&#39;s discuss
-        </button>
+        </Link>
       </div>
       <div
         className='relative mb-8 mt-20 flex min-w-full items-end justify-start gap-20 leading-relaxed sm:flex-col sm:items-start sm:gap-4'

@@ -4,6 +4,7 @@ import { cn } from '@/Util'
 import { useSticky } from '@/hook/useSticky'
 import Link from 'next/link'
 import { HTMLAttributes, useEffect, useState } from 'react'
+import { useMediaQuery } from 'react-responsive'
 
 type Tag = {
   display: string
@@ -17,9 +18,10 @@ type HeroSideBarProps = {
 
 export function HeroSideBar({ className, tags, ...rest }: HeroSideBarProps) {
   const [highlightId, setHighlightId] = useState<string>(tags[0].id)
+  const isMobile = useMediaQuery({ maxWidth: 767 })
 
   const id = 'hero-sidebar'
-  useSticky(id)
+  useSticky(id, !isMobile)
 
   useEffect(() => {
     const sectionPositionDic = tags.reduce(

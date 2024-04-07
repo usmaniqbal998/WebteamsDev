@@ -1,36 +1,40 @@
 'use client'
 
 import { Input } from '@/Components/ui/input'
-import {
-  SubmitHandler,
-  UseFormHandleSubmit,
-  useForm,
-  useFormState
-} from 'react-hook-form'
+import { SubmitHandler, useForm } from 'react-hook-form'
 import { zodResolver } from '@hookform/resolvers/zod'
-import { z } from 'zod'
 import { sendContactMessage } from '@/app/contact/sendContactMessage'
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import { cn } from '@/Util'
-
-const numbersRegex = /^\d+$/
-
-const formSchema = z.object({
-  name: z.string().min(1, 'A name is required.'),
-  email: z.string().email('Invalid email.'),
-  phone: z
-    .string()
-    .refine(
-      (value: unknown) => typeof value === 'string' && numbersRegex.test(value),
-      'Should be numbers only.'
-    ),
-  aboutProject: z.string().min(1, 'A message is required.')
-})
-
-type FormSchema = z.infer<typeof formSchema>
+import { FormData, formSchema } from '@/app/contact/formSchema'
 
 export default function Contract() {
-  const { register, formState, handleSubmit, reset } = useForm<FormSchema>({
+  useEffect(() => {
+    const onResize = () => {
+      const vw = Math.max(
+        window.innerWidth,
+        document.documentElement.clientWidth
+      )
+      const leftPadding = Math.pow(vw, 3.8) * 0.000000000148 - 130
+      console.log({ leftPadding })
+      const form = document.querySelector(
+        '#form-container'
+      ) as HTMLDivElement | null
+      if (!form) return
+      form.style.paddingLeft = `${leftPadding}px`
+    }
+
+    onResize()
+    window.addEventListener('resize', onResize)
+    window.addEventListener('load', onResize)
+
+    return () => {
+      window.removeEventListener('resize', onResize)
+      window.removeEventListener('load', onResize)
+    }
+  }, [])
+
+  const { register, formState, handleSubmit, reset } = useForm<FormData>({
     resolver: zodResolver(formSchema)
   })
 
@@ -38,13 +42,13 @@ export default function Contract() {
 
   const { errors } = formState
 
-  const handleContactForm: SubmitHandler<FormSchema> = async (
+  const handleContactForm: SubmitHandler<FormData> = async (
     formData,
     event
   ) => {
     event?.preventDefault()
     setPending(true)
-    await sendContactMessage()
+    await sendContactMessage(formData)
 
     setPending(false)
     reset()
@@ -73,13 +77,14 @@ export default function Contract() {
       </div>
       <div
         className={cn(
-          'col-span-7 flex w-full flex-col items-start justify-center gap-16 pl-84 sm:gap-8',
+          'col-span-7 flex w-full flex-col items-start justify-center gap-16 sm:gap-8',
           'sm:row-span-9 sm:pl-0'
         )}
+        id='form-container'
       >
         <form
           onSubmit={handleSubmit(handleContactForm)}
-          className='flex w-4/6 flex-col gap-y-[2vh] sm:w-full'
+          className='flex w-8/12 flex-col gap-y-[2vh] sm:w-full'
           method='POST'
         >
           <Input

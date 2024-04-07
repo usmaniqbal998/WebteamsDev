@@ -1,8 +1,9 @@
 import { useEffect } from 'react'
 
-export const useSticky = (id: string) => {
+export const useSticky = (id: string, enable: boolean = true) => {
   useEffect(() => {
-    const heroSidebar = document.getElementById('hero-sidebar')
+    if (!enable) return () => {}
+    const heroSidebar = document.getElementById(id)
     if (!heroSidebar) return () => {}
 
     const initialYPosition =
@@ -29,5 +30,5 @@ export const useSticky = (id: string) => {
     return () => {
       document.removeEventListener('scroll', handleScroll)
     }
-  }, [])
+  }, [enable, id])
 }

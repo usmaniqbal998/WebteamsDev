@@ -90,7 +90,7 @@ export function Reviews(props: { className?: string }) {
   return (
     <div
       className={cn(
-        'mb-4 flex gap-5 leading-relaxed sm:gap-1',
+        'mb-4 flex gap-5 leading-relaxed sm:gap-4',
         props.className
       )}
     >
@@ -111,7 +111,7 @@ export function Reviews(props: { className?: string }) {
           alt='staricon'
         />
       </div>
-      <div className='flex flex-col gap-5  sm:hidden'>
+      <div className='flex flex-col gap-5 sm:hidden sm:gap-4'>
         {comments2.map(comment => (
           <CommentCard
             comment={comment.text}
@@ -131,7 +131,7 @@ export function Reviews(props: { className?: string }) {
           />
         ))}
       </div>
-      <div className='mb-8 flex flex-col gap-5 self-end sm:gap-1'>
+      <div className='mb-8 flex flex-col gap-5 self-end sm:gap-4'>
         {comments4.map(comment => (
           <CommentCard
             comment={comment.text}

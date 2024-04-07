@@ -19,16 +19,17 @@ import emailIcon from '@/assets/email-icon.svg'
 import { ImageCircle } from '@/Util/ImageCirclu'
 
 import { MobileServiceDropdown } from '@/Components/MobileServiceDropdown'
+import Link from 'next/link'
 
 export const BurgerMenu = (props: { className?: string }) => {
   return (
     <div
       className={`${props.className} z-50 mb-8 flex w-screen flex-row items-center justify-between px-4`}
     >
-      <div className='flex items-center justify-center gap-2'>
+      <Link href='/' className='flex items-center justify-center gap-2'>
         <Image src={webteamsLogo} alt='webteams logo' />
         <span className='mt-1 text-sm font-semibold'>Webteams</span>
-      </div>
+      </Link>
       <Sheet>
         <SheetTrigger asChild>
           <div className='size-min space-y-[6px]'>
@@ -42,10 +43,10 @@ export const BurgerMenu = (props: { className?: string }) => {
             {/* <SheetDescription>description</SheeDescription> */}
           </SheetHeader>
 
-          <span className='mb-4 mt-20 block text-xl text-neutral-400'>
-            Case studies
-          </span>
-          <MobileCaseStudies />
+          <span className='mb-4 mt-20 block text-xl'>Case studies</span>
+          <SheetClose asChild>
+            <MobileCaseStudies />
+          </SheetClose>
           <div className='mt-12 flex flex-col gap-8'>
             <SheetClose asChild>
               <MenuButton href='/' regex='^\/$'>
@@ -61,9 +62,14 @@ export const BurgerMenu = (props: { className?: string }) => {
           </div>
 
           <SheetFooter className='flex flex-1 items-center justify-end gap-14'>
-            <button className='rounded-full bg-white px-6 py-4 font-semibold text-black'>
-              Get project estimation
-            </button>
+            <SheetClose asChild>
+              <Link
+                href='/contact'
+                className='flex items-center justify-center rounded-full bg-white px-6 py-4 font-semibold text-black'
+              >
+                Get project estimation
+              </Link>
+            </SheetClose>
             <div className='flex gap-4'>
               <ImageCircle
                 src={linkedinIcon}

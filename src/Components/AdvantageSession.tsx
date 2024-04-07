@@ -73,7 +73,8 @@ export function AdvantageSession(props: { className?: string }) {
         className='mb-44 h-[720px] w-auto sm:mb-10 sm:h-auto'
         src={session2}
         alt='pick session2'
-        height={400}
+        height={800}
+        priority
       />
       <div className='mb-12 grid w-full grid-cols-11 items-end px-32 sm:mb-0 sm:grid-cols-1 sm:grid-rows-2 sm:flex-col sm:items-start sm:gap-6 sm:px-2'>
         <h2 className='col-span-7 text-8xl 2xl:text-6xl xl:text-5xl sm:col-span-1 sm:text-wrap sm:text-4xl'>

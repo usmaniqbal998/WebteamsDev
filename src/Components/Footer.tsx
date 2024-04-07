@@ -12,7 +12,11 @@ import Link from 'next/link'
 
 const Navigator = (props: { className?: string }) => (
   <div className={props.className}>
-    <MenuButton href='/about' regex='^\/about$' className='sm:text-sm'>
+    <MenuButton
+      href='/about'
+      regex='^\/about$'
+      className='text-nowrap sm:text-sm'
+    >
       about us
     </MenuButton>
     <MenuButton href='/services' regex='^\/services' className='sm:text-sm'>

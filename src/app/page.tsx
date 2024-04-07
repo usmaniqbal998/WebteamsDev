@@ -12,7 +12,7 @@ export default function Home() {
       <Hero className='mt-40 sm:mt-10' />
       <AdvantageSession className='mt-36 sm:mt-8' />
       <Code className='mt-36 sm:mt-10' />
-      <RecentWork className='mt-40 sm:mt-10' />
+      <RecentWork className='mt-20 sm:mt-10' />
       <Reviews className='mt-40 sm:mt-10' />
       <FaqSession className='mt-20 sm:mt-10' />
       <Explore className='mb-20 mt-32 sm:my-10' />

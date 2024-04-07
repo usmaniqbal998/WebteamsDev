@@ -12,7 +12,7 @@ export function ContactUsButton() {
       data-selected={pathName.startsWith('/contact')}
       href='/contact'
       className={cn(
-        'flex h-11 w-32 items-center justify-center rounded-full  p-2 text-center text-sm font-semibold text-black',
+        'flex h-11 w-32 items-center justify-center rounded-full p-2 text-center text-xs font-bold text-black text-nowrap',
         'lg:w-28 lg:text-xs',
         'bg-white duration-300 transition-colors  hover:bg-[#ECFAE5] data-[selected=true]:bg-[#CEDCF6]'
       )}
