@@ -1,16 +1,16 @@
 'use client'
 
 import Image from 'next/image'
-import img1 from '@/assets/baton/img1-baton.png'
-import img2 from '@/assets/baton/img2-baton.png'
-import img3 from '@/assets/baton/img3-batonn.png'
-import img4 from '@/assets/baton/img4-baton.png'
-import img5 from '@/assets/baton/img5-baton.png'
-import img6 from '@/assets/baton/img6-baton.png'
-import img7 from '@/assets/baton/img7-baton.png'
-import img8 from '@/assets/baton/img8-baton.png'
-import img9 from '@/assets/baton/img9-baton.png'
-import img10 from '@/assets/baton/img10-baton.png'
+import img1 from '@/assets/baton/desktop/img1-baton.png'
+import img2 from '@/assets/baton/desktop/img2-baton.png'
+import img3 from '@/assets/baton/desktop/img3-batonn.png'
+import img4 from '@/assets/baton/desktop/img4-baton.png'
+import img5 from '@/assets/baton/desktop/img5-baton.png'
+import img6 from '@/assets/baton/desktop/img6-baton.png'
+import img7 from '@/assets/baton/desktop/img7-baton.png'
+import img8 from '@/assets/baton/desktop/img8-baton.png'
+import img9 from '@/assets/baton/desktop/img9-baton.png'
+import img10 from '@/assets/baton/desktop/img10-baton.png'
 
 export function BatonDesktop() {
   return (

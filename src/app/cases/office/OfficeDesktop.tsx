@@ -1,17 +1,17 @@
 import Image from 'next/image'
-import img1 from '@/assets/office/img1-office.png'
-import img2 from '@/assets/office/img2-office.png'
-import img3 from '@/assets/office/img3-office.png'
-import img4 from '@/assets/office/img4-office.png'
-import img5 from '@/assets/office/img5-office.png'
-import img6 from '@/assets/office/img6-office.png'
-import img7 from '@/assets/office/img7-office.png'
-import img8 from '@/assets/office/img8-office.png'
-import img9 from '@/assets/office/img9-office.png'
-import img10 from '@/assets/office/img10-office.png'
-import img11 from '@/assets/office/img11-office.png'
-import img12 from '@/assets/office/img12-office.png'
-import img13 from '@/assets/office/img13-office.png'
+import img1 from '@/assets/office/desktop/img1-office.png'
+import img2 from '@/assets/office/desktop/img2-office.png'
+import img3 from '@/assets/office/desktop/img3-office.png'
+import img4 from '@/assets/office/desktop/img4-office.png'
+import img5 from '@/assets/office/desktop/img5-office.png'
+import img6 from '@/assets/office/desktop/img6-office.png'
+import img7 from '@/assets/office/desktop/img7-office.png'
+import img8 from '@/assets/office/desktop/img8-office.png'
+import img9 from '@/assets/office/desktop/img9-office.png'
+import img10 from '@/assets/office/desktop/img10-office.png'
+import img11 from '@/assets/office/desktop/img11-office.png'
+import img12 from '@/assets/office/desktop/img12-office.png'
+import img13 from '@/assets/office/desktop/img13-office.png'
 
 export function OfficeDesktop() {
   return (
@@ -53,7 +53,7 @@ export function OfficeDesktop() {
         src={img6}
         alt='icon office 20 dashboard'
       />
-      <div className='flex w-screen items-center justify-start gap-5'>
+      <div className='flex size-[150%] translate-x-[8%] items-center justify-start gap-5'>
         <Image
           height={1228}
           className='size-10/12 h-auto'
@@ -67,15 +67,15 @@ export function OfficeDesktop() {
           alt='icon office 20 dashboard'
         />
       </div>
-      <div className='flex w-screen -translate-x-96 items-center justify-start gap-5'>
+      <div className='flex size-[150%] translate-x-[-8%] items-center justify-start gap-5'>
         <Image
-          className='size-10/12 h-auto'
+          className='size-11/12 h-auto'
           height={1228}
           src={img9}
           alt='icon office 20 dashboard'
         />
         <Image
-          className='size-10/12 h-auto'
+          className='size-11/12 h-auto'
           height={1228}
           src={img10}
           alt='icon office 20 dashboard'
