@@ -76,7 +76,7 @@ export const ServiceDropdown = () => {
                 <span className='text-3xl font-semibold'>Team of Experts</span>
                 <Link
                   href='/contact'
-                  className='w-min text-nowrap rounded-full px-4 py-2 text-sm font-semibold ring-1 ring-black hover:bg-black hover:text-accent'
+                  className='w-max text-nowrap rounded-full px-4 py-2 text-sm font-semibold ring-1 ring-black hover:bg-black hover:text-accent'
                 >
                   Get quotation
                 </Link>

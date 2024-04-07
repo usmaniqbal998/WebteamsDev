@@ -6,14 +6,14 @@ import { useMediaQuery } from 'react-responsive'
 
 const OfficeDesktop = dynamic(
   () =>
-    import('@/app/services/office/OfficeDesktop').then(
+    import('@/app/cases/office/OfficeDesktop').then(
       module => module.OfficeDesktop
     ),
   { ssr: false, loading: () => <CaseLoader /> }
 )
 const OfficeMobile = dynamic(
   () =>
-    import('@/app/services/office/OfficeMobile').then(
+    import('@/app/cases/office/OfficeMobile').then(
       module => module.OfficeMobile
     ),
   { ssr: false, loading: () => <CaseLoader /> }

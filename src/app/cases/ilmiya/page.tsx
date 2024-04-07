@@ -1,19 +1,19 @@
+'use client'
+
 import { CaseLoader } from '@/Components/CaseLoader'
 import dynamic from 'next/dynamic'
 import { useMediaQuery } from 'react-responsive'
 
 const IlmyaDesktop = dynamic(
   () =>
-    import('@/app/services/ilmiya/IlmyaDesktop').then(
+    import('@/app/cases/ilmiya/IlmyaDesktop').then(
       module => module.IlmyaDesktop
     ),
   { ssr: false, loading: () => <CaseLoader /> }
 )
 const IlmyaMobile = dynamic(
   () =>
-    import('@/app/services/ilmiya/IlmyaMobile').then(
-      module => module.IlmyaMobile
-    ),
+    import('@/app/cases/ilmiya/IlmyaMobile').then(module => module.IlmyaMobile),
   { ssr: false, loading: () => <CaseLoader /> }
 )
 

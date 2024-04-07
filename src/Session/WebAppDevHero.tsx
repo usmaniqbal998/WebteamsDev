@@ -28,7 +28,7 @@ export function WebAppDevHero() {
             { display: 'Process', id: 'web-process' }
           ]}
         />
-        <h2 className='text-7xl sm:w-3/6 sm:text-3xl'>
+        <h2 className='text-7xl xl:text-5xl sm:w-3/6 sm:text-3xl'>
           Agile <br /> scalable <br /> team
         </h2>
         <p className='w-[600px] leading-relaxed text-neutral-400 sm:w-full'>
