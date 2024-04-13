@@ -48,18 +48,21 @@ export const Footer = (props: { className?: string }) => {
             circleSize={35}
             imageHeight={12}
             alt='linkedin Icon'
+            href='https://www.linkedin.com/company/webteams1/'
           />
           <ImageCircle
             src={facebookIcon}
             circleSize={35}
             imageHeight={12}
             alt='facebook Icon'
+            href='https://www.facebook.com/webteams01'
           />
           <ImageCircle
             src={emailIcon}
             imageHeight={12}
             circleSize={35}
             alt='email Icon'
+            href='mailto:info@webteams.dev'
           />
         </div>
       </div>
