@@ -9,7 +9,7 @@ export const ImageCircle = (props: {
   imageHeight?: number
   imageWidth?: number
   className?: string
-  href: string
+  href?: string
 }) => {
   return (
     <Link href={props.href || '#'}>
