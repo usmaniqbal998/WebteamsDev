@@ -12,7 +12,7 @@ import person8 from '@/assets/person/Web teams/person8.png'
 import person9 from '@/assets/person/Web teams/person9.png'
 import person10 from '@/assets/person/Web teams/person10.png'
 import person11 from '@/assets/person/Web teams/person11.png'
-import { CommentCard } from '@/Components/CommentCard'
+import { CommentCard } from '@/components/CommentCard'
 import { cn } from '@/Util'
 
 const comments1 = [

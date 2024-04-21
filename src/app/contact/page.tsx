@@ -1,6 +1,6 @@
 'use client'
 
-import { Input } from '@/Components/ui/input'
+import { Input } from '@/components/ui/input'
 import { SubmitHandler, useForm } from 'react-hook-form'
 import { zodResolver } from '@hookform/resolvers/zod'
 import { sendContactMessage } from '@/app/contact/sendContactMessage'
@@ -133,7 +133,7 @@ export default function Contract() {
 
         <div className='flex flex-col gap-4 sm:gap-2'>
           <span className='text-neutral-400'>Support</span>
-          <span className='text-xl sm:text-base'>info@webteams.com</span>
+          <span className='text-xl sm:text-base'>info@webteams.dev</span>
         </div>
       </div>
     </div>

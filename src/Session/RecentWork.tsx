@@ -1,4 +1,4 @@
-import { RecentWorkGallery } from '@/Components/RecentWorkGallery'
+import { RecentWorkGallery } from '@/components/RecentWorkGallery'
 import { cn } from '@/Util'
 
 export const RecentWork = (props: { className?: string }) => (

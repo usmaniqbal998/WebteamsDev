@@ -1,7 +1,7 @@
 'use client'
 
-import { CodeBlock } from '@/Components/CodeBlock'
-import { TechCard } from '@/Components/TechCard'
+import { CodeBlock } from '@/components/CodeBlock'
+import { TechCard } from '@/components/TechCard'
 import Image from 'next/image'
 import star from '@/assets/star-image.svg'
 import { cn } from '@/Util'

@@ -1,5 +1,5 @@
-import { MenuButton } from '@/Components/MenuButton'
-import { MobileCaseStudies } from '@/Components/MobileCaseStudies'
+import { MenuButton } from '@/components/MenuButton'
+import { MobileCaseStudies } from '@/components/MobileCaseStudies'
 import {
   Sheet,
   SheetClose,
@@ -8,7 +8,7 @@ import {
   SheetHeader,
   SheetTitle,
   SheetTrigger
-} from '@/Components/ui/sheet'
+} from '@/components/ui/sheet'
 
 import webteamsLogo from '@/assets/webteams-logo.svg'
 import Image from 'next/image'
@@ -18,7 +18,7 @@ import facebookIcon from '@/assets/facebook-icon.svg'
 import emailIcon from '@/assets/email-icon.svg'
 import { ImageCircle } from '@/Util/ImageCirclu'
 
-import { MobileServiceDropdown } from '@/Components/MobileServiceDropdown'
+import { MobileServiceDropdown } from '@/components/MobileServiceDropdown'
 import Link from 'next/link'
 
 export const BurgerMenu = (props: { className?: string }) => {

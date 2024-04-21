@@ -1,4 +1,4 @@
-import { OurDesignCard, Step } from '@/Components/OurDesignCard'
+import { OurDesignCard, Step } from '@/components/OurDesignCard'
 import { WebAppDevHero } from '@/Session/WebAppDevHero'
 import { Reason, WhySection } from '@/Session/WhySection'
 import reasonIcon1 from '@/assets/MobilePage/reason-icon1.svg'

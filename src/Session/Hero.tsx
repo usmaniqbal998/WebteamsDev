@@ -1,6 +1,6 @@
 import Image from 'next/image'
 import heroIcon from '@/assets/hero-icon.svg'
-import { BracketText } from '@/Components/BracketText'
+import { BracketText } from '@/components/BracketText'
 import shopify from '@/assets/shopify-icon.svg'
 import bynder from '@/assets/bynder-icon.svg'
 import amazon from '@/assets/amazon-icon.svg'
@@ -21,10 +21,9 @@ export function Hero(props: { className?: string }) {
           <Image
             src={heroIcon}
             alt='heroIcon'
-            width={162}
-            height={162}
             className='h-[10vw] max-h-full w-auto sm:size-12'
             priority
+            unoptimized
           />
           <h1 className='text-[10vw] '>Horizons</h1>
         </div>
