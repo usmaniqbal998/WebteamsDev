@@ -1,6 +1,6 @@
 import Image from 'next/image'
 import IconAboutHero from '@/assets/iconAboutHero.svg'
-import { HeroSideBar } from '@/components/HeroSideBar'
+import { HeroSideBar } from '@/Components/HeroSideBar'
 import Link from 'next/link'
 
 export function AboutUsHero() {

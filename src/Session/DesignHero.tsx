@@ -1,11 +1,11 @@
 import Image from 'next/image'
 import flowerIcon from '@/assets/flower-icon.svg'
-import { CaseStudyCard } from '@/components/CaseStudyCard'
+import { CaseStudyCard } from '@/Components/CaseStudyCard'
 import studyCase1 from '@/assets/study-case/study-case-1.svg'
 import studyCase2 from '@/assets/study-case/study-case-2.svg'
 import studyCase3 from '@/assets/study-case/study-case-3.svg'
 import studyCase4 from '@/assets/study-case/study-case-4.svg'
-import { HeroSideBar } from '@/components/HeroSideBar'
+import { HeroSideBar } from '@/Components/HeroSideBar'
 import Link from 'next/link'
 
 export function DesignHero() {

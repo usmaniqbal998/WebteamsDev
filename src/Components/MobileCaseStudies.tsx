@@ -4,14 +4,14 @@ import {
   Carousel,
   CarouselContent,
   CarouselItem
-} from '@/components/ui/carousel'
+} from '@/Components/ui/carousel'
 import Image from 'next/image'
 import studyCase1 from '@/assets/menu/casestudy1.png'
 import studyCase2 from '@/assets/menu/casestudy2.png'
 import studyCase3 from '@/assets/menu/casestudy3.png'
 import studyCase4 from '@/assets/menu/casestudy4.png'
 import Link from 'next/link'
-import { SheetClose } from '@/components/ui/sheet'
+import { SheetClose } from '@/Components/ui/sheet'
 import { useMediaQuery } from 'react-responsive'
 
 export const StudyCase = (props: {

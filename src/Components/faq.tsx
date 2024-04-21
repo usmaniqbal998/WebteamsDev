@@ -4,7 +4,7 @@ import {
   Accordion,
   AccordionItem,
   AccordionTrigger
-} from '@/components/ui/accordion'
+} from '@/Components/ui/accordion'
 import { cn } from '@/Util'
 import { AccordionContent } from '@radix-ui/react-accordion'
 

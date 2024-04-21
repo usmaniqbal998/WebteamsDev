@@ -1,7 +1,7 @@
 'use client'
 
-import { MenuButton } from '@/components/MenuButton'
-import { SheetClose } from '@/components/ui/sheet'
+import { MenuButton } from '@/Components/MenuButton'
+import { SheetClose } from '@/Components/ui/sheet'
 import { cn } from '@/Util'
 import {
   Accordion,
