@@ -1,6 +1,6 @@
 import session2 from '@/assets/picksession2.png'
 import Image from 'next/image'
-import { HomeCard } from '@/components/Homecards'
+import { HomeCard } from '@/Components/Homecards'
 import { cn } from '@/Util'
 
 type HomeCard = {

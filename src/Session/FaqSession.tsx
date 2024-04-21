@@ -1,4 +1,4 @@
-import { Faq, FaqItem } from '@/components/faq'
+import { Faq, FaqItem } from '@/Components/faq'
 import { cn } from '@/Util'
 
 export const FaqSession = (props: { className?: string }) => {

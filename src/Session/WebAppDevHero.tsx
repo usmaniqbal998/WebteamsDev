@@ -1,6 +1,6 @@
 import Image from 'next/image'
 import WebAppHero from '@/assets/webappdev-icon.svg'
-import { HeroSideBar } from '@/components/HeroSideBar'
+import { HeroSideBar } from '@/Components/HeroSideBar'
 import Link from 'next/link'
 
 export function WebAppDevHero() {

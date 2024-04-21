@@ -1,6 +1,6 @@
 'use client'
 
-import { CaseLoader } from '../../../components/CaseLoader'
+import { CaseLoader } from '../../../Components/CaseLoader'
 import dynamic from 'next/dynamic'
 import { useMediaQuery } from 'react-responsive'
 

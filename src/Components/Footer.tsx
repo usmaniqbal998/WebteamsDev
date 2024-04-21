@@ -2,7 +2,7 @@
 
 import Image from 'next/image'
 import webteamsLogo from '@/assets/webteams-logo.svg'
-import { MenuButton } from '@/components/MenuButton'
+import { MenuButton } from '@/Components/MenuButton'
 import { ImageCircle } from '@/Util/ImageCirclu'
 import linkedinIcon from '@/assets/linkedin-icon.svg'
 import facebookIcon from '@/assets/facebook-icon.svg'

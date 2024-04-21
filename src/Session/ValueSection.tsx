@@ -1,4 +1,4 @@
-import { ValueCard } from '@/components/ValueCard'
+import { ValueCard } from '@/Components/ValueCard'
 import IconPeople from '@/assets/ValueCard/icon-people.svg'
 import IconGrowth from '@/assets/ValueCard/icon-growth.svg'
 import IconEnvolve from '@/assets/ValueCard/icon-envolve.svg'

@@ -1,6 +1,6 @@
 import Image from 'next/image'
 import heroIcon from '@/assets/hero-icon.svg'
-import { BracketText } from '@/components/BracketText'
+import { BracketText } from '@/Components/BracketText'
 import shopify from '@/assets/shopify-icon.svg'
 import bynder from '@/assets/bynder-icon.svg'
 import amazon from '@/assets/amazon-icon.svg'

@@ -4,7 +4,7 @@ import reasonIcon1 from '@/assets/DesignPage/reason-icon1.svg'
 import reasonIcon2 from '@/assets/DesignPage/reason-icon2.svg'
 import reasonIcon3 from '@/assets/DesignPage/reason-icon3.svg'
 import reasonIcon4 from '@/assets/DesignPage/reason-icon4.svg'
-import { OurDesignCard, Step } from '@/components/OurDesignCard'
+import { OurDesignCard, Step } from '@/Components/OurDesignCard'
 
 const reasons: Reason[] = [
   {
