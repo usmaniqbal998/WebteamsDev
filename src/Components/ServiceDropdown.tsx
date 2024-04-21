@@ -5,11 +5,11 @@ import {
   NavigationMenuContent,
   NavigationMenuItem,
   NavigationMenuTrigger
-} from '@/Components/ui/navigation-menu'
+} from '@/components/ui/navigation-menu'
 import { usePathname } from 'next/navigation'
 import Link from 'next/link'
 import { cn } from '@/Util'
-import { MobileCaseStudies } from '@/Components/MobileCaseStudies'
+import { MobileCaseStudies } from '@/components/MobileCaseStudies'
 
 const linkCardClassName = cn(
   'flex flex-col items-start justify-center gap-2 rounded-xl p-3 text-sm hover:bg-black hover:text-accent',

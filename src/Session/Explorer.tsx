@@ -1,4 +1,4 @@
-import { ContactUsButton } from '@/Components/ContactUsButton'
+import { ContactUsButton } from '@/components/ContactUsButton'
 import { cn } from '@/Util'
 import FlowerIcon from '@/assets/flower.svg'
 import Image from 'next/image'

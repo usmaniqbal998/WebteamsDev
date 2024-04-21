@@ -4,14 +4,14 @@ import {
   Carousel,
   CarouselContent,
   CarouselItem
-} from '@/Components/ui/carousel'
+} from '@/components/ui/carousel'
 import Image from 'next/image'
-import studyCase1 from '@/assets/study-case/study-case-1.svg'
-import studyCase2 from '@/assets/study-case/study-case-2.svg'
-import studyCase3 from '@/assets/study-case/study-case-3.svg'
-import studyCase4 from '@/assets/study-case/study-case-4.svg'
+import studyCase1 from '@/assets/menu/casestudy1.png'
+import studyCase2 from '@/assets/menu/casestudy2.png'
+import studyCase3 from '@/assets/menu/casestudy3.png'
+import studyCase4 from '@/assets/menu/casestudy4.png'
 import Link from 'next/link'
-import { SheetClose } from '@/Components/ui/sheet'
+import { SheetClose } from '@/components/ui/sheet'
 import { useMediaQuery } from 'react-responsive'
 
 export const StudyCase = (props: {
@@ -28,27 +28,23 @@ export const StudyCase = (props: {
         <SheetClose asChild>
           <Link
             href={props.href}
-            className=' flex size-full items-center justify-center bg-neutral-100 p-3'
+            className=' flex size-full items-center justify-center  p-3'
           >
             <Image
               src={props.src}
               alt={props.alt}
               height={props.height}
               className='shadow-border drop-shadow-lg'
+              unoptimized
             ></Image>
           </Link>
         </SheetClose>
       ) : (
         <Link
           href={props.href}
-          className=' flex size-full items-center justify-center bg-neutral-100 p-3'
+          className='flex size-full items-center justify-center  p-3'
         >
-          <Image
-            src={props.src}
-            alt={props.alt}
-            height={props.height}
-            className='shadow-border drop-shadow-lg'
-          ></Image>
+          <Image src={props.src} alt={props.alt}></Image>
         </Link>
       )}
     </CarouselItem>

@@ -3,7 +3,7 @@ import { Hero } from '@/Session/Hero'
 import { Explore } from '@/Session/Explorer'
 import { FaqSession } from '@/Session/FaqSession'
 import { RecentWork } from '@/Session/RecentWork'
-import { AdvantageSession } from '@/Components/AdvantageSession'
+import { AdvantageSession } from '@/components/AdvantageSession'
 import { Reviews } from '@/Session/Reviews'
 
 export default function Home() {

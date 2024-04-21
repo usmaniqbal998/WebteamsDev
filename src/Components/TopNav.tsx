@@ -1,9 +1,9 @@
-import { MenuButton } from '@/Components/MenuButton'
-import { ContactUsButton } from './ContactUsButton'
+import { MenuButton } from '@/components/MenuButton'
+import { ContactUsButton } from '@/components/ContactUsButton'
 import webteamsLogo from '@/assets/webteams-logo.svg'
 import Image from 'next/image'
 import Link from 'next/link'
-import { ServiceDropdown } from '@/Components/ServiceDropdown'
+import { ServiceDropdown } from '@/components/ServiceDropdown'
 
 export const TopNav = (props: { className?: string }) => {
   return (

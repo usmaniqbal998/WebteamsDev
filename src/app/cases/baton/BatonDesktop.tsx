@@ -16,66 +16,16 @@ export function BatonDesktop() {
   return (
     <div className='flex max-w-full flex-col items-center justify-center gap-14'>
       <h1 className='text-center text-8xl'>Baton Team Management</h1>
-      <Image
-        className='w-auto'
-        height={1156}
-        src={img1}
-        alt='Icon-BatonTeamManagement'
-      />
-      <Image
-        className='w-auto'
-        height={1156}
-        src={img2}
-        alt='Icon-BatonTeamManagement'
-      />
-      <Image
-        className='w-auto'
-        height={1156}
-        src={img3}
-        alt='Icon-BatonTeamManagement'
-      />
-      <Image
-        className='w-auto'
-        height={1156}
-        src={img4}
-        alt='Icon-BatonTeamManagement'
-      />
-      <Image
-        className='w-auto'
-        height={1156}
-        src={img5}
-        alt='Icon-BatonTeamManagement'
-      />
-      <Image
-        className='min-w-[100vw]'
-        height={1156}
-        src={img6}
-        alt='Icon-BatonTeamManagement'
-      />
-      <Image
-        className='min-w-full'
-        height={1156}
-        src={img7}
-        alt='Icon-BatonTeamManagement'
-      />
-      <Image
-        className='w-auto'
-        height={1156}
-        src={img8}
-        alt='Icon-BatonTeamManagement'
-      />
-      <Image
-        className='w-auto'
-        height={1156}
-        src={img9}
-        alt='Icon-BatonTeamManagement'
-      />
-      <Image
-        className='min-w-full'
-        height={1156}
-        src={img10}
-        alt='Icon-BatonTeamManagement'
-      />
+      <Image src={img1} alt='Icon-BatonTeamManagement' />
+      <Image src={img2} alt='Icon-BatonTeamManagement' />
+      <Image src={img3} alt='Icon-BatonTeamManagement' />
+      <Image src={img4} alt='Icon-BatonTeamManagement' />
+      <Image src={img5} alt='Icon-BatonTeamManagement' />
+      <Image src={img6} alt='Icon-BatonTeamManagement' />
+      <Image src={img7} alt='Icon-BatonTeamManagement' />
+      <Image src={img8} alt='Icon-BatonTeamManagement' />
+      <Image src={img9} alt='Icon-BatonTeamManagement' />
+      <Image src={img10} alt='Icon-BatonTeamManagement' />
     </div>
   )
 }

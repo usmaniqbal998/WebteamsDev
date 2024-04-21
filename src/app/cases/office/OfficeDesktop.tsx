@@ -17,69 +17,19 @@ export function OfficeDesktop() {
   return (
     <div className='flex max-w-full flex-col items-center justify-start gap-14'>
       <h1 className='text-center text-8xl'>Office 20 Dashboard</h1>
-      <Image
-        className='w-auto'
-        height={1228}
-        src={img1}
-        alt='icon office 20 dashboard'
-      />
-      <Image
-        className='w-auto'
-        height={1228}
-        src={img2}
-        alt='icon office 20 dashboard'
-      />
-      <Image
-        className='w-auto'
-        height={1228}
-        src={img3}
-        alt='icon office 20 dashboard'
-      />
-      <Image
-        className='w-auto'
-        height={1228}
-        src={img4}
-        alt='icon office 20 dashboard'
-      />
-      <Image
-        className='w-auto'
-        height={1228}
-        src={img5}
-        alt='icon office 20 dashboard'
-      />
-      <Image
-        className='w-auto'
-        height={1228}
-        src={img6}
-        alt='icon office 20 dashboard'
-      />
+      <Image src={img1} alt='icon office 20 dashboard' />
+      <Image src={img2} alt='icon office 20 dashboard' />
+      <Image src={img3} alt='icon office 20 dashboard' />
+      <Image src={img4} alt='icon office 20 dashboard' />
+      <Image src={img5} alt='icon office 20 dashboard' />
+      <Image src={img6} alt='icon office 20 dashboard' />
       <div className='flex size-[150%] translate-x-[8%] items-center justify-start gap-5'>
-        <Image
-          height={1228}
-          className='size-10/12 h-auto'
-          src={img7}
-          alt='icon office 20 dashboard '
-        />
-        <Image
-          height={1228}
-          className='size-10/12 h-auto'
-          src={img8}
-          alt='icon office 20 dashboard'
-        />
+        <Image src={img7} alt='icon office 20 dashboard ' />
+        <Image src={img8} alt='icon office 20 dashboard' />
       </div>
       <div className='flex size-[150%] translate-x-[-8%] items-center justify-start gap-5'>
-        <Image
-          className='size-11/12 h-auto'
-          height={1228}
-          src={img9}
-          alt='icon office 20 dashboard'
-        />
-        <Image
-          className='size-11/12 h-auto'
-          height={1228}
-          src={img10}
-          alt='icon office 20 dashboard'
-        />
+        <Image src={img9} alt='icon office 20 dashboard' />
+        <Image src={img10} alt='icon office 20 dashboard' />
       </div>
       <Image src={img11} alt='icon office 20 dashboard' />
       <Image src={img12} alt='icon office 20 dashboard' />

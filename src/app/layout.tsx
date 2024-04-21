@@ -1,10 +1,10 @@
 import type { Viewport } from 'next'
 import { JetBrains_Mono as JetBrainsMono, Poppins } from 'next/font/google'
 import './globals.css'
-import { TopNav } from '../Components/TopNav'
-import { BurgerMenu } from '@/Components/BurgerMenu'
+import { TopNav } from '../components/TopNav'
+import { BurgerMenu } from '@/components/BurgerMenu'
 import { cn } from '@/Util'
-import { Footer } from '@/Components/Footer'
+import { Footer } from '@/components/Footer'
 
 // const jetBrainsMono = JetBrains_Mono({})
 // 700 400

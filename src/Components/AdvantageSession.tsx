@@ -1,6 +1,6 @@
 import session2 from '@/assets/picksession2.png'
 import Image from 'next/image'
-import { HomeCard } from './HomeCard'
+import { HomeCard } from '@/components/Homecards'
 import { cn } from '@/Util'
 
 type HomeCard = {
@@ -73,7 +73,6 @@ export function AdvantageSession(props: { className?: string }) {
         className='mb-44 h-[720px] w-auto sm:mb-10 sm:h-auto'
         src={session2}
         alt='pick session2'
-        height={800}
         priority
       />
       <div className='mb-12 grid w-full grid-cols-11 items-end px-32 sm:mb-0 sm:grid-cols-1 sm:grid-rows-2 sm:flex-col sm:items-start sm:gap-6 sm:px-2'>

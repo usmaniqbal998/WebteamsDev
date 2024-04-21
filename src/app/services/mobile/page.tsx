@@ -1,5 +1,5 @@
-import { OurDesignCard, Step } from '@/Components/OurDesignCard'
-import { ReactNativeAdvantages } from '@/Components/ReactNativeAdvantages'
+import { OurDesignCard, Step } from '@/components/OurDesignCard'
+import { ReactNativeAdvantages } from '@/components/ReactNativeAdvantages'
 import { MobileDevHero } from '@/Session/MobileDevHero'
 import { Reason, WhySection } from '@/Session/WhySection'
 import reasonIcon1 from '@/assets/MobilePage/reason-icon1.svg'
